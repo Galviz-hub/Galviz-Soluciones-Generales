@@ -2,10 +2,10 @@
    VARIABLES & CONFIGURACIÓN GLOBAL
    ========================================= */
 :root {
-    --primary-color: #0b132b;    /* Azul medianoche elegante */
-    --secondary-color: #1c2541;  /* Azul corporativo */
-    --accent-gold: #f59e0b;      /* Dorado/Cálido para acentos de eventos */
-    --accent-blue: #2563eb;      /* Azul vibrante */
+    --primary-color: #0b132b;    
+    --secondary-color: #1c2541;  
+    --accent-gold: #f59e0b;      
+    --accent-blue: #2563eb;      
     --accent-hover: #1d4ed8;
     --bg-light: #f8fafc;
     --card-bg: #ffffff;
@@ -42,7 +42,7 @@ body {
 }
 
 /* =========================================
-   EN CABEZADO Y NAVEGACIÓN
+   ENCABEZADO Y NAVEGACIÓN
    ========================================= */
 .navbar {
     background-color: var(--primary-color);
@@ -186,6 +186,8 @@ body {
     font-weight: 700;
     text-decoration: none;
     transition: var(--transition);
+    border: none;
+    cursor: pointer;
     box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
 }
 
@@ -215,7 +217,7 @@ body {
 }
 
 /* =========================================
-   ESTILOS DE TARJETAS Y GRID DINÁMICAS
+   ESTRUCTURA DE SECCIONES DE SERVICIOS
    ========================================= */
 .section-header {
     text-align: center;
@@ -235,7 +237,6 @@ body {
     font-size: 1.05rem;
 }
 
-/* EVENTOS DESTACADOS */
 .featured-section {
     padding: 90px 0 60px;
     background: #ffffff;
@@ -247,7 +248,6 @@ body {
     gap: 35px;
 }
 
-/* SERVICIOS GENERALES GRID */
 .services-section {
     padding: 80px 0 100px;
     background-color: var(--bg-light);
@@ -259,22 +259,56 @@ body {
     gap: 30px;
 }
 
-/* DISEÑO DE LA TARJETA DINÁMICA (CARD) */
+/* =========================================
+   EFECTO DE TARJETAS FLIP (GIRO 3D)
+   ========================================= */
+
+/* Contenedor principal de la tarjeta: aporta perspectiva */
 .card {
-    background: var(--card-bg);
+    background-color: transparent;
+    perspective: 1500px;
+    height: 480px; /* Altura fija necesaria para el flip */
+}
+
+/* Contenedor interno: maneja la rotación */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+}
+
+/* Activa el giro de 180 grados en Y al hacer hover */
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Configuración común para el frente y la parte de atrás */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* -- CARA FRONTAL -- */
+.card-front {
+    background: var(--card-bg);
     border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: var(--transition);
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
 .card-img {
     position: relative;
     height: 220px;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -282,22 +316,10 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-/* EFECTO DINÁMICO AL PASAR EL CURSOR (HOVER) */
-.card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(11, 19, 43, 0.12);
-    border-color: var(--accent-gold);
-}
-
-.card:hover .card-img img {
-    transform: scale(1.12);
 }
 
 .card-body {
-    padding: 30px 25px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -307,28 +329,22 @@ body {
     font-size: 2rem;
     color: var(--accent-blue);
     margin-bottom: 15px;
-    transition: var(--transition);
 }
 
-.card:hover .card-icon {
-    color: var(--accent-gold);
-    transform: scale(1.1);
-}
-
-.card h3 {
+.card-front h3 {
     font-size: 1.35rem;
     color: var(--primary-color);
     font-weight: 700;
     margin-bottom: 12px;
 }
 
-.card p {
+.card-front p {
     color: var(--text-muted);
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
-/* TARJETAS DESTACADAS DE EVENTOS */
+/* Estilos especiales para servicios destacados (Frente) */
 .card-featured {
     border: 2px solid rgba(245, 158, 11, 0.3);
     background: linear-gradient(180deg, #ffffff 0%, #fffdfa 100%);
@@ -358,58 +374,171 @@ body {
     justify-content: center;
     font-size: 1.3rem;
     margin-bottom: 18px;
-    box-shadow: 0 6px 15px rgba(245, 158, 11, 0.3);
 }
 
-/* =========================================
-   SECCIÓN DE CONFIANZA & ADAPTABILIDAD
-   ========================================= */
-.trust-banner {
-    background-color: var(--secondary-color);
+/* -- CARA TRASERA (GIRO 180°) -- */
+.card-back {
+    background-color: var(--primary-color);
     color: var(--white);
-    padding: 80px 0;
+    transform: rotateY(180deg); /* Ya está volteada */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 40px 30px;
+    border: 2px solid var(--accent-gold);
 }
 
-.trust-content h2 {
-    font-size: 2.2rem;
-    margin-bottom: 50px;
-    color: var(--white);
-}
-
-.trust-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.trust-item {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 35px 25px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: var(--transition);
-}
-
-.trust-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-5px);
-}
-
-.trust-item i {
-    font-size: 2.5rem;
+.back-icon {
+    font-size: 4rem;
     color: var(--accent-gold);
     margin-bottom: 20px;
 }
 
-.trust-item h4 {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
+.card-back h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--white);
 }
 
-.trust-item p {
+.card-back p {
+    font-size: 1rem;
     color: #cbd5e1;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.btn-card-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--whatsapp);
+    color: var(--white);
+    padding: 14px 25px;
+    width: 100%;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    transition: var(--transition);
+}
+
+.btn-card-whatsapp:hover {
+    background-color: var(--whatsapp-dark);
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* =========================================
+   SECCIÓN DE COMENTARIOS Y SUGERENCIAS
+   ========================================= */
+.comments-section {
+    padding: 90px 0;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    position: relative;
+}
+
+/* Decoración de fondo simple CSS */
+.comments-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(circle at right top, rgba(245, 158, 11, 0.05), transparent 40%);
+    pointer-events: none;
+}
+
+.comments-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.comments-info h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--accent-gold);
+}
+
+.comments-info p {
+    font-size: 1.1rem;
+    color: #e2e8f0;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.comments-benefits {
+    list-style: none;
+}
+
+.comments-benefits li {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.comments-benefits i {
+    color: var(--whatsapp);
+    font-size: 1.2rem;
+}
+
+/* Formulario */
+.comments-form-container {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    color: var(--primary-color);
+    font-weight: 600;
     font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+    background-color: var(--white);
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 10px;
+    padding: 16px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
 }
 
 /* =========================================
@@ -550,6 +679,20 @@ footer {
 }
 
 /* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .comments-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .comments-info {
+        text-align: center;
+    }
+
+    .comments-benefits li {
+        justify-content: center;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-content {
         flex-direction: column;
@@ -570,6 +713,14 @@ footer {
 
     .featured-grid, .services-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .card {
+        height: 520px; /* Un poco más alto para móviles por el texto */
+    }
+
+    .comments-form-container {
+        padding: 25px;
     }
 
     .footer-top {
