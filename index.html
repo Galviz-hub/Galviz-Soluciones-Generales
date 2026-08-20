@@ -47,62 +47,6 @@
     <link rel="stylesheet" href="staly.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* ACORDEÓN 100% CSS PURO (Mediante Checkbox Oculto) */
-        .faq-item input[type="checkbox"] {
-            display: none;
-        }
-
-        .faq-item label {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 25px;
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            cursor: pointer;
-            background: var(--bg-light);
-            border-radius: 12px;
-            transition: var(--transition);
-        }
-
-        .faq-item label i {
-            color: var(--accent-gold);
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item input[type="checkbox"]:checked + label {
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            background: #f1f5f9;
-        }
-
-        .faq-item input[type="checkbox"]:checked + label i {
-            transform: rotate(180deg);
-        }
-
-        .faq-content-box {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-            background: var(--bg-light);
-            border-bottom-left-radius: 12px;
-            border-bottom-right-radius: 12px;
-            padding: 0 25px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .faq-item input[type="checkbox"]:checked ~ .faq-content-box {
-            max-height: 250px;
-            padding: 0 25px 20px 25px;
-            border: 1px solid #e2e8f0;
-            border-top: none;
-        }
-    </style>
 </head>
 <body>
 
@@ -115,7 +59,8 @@
                 <span><i class="fa-solid fa-certificate"></i> RNP Vigente</span>
             </div>
             <div>
-                <span><i class="fa-solid fa-location-dot" style="color: var(--accent-gold);"></i> Tumbes, Perú</span>
+                <span><i class="fa-solid fa-envelope" style="color: var(--accent-gold);"></i> contacto@solucionesgeneralesgalviz.com</span>
+                <span style="margin-left: 15px;"><i class="fa-solid fa-location-dot" style="color: var(--accent-gold);"></i> Tumbes, Perú</span>
             </div>
         </div>
     </div>
@@ -223,7 +168,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) - HTML Y CSS PURO -->
+    <!-- SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) -->
     <section class="faq-section">
         <div class="container">
             <div class="section-header">
@@ -232,7 +177,6 @@
             </div>
             
             <div class="faq-container">
-                <!-- Pregunta 1 -->
                 <div class="faq-item">
                     <input type="checkbox" id="faq1">
                     <label for="faq1">
@@ -244,7 +188,6 @@
                     </div>
                 </div>
 
-                <!-- Pregunta 2 -->
                 <div class="faq-item">
                     <input type="checkbox" id="faq2">
                     <label for="faq2">
@@ -256,7 +199,6 @@
                     </div>
                 </div>
 
-                <!-- Pregunta 3 -->
                 <div class="faq-item">
                     <input type="checkbox" id="faq3">
                     <label for="faq3">
@@ -268,7 +210,6 @@
                     </div>
                 </div>
 
-                <!-- Pregunta 4 -->
                 <div class="faq-item">
                     <input type="checkbox" id="faq4">
                     <label for="faq4">
@@ -283,6 +224,69 @@
         </div>
     </section>
 
+    <!-- SECCIÓN DE FORMULARIO DE COTIZACIÓN -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Solicita tu Cotización Formal</h2>
+                <p>Déjanos tus datos y los detalles de tu proyecto. Nuestro equipo analizará tu requerimiento y te enviaremos una propuesta a medida.</p>
+            </div>
+            
+            <div class="contact-container">
+                <form action="https://formsubmit.co/contacto@solucionesgeneralesgalviz.com" method="POST" enctype="multipart/form-data" class="contact-form">
+                    
+                    <input type="hidden" name="_subject" value="Nueva Solicitud de Cotización (Con Archivo) - Web Galviz">
+                    <input type="hidden" name="_next" value="https://galviz-hub.github.io/Galviz-Soluciones-Generales/index.html">
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre de Contacto o Empresa *</label>
+                        <input type="text" id="nombre" name="Nombre" class="form-control" placeholder="Ej. Juan Pérez - Minera ABC" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico *</label>
+                        <input type="email" id="correo" name="Email" class="form-control" placeholder="tucorreo@empresa.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono / WhatsApp *</label>
+                        <input type="tel" id="telefono" name="Teléfono" class="form-control" placeholder="+51 999 999 999" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servicio">¿Qué servicio deseas cotizar? *</label>
+                        <select id="servicio" name="Servicio Solicitado" class="form-control" required>
+                            <option value="" disabled selected>Selecciona una opción...</option>
+                            <option value="Eventos y Catering">Organización de Eventos y Catering</option>
+                            <option value="Limpieza y Mantenimiento">Limpieza Corporativa y Mantenimiento</option>
+                            <option value="Drywall y Electricidad">Drywall, Pintura y Electricidad</option>
+                            <option value="SST y Ambiental">Consultoría SST y Gestión Ambiental</option>
+                            <option value="Logística y Transporte">Logística, Fletes y Transporte</option>
+                            <option value="Outsourcing y Asesoría">Outsourcing y Asesoría Contable</option>
+                            <option value="Marketing Digital y TI">Marketing Digital y Soporte TI</option>
+                            <!-- OPCIÓN ACTUALIZADA CON TONO FORMAL -->
+                            <option value="Proyectos Especiales">Proyectos Especiales y Soluciones a Medida</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Detalles de tu solicitud *</label>
+                        <textarea id="mensaje" name="Mensaje" class="form-control" placeholder="Indícanos detalles relevantes para preparar tu propuesta..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="archivoAdjunto">Adjuntar documento o plano (Opcional, Máx. 15MB)</label>
+                        <input type="file" id="archivoAdjunto" name="Archivo Adjunto" class="form-control" accept=".pdf, .doc, .docx, .xls, .xlsx, .jpg, .png">
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-solid fa-paper-plane"></i> Enviar Solicitud de Cotización
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Pie de página -->
     <footer id="contacto">
         <div class="container footer-container">
@@ -292,6 +296,7 @@
                     <p>Conectamos visiones, transformamos entornos y elevamos tus eventos.</p>
                     <p style="margin-top: 10px;"><i class="fa-solid fa-location-dot" style="color: var(--accent-gold);"></i> Sede Central: Tumbes, Perú (Cobertura Nacional)</p>
                     <p><i class="fa-solid fa-phone" style="color: var(--accent-gold);"></i> +51 941 637 862</p>
+                    <p><i class="fa-solid fa-envelope" style="color: var(--accent-gold);"></i> contacto@solucionesgeneralesgalviz.com</p>
                 </div>
                 <div class="footer-info">
                     <h4 style="color: var(--white); margin-bottom: 10px;">Transparencia Corporativa</h4>
