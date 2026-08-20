@@ -42,7 +42,43 @@ body {
 }
 
 /* =========================================
-   ENCABEZADO Y NAVEGACIÓN
+   BARRA SUPERIOR DE CONFIANZA (TOP BAR)
+   ========================================= */
+.top-trust-bar {
+    background-color: #060913;
+    border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+    padding: 10px 0;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+
+.top-trust-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.top-trust-items {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.top-trust-items span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top-trust-items i {
+    color: var(--accent-gold);
+}
+
+/* =========================================
+   ENCABEZADO Y NAVEGACIÓN (7 OPCIONES)
    ========================================= */
 .navbar {
     background-color: var(--primary-color);
@@ -83,7 +119,7 @@ body {
     gap: 25px;
 }
 
-.menu a {
+.menu > a, .dropdown > a {
     text-decoration: none;
     color: #cbd5e1;
     font-weight: 500;
@@ -91,8 +127,56 @@ body {
     transition: var(--transition);
 }
 
-.menu a:hover {
+.menu > a:hover, .dropdown:hover > a {
     color: var(--accent-gold);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    background-color: var(--primary-color);
+    min-width: 330px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 1000;
+    border-top: 4px solid var(--accent-gold);
+    padding: 10px 0;
+}
+
+.dropdown-content a {
+    color: #cbd5e1;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.93rem;
+    transition: var(--transition);
+    margin: 0 !important;
+}
+
+.dropdown-content a i {
+    color: var(--accent-gold);
+    font-size: 1.1rem;
+    width: 22px;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+    padding-left: 26px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .btn-nav {
@@ -109,7 +193,7 @@ body {
 }
 
 /* =========================================
-   SECCIÓN HERO DINÁMICA
+   SECCIÓN HERO (PRINCIPAL Y BANNERS)
    ========================================= */
 .hero {
     position: relative;
@@ -129,7 +213,7 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 850px;
+    max-width: 900px;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -149,10 +233,11 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .hero-content h1 span {
@@ -217,7 +302,7 @@ body {
 }
 
 /* =========================================
-   ESTRUCTURA DE SECCIONES DE SERVICIOS
+   EFECTO DE TARJETAS FLIP (GIRO 3D)
    ========================================= */
 .section-header {
     text-align: center;
@@ -248,29 +333,12 @@ body {
     gap: 35px;
 }
 
-.services-section {
-    padding: 80px 0 100px;
-    background-color: var(--bg-light);
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-/* =========================================
-   EFECTO DE TARJETAS FLIP (GIRO 3D)
-   ========================================= */
-
-/* Contenedor principal de la tarjeta: aporta perspectiva */
 .card {
     background-color: transparent;
     perspective: 1500px;
-    height: 480px; /* Altura fija necesaria para el flip */
+    height: 480px;
 }
 
-/* Contenedor interno: maneja la rotación */
 .card-inner {
     position: relative;
     width: 100%;
@@ -280,24 +348,21 @@ body {
     transform-style: preserve-3d;
 }
 
-/* Activa el giro de 180 grados en Y al hacer hover */
 .card:hover .card-inner {
     transform: rotateY(180deg);
 }
 
-/* Configuración común para el frente y la parte de atrás */
 .card-front, .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; 
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* -- CARA FRONTAL -- */
 .card-front {
     background: var(--card-bg);
     border: 1px solid rgba(226, 232, 240, 0.8);
@@ -325,12 +390,6 @@ body {
     flex-grow: 1;
 }
 
-.card-icon {
-    font-size: 2rem;
-    color: var(--accent-blue);
-    margin-bottom: 15px;
-}
-
 .card-front h3 {
     font-size: 1.35rem;
     color: var(--primary-color);
@@ -344,7 +403,6 @@ body {
     line-height: 1.5;
 }
 
-/* Estilos especiales para servicios destacados (Frente) */
 .card-featured {
     border: 2px solid rgba(245, 158, 11, 0.3);
     background: linear-gradient(180deg, #ffffff 0%, #fffdfa 100%);
@@ -376,11 +434,10 @@ body {
     margin-bottom: 18px;
 }
 
-/* -- CARA TRASERA (GIRO 180°) -- */
 .card-back {
     background-color: var(--primary-color);
     color: var(--white);
-    transform: rotateY(180deg); /* Ya está volteada */
+    transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -433,116 +490,7 @@ body {
 }
 
 /* =========================================
-   SECCIÓN DE COMENTARIOS Y SUGERENCIAS
-   ========================================= */
-.comments-section {
-    padding: 90px 0;
-    background-color: var(--secondary-color);
-    color: var(--white);
-    position: relative;
-}
-
-/* Decoración de fondo simple CSS */
-.comments-section::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-image: radial-gradient(circle at right top, rgba(245, 158, 11, 0.05), transparent 40%);
-    pointer-events: none;
-}
-
-.comments-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.comments-info h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: var(--accent-gold);
-}
-
-.comments-info p {
-    font-size: 1.1rem;
-    color: #e2e8f0;
-    margin-bottom: 30px;
-    line-height: 1.7;
-}
-
-.comments-benefits {
-    list-style: none;
-}
-
-.comments-benefits li {
-    font-size: 1.05rem;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.comments-benefits i {
-    color: var(--whatsapp);
-    font-size: 1.2rem;
-}
-
-/* Formulario */
-.comments-form-container {
-    background-color: var(--white);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-.contact-form .form-group {
-    margin-bottom: 20px;
-}
-
-.contact-form label {
-    display: block;
-    color: var(--primary-color);
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-    width: 100%;
-    padding: 14px 18px;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.95rem;
-    color: var(--text-dark);
-    background-color: var(--bg-light);
-    transition: var(--transition);
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--accent-blue);
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
-    background-color: var(--white);
-}
-
-.btn-submit {
-    width: 100%;
-    margin-top: 10px;
-    padding: 16px;
-    font-size: 1.1rem;
-    display: flex;
-    justify-content: center;
-}
-
-/* =========================================
-   PIE DE PÁGINA (FOOTER)
+   PIE DE PÁGINA Y WHATSAPP FLOTANTE
    ========================================= */
 footer {
     background-color: var(--primary-color);
@@ -580,11 +528,6 @@ footer {
     color: var(--accent-gold);
 }
 
-.footer-cta h4 {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-}
-
 .footer-divider {
     border: 0;
     height: 1px;
@@ -609,9 +552,6 @@ footer {
     font-size: 0.85rem;
 }
 
-/* =========================================
-   BOTÓN FLOTANTE WHATSAPP
-   ========================================= */
 .whatsapp-btn {
     position: fixed;
     bottom: 30px;
@@ -671,64 +611,18 @@ footer {
     transform: translateX(0);
 }
 
-/* ANIMACIONES */
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
     70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 992px) {
-    .comments-wrapper {
-        grid-template-columns: 1fr;
-    }
-    
-    .comments-info {
-        text-align: center;
-    }
-
-    .comments-benefits li {
-        justify-content: center;
-    }
-}
-
 @media (max-width: 768px) {
-    .nav-content {
-        flex-direction: column;
-        height: auto;
-        padding: 15px 0;
-    }
-
-    .menu {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-
-    .featured-grid, .services-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .card {
-        height: 520px; /* Un poco más alto para móviles por el texto */
-    }
-
-    .comments-form-container {
-        padding: 25px;
-    }
-
-    .footer-top {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-phrase {
-        font-size: 1.1rem;
-    }
+    .nav-content { flex-direction: column; height: auto; padding: 15px 0; }
+    .menu { margin-top: 15px; flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .hero-content h1 { font-size: 2.3rem; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .card { height: 520px; }
+    .top-trust-content { justify-content: center; text-align: center; }
+    .top-trust-items { justify-content: center; gap: 15px; }
 }

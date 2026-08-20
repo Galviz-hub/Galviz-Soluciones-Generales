@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Optimizado para la sección Nosotros / Legal -->
+    <title>Nosotros y Respaldo Legal | Galviz Soluciones Generales S.A.C.S.</title>
+    <meta name="description" content="Conoce la historia, misión, visión y respaldo legal de Galviz Soluciones Generales S.A.C.S. RUC: 20614802929. Proveedores formales (RNP) en Tumbes y el Perú.">
+    
+    <!-- Enlace al CSS global -->
+    <link rel="stylesheet" href="staly.css">
+    <!-- Fuentes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos específicos de la página Nosotros -->
+    <style>
+        .page-header { 
+            background: linear-gradient(rgba(11, 19, 43, 0.85), rgba(11, 19, 43, 0.95)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80') center/cover; 
+            padding: 160px 0 80px; 
+            text-align: center; 
+            color: white; 
+        }
+        .page-header h1 { font-size: 3rem; color: var(--accent-gold); margin-bottom: 15px; }
+        .page-header p { font-size: 1.1rem; color: #cbd5e1; max-width: 600px; margin: 0 auto; }
+        
+        .about-section { padding: 80px 0; background: #fff; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-text h2 { color: var(--primary-color); font-size: 2.2rem; margin-bottom: 20px; }
+        .about-text h2 span { color: var(--accent-gold); }
+        .about-text p { font-size: 1.05rem; color: #475569; margin-bottom: 20px; line-height: 1.8; }
+        .about-image img { width: 100%; border-radius: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        
+        .mv-section { padding: 80px 0; background: #f8fafc; }
+        .mv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .mv-card { 
+            background: white; 
+            padding: 50px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+            text-align: center; 
+            border-bottom: 4px solid var(--accent-gold); 
+            transition: transform 0.3s;
+        }
+        .mv-card:hover { transform: translateY(-5px); }
+        .mv-card i { font-size: 3rem; color: var(--accent-blue); margin-bottom: 20px; }
+        .mv-card h3 { color: var(--primary-color); font-size: 1.8rem; margin-bottom: 15px; }
+        .mv-card p { color: #64748b; font-size: 1.05rem; line-height: 1.7; }
+
+        .legal-section { padding: 90px 0; background: var(--secondary-color); color: white; text-align: center; position: relative; }
+        .legal-section h2 { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 20px; }
+        .legal-section p.subtitle { font-size: 1.1rem; margin-bottom: 50px; color: #cbd5e1; max-width: 700px; margin-inline: auto; line-height: 1.6; }
+        .legal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .legal-card { 
+            background: rgba(255,255,255,0.05); 
+            border: 1px solid rgba(255,255,255,0.1); 
+            padding: 40px 30px; 
+            border-radius: 15px; 
+            transition: all 0.3s; 
+            text-align: left;
+        }
+        .legal-card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.08); border-color: var(--accent-gold); }
+        .legal-card i { font-size: 2.5rem; color: var(--whatsapp); margin-bottom: 20px; display: block; }
+        .legal-card h4 { font-size: 1.25rem; margin-bottom: 15px; color: #fff; }
+        .legal-card p { font-size: 0.95rem; color: #94a3b8; margin-bottom: 10px; line-height: 1.5; }
+        
+        .btn-download { 
+            display: inline-block; 
+            margin-top: 20px; 
+            padding: 10px 20px; 
+            background: transparent; 
+            border: 1px solid var(--accent-gold); 
+            color: var(--accent-gold); 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            font-weight: 500;
+            transition: var(--transition); 
+        }
+        .btn-download:hover { background: var(--accent-gold); color: var(--primary-color); }
+        
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .page-header { padding: 120px 0 60px; }
+            .page-header h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado y Navegación con Menú Desplegable -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-layer-group"></i> GALVIZ <span>Soluciones</span>
+            </a>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html" style="color: var(--accent-gold); font-weight: 600;">Nosotros / Legal</a>
+                
+                <!-- Menú desplegable conectado a las futuras subpáginas de servicios -->
+                <div class="dropdown">
+                    <a href="servicios-generales.html">Servicios <i class="fa-solid fa-angle-down" style="font-size: 0.8rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="eventos-catering.html"><i class="fa-solid fa-glass-cheers"></i> Eventos & Catering</a>
+                        <a href="servicio-limpieza-mantenimiento.html"><i class="fa-solid fa-broom"></i> Limpieza y Mantenimiento</a>
+                        <a href="servicio-drywall-construccion.html"><i class="fa-solid fa-hammer"></i> Drywall, Pintura y Electricidad</a>
+                        <a href="servicio-sst-ambiental.html"><i class="fa-solid fa-helmet-safety"></i> Consultoría SST y Ambiental</a>
+                        <a href="servicio-logistica-transporte.html"><i class="fa-solid fa-truck-fast"></i> Logística y Transportes</a>
+                        <a href="servicio-outsourcing-asesoria.html"><i class="fa-solid fa-users-gear"></i> Outsourcing y Asesoría</a>
+                        <a href="servicio-marketing-ti.html"><i class="fa-solid fa-laptop-code"></i> Marketing Digital y TI</a>
+                    </div>
+                </div>
+
+                <a href="#contacto" class="btn-nav">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner de la Página -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Nuestra Identidad y Respaldo</h1>
+            <p>Conoce a Galviz Soluciones Generales S.A.C.S. Transparencia, legalidad y excelencia operativa desde Tumbes para todo el Perú.</p>
+        </div>
+    </section>
+
+    <!-- Sección Quiénes Somos -->
+    <section class="about-section">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2>Quiénes <span>Somos</span></h2>
+                <p><strong>Galviz Soluciones Generales S.A.C.S.</strong> es una empresa sólidamente constituida en la ciudad de Tumbes, con una visión expansiva e infraestructura operativa que nos permite brindar atención tanto a personas naturales como a grandes corporaciones en todo el territorio nacional.</p>
+                <p>Nacimos con el propósito de centralizar múltiples necesidades operativas y creativas en un solo proveedor de confianza. Nuestro equipo multidisciplinario gestiona integralmente desde la producción de eventos sociales y corporativos, hasta la logística, mantenimiento, consultoría ambiental y seguridad ocupacional (SST).</p>
+                <p>No somos solo proveedores; somos <strong>aliados estratégicos</strong> diseñados para proteger, potenciar y facilitar las operaciones de nuestros clientes, garantizando el fiel cumplimiento de la normativa legal peruana.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1000&q=80" alt="Equipo Galviz Soluciones Generales S.A.C.S.">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Misión y Visión -->
+    <section class="mv-section">
+        <div class="container mv-grid">
+            <div class="mv-card">
+                <i class="fa-solid fa-bullseye"></i>
+                <h3>Nuestra Misión</h3>
+                <p>Brindar soluciones integrales y eficientes a hogares, empresas e instituciones, optimizando sus recursos a través de servicios especializados de organización de eventos, logística, mantenimiento y SST. Nos comprometemos a trabajar con innovación, ética y responsabilidad socioambiental.</p>
+            </div>
+            <div class="mv-card">
+                <i class="fa-solid fa-eye"></i>
+                <h3>Nuestra Visión</h3>
+                <p>Ser reconocidos como la empresa referente en servicios integrales y organización de eventos en el norte y todo el Perú. Destacándonos por nuestra solidez corporativa, el profesionalismo de nuestro talento humano y nuestra capacidad para resolver cualquier desafío.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Confianza Legal B2B y B2C -->
+    <section class="legal-section">
+        <div class="container">
+            <h2>Transparencia y Respaldo Corporativo</h2>
+            <p class="subtitle">Entendemos que la confianza es fundamental. Contamos con todos los registros y habilitaciones vigentes exigidos por la ley para contratar de forma segura.</p>
+            
+            <div class="legal-grid">
+                <!-- Tarjeta RUC -->
+                <div class="legal-card">
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <h4>RUC: 20614802929</h4>
+                    <p><strong>Razón Social:</strong> Galviz Soluciones Generales S.A.C.S.</p>
+                    <p><strong>Estado:</strong> Activo</p>
+                    <p><strong>Condición:</strong> Habido</p>
+                    <p><strong>Domicilio Fiscal:</strong> Tumbes, Perú</p>
+                </div>
+                
+                <!-- Tarjeta RNP -->
+                <div class="legal-card">
+                    <i class="fa-solid fa-certificate"></i>
+                    <h4>Registro Nacional de Proveedores (RNP)</h4>
+                    <p>Inscripción totalmente vigente en el capítulo de Bienes y Servicios. Proveedores formales habilitados para contrataciones estatales y privadas.</p>
+                    <a href="https://wa.me/51941637862?text=Hola,%20deseo%20solicitar%20información%20sobre%20su%20constancia%20RNP." target="_blank" class="btn-download"><i class="fa-solid fa-download"></i> Solicitar Constancia</a>
+                </div>
+                
+                <!-- Tarjeta Cumplimiento -->
+                <div class="legal-card">
+                    <i class="fa-solid fa-building-shield"></i>
+                    <h4>Cumplimiento Legal y Garantía</h4>
+                    <p>Emitimos boletas y facturas electrónicas. Operamos bajo estrictos estándares de seguridad y calidad, asegurando total tranquilidad en cada servicio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer id="contacto">
+        <div class="container footer-container">
+            <div class="footer-top" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;">
+                <div class="footer-info">
+                    <h3>GALVIZ Soluciones Generales S.A.C.S.</h3>
+                    <p>Conectamos visiones, transformamos entornos y elevamos tus eventos.</p>
+                    <p style="margin-top: 10px;"><i class="fa-solid fa-location-dot" style="color: var(--accent-gold);"></i> Sede Central: Tumbes, Perú (Cobertura Nacional)</p>
+                    <p><i class="fa-solid fa-phone" style="color: var(--accent-gold);"></i> +51 941 637 862</p>
+                </div>
+                <div class="footer-info">
+                    <h4 style="color: var(--white); margin-bottom: 10px;">Transparencia Corporativa</h4>
+                    <p><i class="fa-solid fa-file-invoice"></i> <strong>RUC:</strong> 20614802929</p>
+                    <p><i class="fa-solid fa-certificate"></i> RNP Vigente (Facturas y Boletas)</p>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            <p class="footer-phrase">
+                "Conectamos visiones, transformamos entornos y elevamos tus eventos. Galviz: tu aliado integral para hacer posible lo extraordinario."
+            </p>
+            <p class="copyright">&copy; 2026 Galviz Soluciones Generales S.A.C.S. Todos los derechos reservados. | RUC: 20614802929</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/51941637862?text=Hola!%20Me%20gustaria%20recibir%20informacion%20de%20sus%20servicios" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar a Galviz por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="tooltip">¡Habla con nosotros!</span>
+    </a>
+
+</body>
+</html>

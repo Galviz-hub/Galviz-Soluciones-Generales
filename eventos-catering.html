@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Altamente optimizado para Google -->
+    <title>Organización de Eventos y Catering en Tumbes | Galviz Soluciones</title>
+    <meta name="description" content="Planificamos bodas, quinceañeros, cumpleaños y eventos corporativos. Servicio de catering premium, coffee breaks y banquetes en Tumbes y todo el Perú. Cotiza aquí.">
+    <meta name="keywords" content="organización de eventos Tumbes, bodas en Tumbes, catering Tumbes, coffee break corporativo, banquetes y fiestas Perú">
+    
+    <!-- Enlace al CSS global -->
+    <link rel="stylesheet" href="staly.css">
+    <!-- Fuentes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos específicos de Eventos -->
+    <style>
+        .events-hero { 
+            background: linear-gradient(rgba(11, 19, 43, 0.75), rgba(11, 19, 43, 0.9)), url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80') center/cover; 
+            padding: 180px 0 100px; 
+            text-align: center; 
+            color: white; 
+        }
+        .events-hero h1 { font-size: 3.5rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; }
+        .events-hero h1 span { color: var(--accent-gold); font-style: italic; text-transform: none; }
+        .events-hero p { font-size: 1.2rem; color: #e2e8f0; max-width: 700px; margin: 0 auto 30px; line-height: 1.8; }
+
+        .pillars-section { padding: 90px 0; background: #f8fafc; }
+        .pillars-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        
+        .pillar-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 500px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease;
+        }
+        .pillar-card:hover { transform: translateY(-10px); }
+        .pillar-img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .pillar-card:hover .pillar-img { transform: scale(1.1); }
+        .pillar-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11,19,43,0.95) 0%, rgba(11,19,43,0.4) 50%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 40px; color: white;
+        }
+        .pillar-overlay h2 { font-size: 2.2rem; margin-bottom: 10px; color: var(--accent-gold); }
+        .pillar-overlay p { font-size: 1rem; margin-bottom: 20px; color: #cbd5e1; line-height: 1.6; }
+        .pillar-overlay ul { list-style: none; margin-bottom: 25px; }
+        .pillar-overlay ul li { margin-bottom: 8px; font-size: 0.95rem; }
+        .pillar-overlay ul li i { color: var(--accent-gold); margin-right: 10px; }
+        
+        .catering-section { padding: 90px 0; background: var(--secondary-color); color: white; }
+        .catering-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .catering-text h2 { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 20px; }
+        .catering-text p { font-size: 1.1rem; color: #cbd5e1; margin-bottom: 20px; line-height: 1.8; }
+        .catering-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .catering-gallery img { width: 100%; height: 210px; object-fit: cover; border-radius: 10px; border: 2px solid rgba(255,255,255,0.1); transition: transform 0.3s; }
+        .catering-gallery img:hover { transform: scale(1.03); }
+
+        .process-section { padding: 90px 0; background: white; text-align: center; }
+        .process-section h2 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 50px; }
+        .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .process-step { padding: 30px; }
+        .process-icon { 
+            width: 80px; height: 80px; 
+            background: var(--accent-gold); color: var(--primary-color); 
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+            font-size: 2rem; margin: 0 auto 20px; 
+            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+        }
+        .process-step h3 { font-size: 1.5rem; color: var(--primary-color); margin-bottom: 15px; }
+        .process-step p { color: var(--text-muted); line-height: 1.6; }
+
+        @media (max-width: 992px) {
+            .pillars-grid, .catering-grid, .process-grid { grid-template-columns: 1fr; }
+            .events-hero h1 { font-size: 2.5rem; }
+            .pillar-card { height: auto; min-height: 450px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado y Navegación con Menú Desplegable -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-layer-group"></i> GALVIZ <span>Soluciones</span>
+            </a>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros / Legal</a>
+                
+                <!-- Menú Desplegable de Servicios -->
+                <div class="dropdown">
+                    <a href="servicios-generales.html" style="color: var(--accent-gold); font-weight: 600;">Servicios <i class="fa-solid fa-angle-down" style="font-size: 0.8rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="eventos-catering.html" style="color: var(--accent-gold);"><i class="fa-solid fa-glass-cheers"></i> Eventos & Catering</a>
+                        <a href="servicio-limpieza-mantenimiento.html"><i class="fa-solid fa-broom"></i> Limpieza y Mantenimiento</a>
+                        <a href="servicio-drywall-construccion.html"><i class="fa-solid fa-hammer"></i> Drywall, Pintura y Electricidad</a>
+                        <a href="servicio-sst-ambiental.html"><i class="fa-solid fa-helmet-safety"></i> Consultoría SST y Ambiental</a>
+                        <a href="servicio-logistica-transporte.html"><i class="fa-solid fa-truck-fast"></i> Logística y Transportes</a>
+                        <a href="servicio-outsourcing-asesoria.html"><i class="fa-solid fa-users-gear"></i> Outsourcing y Asesoría</a>
+                        <a href="servicio-marketing-ti.html"><i class="fa-solid fa-laptop-code"></i> Marketing Digital y TI</a>
+                    </div>
+                </div>
+
+                <a href="#contacto" class="btn-nav">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="events-hero">
+        <div class="container">
+            <h1>Llevamos tus ideas a la <span>Realidad</span></h1>
+            <p>Diseñamos, planificamos y ejecutamos eventos memorables en Tumbes y todo el Perú. Desde la boda de tus sueños hasta la convención corporativa más exigente.</p>
+            <a href="https://wa.me/51941637862?text=Hola,%20deseo%20planificar%20un%20evento%20con%20ustedes." target="_blank" class="btn-primary" style="font-size: 1.1rem; padding: 15px 30px;">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Empieza a Planificar
+            </a>
+        </div>
+    </section>
+
+    <!-- Pilares: B2C (Sociales) y B2B (Corporativos) -->
+    <section class="pillars-section">
+        <div class="container pillars-grid">
+            
+            <!-- Eventos Sociales (Personas Naturales) -->
+            <div class="pillar-card">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80" alt="Organización de Bodas y Eventos Sociales en Tumbes" class="pillar-img">
+                <div class="pillar-overlay">
+                    <h2>Eventos Sociales</h2>
+                    <p>Creamos atmósferas mágicas para celebrar los momentos más importantes de tu vida. Cuidamos cada detalle estético y logístico.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-ring"></i> Bodas de Ensueño & Aniversarios</li>
+                        <li><i class="fa-solid fa-cake-candles"></i> Cumpleaños, Quinceañeros & Bautizos</li>
+                        <li><i class="fa-solid fa-masks-theater"></i> Fiestas Privadas & Reuniones Familiares</li>
+                    </ul>
+                    <a href="https://wa.me/51941637862?text=Hola,%20deseo%20cotizar%20un%20evento%20social%20o%20boda." target="_blank" class="btn-primary" style="align-self: flex-start; padding: 10px 20px; font-size: 0.9rem;">Cotizar mi Evento</a>
+                </div>
+            </div>
+
+            <!-- Eventos Corporativos (Empresas) -->
+            <div class="pillar-card">
+                <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80" alt="Eventos Corporativos y Congresos" class="pillar-img">
+                <div class="pillar-overlay">
+                    <h2>Eventos Corporativos</h2>
+                    <p>Refleja el prestigio de tu marca. Organizamos eventos empresariales con rigurosa formalidad, tecnología y protocolo impecable.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-handshake"></i> Congresos, Convenciones y Seminarios</li>
+                        <li><i class="fa-solid fa-rocket"></i> Lanzamiento de Marcas y Productos</li>
+                        <li><i class="fa-solid fa-champagne-glasses"></i> Cenas de Gala y Fiestas de Fin de Año</li>
+                    </ul>
+                    <a href="https://wa.me/51941637862?text=Hola,%20deseo%20cotizar%20un%20evento%20corporativo." target="_blank" class="btn-primary" style="align-self: flex-start; padding: 10px 20px; font-size: 0.9rem;">Cotizar Evento Empresa</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Catering & Coffee Break -->
+    <section class="catering-section">
+        <div class="container catering-grid">
+            <div class="catering-text">
+                <h2>Catering, Banquetes & Coffee Break</h2>
+                <p>Un evento extraordinario merece sabores inolvidables. Nuestro servicio de catering combina gastronomía de alta calidad con una presentación sofisticada y puntual.</p>
+                <p>Ofrecemos servicio llave en mano que incluye personal calificado (chefs, mozos, barman) y mobiliario completo (menaje, estaciones de bebidas, toldos y mesas).</p>
+                <ul style="list-style: none; margin-top: 20px; color: var(--accent-gold); font-weight: 500;">
+                    <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"></i> Coffee Breaks Corporativos y Ejecutivos</li>
+                    <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"></i> Almuerzos y Cenas Buffet</li>
+                    <li style="margin-bottom: 10px;"><i class="fa-solid fa-check"></i> Estaciones de Bocaditos, Coctelería y Menús Dietéticos</li>
+                </ul>
+            </div>
+            <div class="catering-gallery">
+                <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&q=80" alt="Catering Buffet Tumbes">
+                <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&q=80" alt="Cena de Gala Corporativa">
+                <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&q=80" alt="Bocaditos y Aperitivos">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80" alt="Montaje de Eventos">
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodología en 3 Pasos -->
+    <section class="process-section">
+        <div class="container">
+            <h2>Nuestra Metodología de Trabajo</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-icon"><i class="fa-solid fa-ear-listen"></i></div>
+                    <h3>1. Escuchamos tu Visión</h3>
+                    <p>Nos reunimos contigo para entender tus ideas, gustos, presupuesto y objetivos. Tú pones los sueños, nosotros la estrategia.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <h3>2. Diseño y Planificación</h3>
+                    <p>Creamos un plan a medida: selección de locación, ambientación temática, propuesta gastronómica y cronograma detallado.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon"><i class="fa-solid fa-face-smile-beam"></i></div>
+                    <h3>3. Ejecución sin Estrés</h3>
+                    <p>Nuestro equipo coordina toda la logística en el día central. Tu única preocupación será disfrutar al máximo con tus invitados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer id="contacto">
+        <div class="container footer-container">
+            <div class="footer-top" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;">
+                <div class="footer-info">
+                    <h3>GALVIZ Soluciones Generales S.A.C.S.</h3>
+                    <p>Conectamos visiones, transformamos entornos y elevamos tus eventos.</p>
+                    <p style="margin-top: 10px;"><i class="fa-solid fa-location-dot" style="color: var(--accent-gold);"></i> Sede Central: Tumbes, Perú (Cobertura Nacional)</p>
+                    <p><i class="fa-solid fa-phone" style="color: var(--accent-gold);"></i> +51 941 637 862</p>
+                </div>
+                <div class="footer-info">
+                    <h4 style="color: var(--white); margin-bottom: 10px;">Transparencia Corporativa</h4>
+                    <p><i class="fa-solid fa-file-invoice"></i> <strong>RUC:</strong> 20614802929</p>
+                    <p><i class="fa-solid fa-certificate"></i> RNP Vigente (Facturas y Boletas)</p>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            <p class="footer-phrase">
+                "Conectamos visiones, transformamos entornos y elevamos tus eventos. Galviz: tu aliado integral para hacer posible lo extraordinario."
+            </p>
+            <p class="copyright">&copy; 2026 Galviz Soluciones Generales S.A.C.S. Todos los derechos reservados. | RUC: 20614802929</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/51941637862?text=Hola!%20Me%20gustaria%20recibir%20informacion%20sobre%20eventos%20y%20catering" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar a Galviz por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="tooltip">¡Habla con nosotros!</span>
+    </a>
+
+</body>
+</html>

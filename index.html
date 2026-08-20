@@ -3,78 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galviz Soluciones Generales S.A.C.S. | Eventos & Servicios Integrales</title>
-    <!-- CSS Principal -->
+    
+    <!-- ========================================== -->
+    <!-- OPTIMIZACIÓN SEO (POSICIONAMIENTO GOOGLE)  -->
+    <!-- ========================================== -->
+    <title>Galviz Soluciones Generales S.A.C.S. | Eventos y Servicios en Tumbes</title>
+    <meta name="description" content="Empresa líder en Tumbes, Perú. Organización de eventos, catering, limpieza, mantenimiento, drywall, electricidad y consultoría SST. RUC: 20614802929. ¡Cotiza hoy!">
+    <meta name="keywords" content="Eventos Tumbes, Catering Tumbes, Limpieza de oficinas Tumbes, Mantenimiento Tumbes, Drywall Tumbes, Seguridad y Salud en el Trabajo Tumbes, Servicios Generales Perú, Galviz Soluciones">
+    <meta name="author" content="Galviz Soluciones Generales S.A.C.S.">
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO para Redes Sociales (Facebook, WhatsApp) -->
+    <meta property="og:title" content="Galviz Soluciones Generales S.A.C.S. | Tumbes">
+    <meta property="og:description" content="Organización de eventos, limpieza, mantenimiento, SST y logística en Tumbes y Perú.">
+    <meta property="og:type" content="website">
+
+    <!-- ========================================== -->
+    <!-- DATOS ESTRUCTURADOS (COMUNICACIÓN DIRECTA CON GOOGLE BUSINESS) -->
+    <!-- ========================================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GeneralContractor",
+      "name": "Galviz Soluciones Generales S.A.C.S.",
+      "image": "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQa4G4Uuz_zxfnhGnKUR6hprO5etfXTn2NOk0W5hyQOSf_2jF9RofamN7GiAPpjJ2v52fTFnxr5GsKjTxg",
+      "telephone": "+51941637862",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tumbes",
+        "addressRegion": "Tumbes",
+        "addressCountry": "PE"
+      },
+      "areaServed": ["Tumbes", "Perú"],
+      "taxID": "20614802929",
+      "description": "Expertos en organización de eventos, catering, limpieza corporativa, mantenimiento de infraestructura, drywall, electricidad y consultoría SST en Tumbes.",
+      "sameAs": [
+        "https://business.google.com/"
+      ]
+    }
+    </script>
+
+    <!-- Estilos y Fuentes -->
     <link rel="stylesheet" href="staly.css">
-    <!-- Fuentes Google: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ACORDEÓN 100% CSS PURO (Mediante Checkbox Oculto) */
+        .faq-item input[type="checkbox"] {
+            display: none;
+        }
+
+        .faq-item label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            cursor: pointer;
+            background: var(--bg-light);
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .faq-item label i {
+            color: var(--accent-gold);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item input[type="checkbox"]:checked + label {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            background: #f1f5f9;
+        }
+
+        .faq-item input[type="checkbox"]:checked + label i {
+            transform: rotate(180deg);
+        }
+
+        .faq-content-box {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            background: var(--bg-light);
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            padding: 0 25px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .faq-item input[type="checkbox"]:checked ~ .faq-content-box {
+            max-height: 250px;
+            padding: 0 25px 20px 25px;
+            border: 1px solid #e2e8f0;
+            border-top: none;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Encabezado y Navegación -->
+    <!-- BARRA SUPERIOR DE CONFIANZA OFICIAL -->
+    <div class="top-trust-bar">
+        <div class="container top-trust-content">
+            <div class="top-trust-items">
+                <span><i class="fa-solid fa-file-shield"></i> RUC: 20614802929</span>
+                <span><i class="fa-solid fa-file-invoice-dollar"></i> Facturas y Boletas Electrónicas</span>
+                <span><i class="fa-solid fa-certificate"></i> RNP Vigente</span>
+            </div>
+            <div>
+                <span><i class="fa-solid fa-location-dot" style="color: var(--accent-gold);"></i> Tumbes, Perú</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Encabezado y Navegación Principal -->
     <header class="navbar">
         <div class="container nav-content">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <i class="fa-solid fa-layer-group"></i> GALVIZ <span>Soluciones</span>
             </a>
             <nav class="menu">
-                <a href="#inicio">Inicio</a>
-                <a href="#eventos">Eventos</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#comentarios">Comentarios</a>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros / Legal</a>
+                
+                <div class="dropdown">
+                    <a href="#" style="color: var(--accent-gold); font-weight: 600;">Servicios <i class="fa-solid fa-angle-down" style="font-size: 0.8rem;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="eventos-catering.html"><i class="fa-solid fa-glass-cheers"></i> Eventos & Catering</a>
+                        <a href="servicio-limpieza-mantenimiento.html"><i class="fa-solid fa-broom"></i> Limpieza y Mantenimiento</a>
+                        <a href="servicio-drywall-electricidad.html"><i class="fa-solid fa-hammer"></i> Drywall, Pintura y Electricidad</a>
+                        <a href="servicio-sst-ambiental.html"><i class="fa-solid fa-helmet-safety"></i> Consultoría SST y Ambiental</a>
+                        <a href="servicio-logistica-transporte.html"><i class="fa-solid fa-truck-fast"></i> Logística y Transportes</a>
+                        <a href="servicio-outsourcing-asesoria.html"><i class="fa-solid fa-users-gear"></i> Outsourcing y Asesoría</a>
+                        <a href="servicio-marketing-ti.html"><i class="fa-solid fa-laptop-code"></i> Marketing Digital y TI</a>
+                    </div>
+                </div>
+
                 <a href="#contacto" class="btn-nav">Contacto</a>
             </nav>
         </div>
     </header>
 
-    <!-- Sección Principal (Hero) -->
+    <!-- Sección Hero (Principal) -->
     <section id="inicio" class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <span class="badge">Galviz Soluciones Generales S.A.C.S.</span>
-            <h1>Especialistas en <span>Organización de Eventos</span> y Gestión Integral</h1>
-            <p>Transformamos tus eventos corporativos y sociales en experiencias memorables. Además, respaldamos tu empresa con soluciones integrales de logística, mantenimiento, SST, limpieza y consultoría adaptadas a tus necesidades.</p>
+            <span class="badge">Galviz Soluciones Generales S.A.C.S. | RUC: 20614802929</span>
+            <h1>Especialistas en <span>Organización de Eventos</span> y Servicios Generales en Tumbes</h1>
+            <p>Transformamos eventos sociales y corporativos en experiencias memorables. Brindamos respaldo integral en logística, mantenimiento, SST y consultoría para hogares y empresas en todo el Perú.</p>
             <div class="hero-btns">
-                <a href="#eventos" class="btn-primary"><i class="fa-solid fa-glass-cheers"></i> Ver Servicio de Eventos</a>
-                <a href="https://wa.me/51941637862?text=Hola,%20deseo%20cotizar%20un%20servicio%20con%20Galviz%20Soluciones%20Generales" class="btn-whatsapp-hero" target="_blank">
+                <a href="eventos-catering.html" class="btn-primary"><i class="fa-solid fa-glass-cheers"></i> Ver Eventos & Catering</a>
+                <a href="https://wa.me/51941637862?text=Hola,%20visité%20su%20web%20y%20deseo%20cotizar%20un%20servicio%20general%20con%20Galviz%20Soluciones" class="btn-whatsapp-hero" target="_blank">
                     <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Sección Destacada: Eventos y Catering (Tarjetas Flip 3D) -->
-    <section id="eventos" class="featured-section">
+    <!-- Sección Destacada: Eventos y Catering -->
+    <section class="featured-section">
         <div class="container">
             <div class="section-header">
                 <h2>Organización de Eventos & Catering Premium</h2>
-                <p>Nuestra especialidad principal: Diseñamos, gestionamos y ejecutamos eventos corporativos y sociales llave en mano con impecable atención al detalle.</p>
+                <p>Diseñamos, gestionamos y ejecutamos eventos corporativos y sociales llave en mano con impecable atención al detalle.</p>
             </div>
 
             <div class="featured-grid">
-                
-                <!-- Tarjeta Principal Eventos -->
                 <div class="card">
                     <div class="card-inner">
-                        <!-- Lado Frontal -->
                         <div class="card-front card-featured">
                             <div class="card-img">
-                                <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQa4G4Uuz_zxfnhGnKUR6hprO5etfXTn2NOk0W5hyQOSf_2jF9RofamN7GiAPpjJ2v52fTFnxr5GsKjTxg" alt="Organización de Eventos Corporativos">
+                                <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQa4G4Uuz_zxfnhGnKUR6hprO5etfXTn2NOk0W5hyQOSf_2jF9RofamN7GiAPpjJ2v52fTFnxr5GsKjTxg" alt="Organización de Eventos en Tumbes">
                                 <span class="tag-featured">Servicio Estrella</span>
                             </div>
                             <div class="card-body">
                                 <div class="icon-badge"><i class="fa-solid fa-calendar-star"></i></div>
                                 <h3>Gestión y Organización de Eventos</h3>
-                                <p>Planiﬁcación integral, ambientación, logística, equipos audiovisuales y protocolo para congresos, lanzamientos, galas e integraciones corporativas.</p>
+                                <p>Planificación integral, ambientación, logística, equipos audiovisuales y protocolo para bodas, congresos e integraciones corporativas.</p>
                             </div>
                         </div>
-                        <!-- Lado Trasero -->
                         <div class="card-back">
                             <i class="fa-solid fa-champagne-glasses back-icon"></i>
                             <h3>Organización de Eventos</h3>
-                            <p>Nos encargamos de todo para que tú solo disfrutes. ¿Listo para hacer tu evento realidad?</p>
+                            <p>Hacemos realidad tus celebraciones y eventos corporativos con máxima elegancia.</p>
                             <a href="https://wa.me/51941637862?text=Hola,%20deseo%20cotizar%20el%20servicio%20de%20Gestión%20y%20Organización%20de%20Eventos." class="btn-card-whatsapp" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i> Cotizar Servicio
                             </a>
@@ -82,236 +197,87 @@
                     </div>
                 </div>
 
-                <!-- Tarjeta Catering & Coffee Break -->
                 <div class="card">
                     <div class="card-inner">
-                        <!-- Lado Frontal -->
                         <div class="card-front card-featured">
                             <div class="card-img">
-                                <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTyT85g2sm7mT1UeSEdpYw8iLAMt6mPoZ5R8lqeSgn8k-1e9UtD3ts6sTZfYHI9EFnmF9K137u1J_ALAVU" alt="Servicio de Coffee Break y Catering">
+                                <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTyT85g2sm7mT1UeSEdpYw8iLAMt6mPoZ5R8lqeSgn8k-1e9UtD3ts6sTZfYHI9EFnmF9K137u1J_ALAVU" alt="Catering y Coffee Break Tumbes">
                             </div>
                             <div class="card-body">
                                 <div class="icon-badge"><i class="fa-solid fa-utensils"></i></div>
                                 <h3>Catering, Alimentación y Coffee Break</h3>
-                                <p>Banquetes profesionales, coffee breaks corporativos, estaciones de refrigerio y menús dietéticos supervisados con el más alto estándar gastronómico.</p>
+                                <p>Banquetes profesionales, coffee breaks corporativos, estaciones de refrigerio y menús supervisados con el más alto estándar.</p>
                             </div>
                         </div>
-                        <!-- Lado Trasero -->
                         <div class="card-back">
                             <i class="fa-solid fa-mug-hot back-icon"></i>
                             <h3>Catering y Alimentación</h3>
-                            <p>Menús exquisitos y atención personalizada para deleitar a todos tus invitados y colaboradores.</p>
+                            <p>Sabores inolvidables para deleitar a tus invitados, clientes o colaboradores.</p>
                             <a href="https://wa.me/51941637862?text=Hola,%20deseo%20cotizar%20el%20servicio%20de%20Catering%20y%20Coffee%20Break." class="btn-card-whatsapp" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i> Cotizar Servicio
                             </a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Sección de Todos los Servicios Generales (Tarjetas Flip 3D) -->
-    <section id="servicios" class="services-section">
+    <!-- SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) - HTML Y CSS PURO -->
+    <section class="faq-section">
         <div class="container">
             <div class="section-header">
-                <h2>Catálogo Integral de Servicios</h2>
-                <p>Nos adaptamos a las exigencias de tu empresa con soluciones ágiles, normadas y multifuncionales.</p>
+                <h2>Preguntas Frecuentes</h2>
+                <p>Resolvemos las dudas más comunes de nuestros clientes particulares y corporativos.</p>
             </div>
-
-            <div class="services-grid">
-
-                <!-- Servicio: Apoyo Logístico -->
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="card-img">
-                                <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTMH45sOzBZoxqxRQIcBkT2DMrlg1xldsNvt_Zx02oJnJyW5tNbaQnI205gY4LD9ehNCY758hEwk1Ts6Z8" alt="Apoyo Logístico y Suministros">
-                            </div>
-                            <div class="card-body">
-                                <i class="fa-solid fa-boxes-packing card-icon"></i>
-                                <h3>Apoyo Logístico & Suministros</h3>
-                                <p>Provisión oportuna de insumos, gestión operativa de insumos y soporte integral en cadena de suministros.</p>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <i class="fa-solid fa-truck-fast back-icon"></i>
-                            <h3>Apoyo Logístico</h3>
-                            <p>Optimiza tus recursos y cadena de suministros con nuestra experiencia.</p>
-                            <a href="https://wa.me/51941637862?text=Hola,%20deseo%20cotizar%20Apoyo%20Logístico%20y%20Suministros." class="btn-card-whatsapp" target="_blank">
-                                <i class="fa-brands fa-whatsapp"></i> Cotizar Servicio
-                            </a>
-                        </div>
+            
+            <div class="faq-container">
+                <!-- Pregunta 1 -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq1">
+                    <label for="faq1">
+                        <span>¿Emiten factura o boleta electrónica por los servicios?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                    <div class="faq-content-box">
+                        Sí, totalmente. Al ser una empresa formal inscrita con RUC 20614802929, emitimos comprobantes de pago electrónicos válidos para empresas, instituciones y personas naturales.
                     </div>
                 </div>
 
-                <!-- Servicio: Seguridad Laboral / SST -->
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="card-img">
-                                <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQAVUs_PHIc5edanyWe1y04pqwb_7QL0g68-KUHYgLYR-XciGefysxiDPbZBYfJJ2AjYvg8tbV7thIrU9k" alt="Capacitación y Consultoría SST">
-                            </div>
-                            <div class="card-body">
-                                <i class="fa-solid fa-hard-hat card-icon"></i>
-                                <h3>Seguridad y Salud en el Trabajo</h3>
-                                <p>Capacitaciones, talleres, planes de manejo de SST, comités y auditorías según normativa vigente.</p>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <i class="fa-solid fa-shield-halved back-icon"></i>
-                            <h3>Consultoría SST</h3>
-                            <p>Garantizamos el cumplimiento normativo y el bienestar de tus colaboradores.</p>
-                            <a href="https://wa.me/51941637862?text=Hola,%20deseo%20cotizar%20Servicios%20de%20Seguridad%20y%20Salud%20en%20el%20Trabajo." class="btn-card-whatsapp" target="_blank">
-                                <i class="fa-brands fa-whatsapp"></i> Cotizar Servicio
-                            </a>
-                        </div>
+                <!-- Pregunta 2 -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq2">
+                    <label for="faq2">
+                        <span>¿Cuál es la zona de cobertura de Galviz Soluciones?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                    <div class="faq-content-box">
+                        Nuestra sede central está ubicada en Tumbes, Perú, pero contamos con la capacidad logística y el equipo profesional para realizar proyectos y consultorías a nivel nacional.
                     </div>
                 </div>
 
-                <!-- Servicio: Gestión Ambiental y Residuos -->
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="card-img">
-                                <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSueHaUg3aBjT9Ge3GqW4Q0AJzpneaiIvsiLW8X1jtEJXx1y07kKVHxX9zdqBNc9yw2x0Z9D_m5XzyjDm0" alt="Consultoría Ambiental y Residuos">
-                            </div>
-                            <div class="card-body">
-                                <i class="fa-solid fa-recycle card-icon"></i>
-                                <h3>Gestión Ambiental & Residuos</h3>
-                                <p>Planes de manejo ambiental, recolección y reciclaje de residuos sólidos y consultoría especializada.</p>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <i class="fa-solid fa-leaf back-icon"></i>
-                            <h3>Gestión Ambiental</h3>
-                            <p>Comprometidos con el medio ambiente y la sostenibilidad de tu empresa.</p>
-                            <a href="https://wa.me/51941637862?text=Hola,%20deseo%20cotizar%20Gestión%20Ambiental%20y%20Manejo%20de%20Residuos." class="btn-card-whatsapp" target="_blank">
-                                <i class="fa-brands fa-whatsapp"></i> Cotizar Servicio
-                            </a>
-                        </div>
+                <!-- Pregunta 3 -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq3">
+                    <label for="faq3">
+                        <span>¿Cómo se solicita una cotización o presupuesto?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                    <div class="faq-content-box">
+                        Es muy sencillo. Solo debes hacer clic en cualquiera de nuestros botones de WhatsApp indicando el servicio que necesitas. Te atenderemos de inmediato para evaluar los detalles de tu requerimiento.
                     </div>
                 </div>
 
-                <!-- Servicio: Mantenimiento e Infraestructura -->
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="card-img">
-                                <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQJQFmUThIsedP0tFJCB_j4A5h_IUrZtajKBANZToqtmedKxHVBlQJTD1zV_UtgkwoxWg9NxWsOeayoLOw" alt="Pintura y Mantenimiento">
-                            </div>
-                            <div class="card-body">
-                                <i class="fa-solid fa-paint-roller card-icon"></i>
-                                <h3>Pintura, Acabados & Electricidad</h3>
-                                <p>Mantenimiento de infraestructura, instalaciones eléctricas, acabados finos, jardinería y arreglos generales.</p>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <i class="fa-solid fa-screwdriver-wrench back-icon"></i>
-                            <h3>Mantenimiento General</h3>
-                            <p>Renovamos y reparamos tus espacios con acabados profesionales y seguros.</p>
-                            <a href="https://wa.me/51941637862?text=Hola,%20deseo%20cotizar%20Mantenimiento,%20Pintura%20o%20Electricidad." class="btn-card-whatsapp" target="_blank">
-                                <i class="fa-brands fa-whatsapp"></i> Cotizar Servicio
-                            </a>
-                        </div>
+                <!-- Pregunta 4 -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq4">
+                    <label for="faq4">
+                        <span>¿Brindan servicios tanto para hogares como para empresas?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </label>
+                    <div class="faq-content-box">
+                        Así es. Atendemos requerimientos residenciales (mantenimiento, gasfitería, pintura) y contratos corporativos a gran escala (organización de eventos, consultoría SST, limpieza industrial y outsourcing).
                     </div>
-                </div>
-
-                <!-- Servicio: Marketing y Soluciones TI -->
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="card-img">
-                                <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSQoNmQ8JykBEeEPt-0Sbig0SioHv32fibEyYrBvpI3i_WNYziLBZuc8HHwCsAMqyVmOnRhFBNHPgtDZzk" alt="Marketing Digital y TI">
-                            </div>
-                            <div class="card-body">
-                                <i class="fa-solid fa-laptop-code card-icon"></i>
-                                <h3>Marketing Digital & Soporte TI</h3>
-                                <p>Gestión de redes sociales, publicidad digital, soluciones informáticas y asistencia técnica corporativa.</p>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <i class="fa-solid fa-bullhorn back-icon"></i>
-                            <h3>Marketing & TI</h3>
-                            <p>Impulsamos tu marca en el mundo digital y optimizamos tu soporte informático.</p>
-                            <a href="https://wa.me/51941637862?text=Hola,%20deseo%20cotizar%20Marketing%20Digital%20o%20Soporte%20TI." class="btn-card-whatsapp" target="_blank">
-                                <i class="fa-brands fa-whatsapp"></i> Cotizar Servicio
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Servicio: Transporte y Personal -->
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="card-img">
-                                <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRT8Sesmip9cm7cm2zKZm1W7vbyICj3OGXX71qW_c7Rqqg-jQeSb38cBcN4weMNJ7rZMuXyQDjhXrTu6uI" alt="Transporte de Personal">
-                            </div>
-                            <div class="card-body">
-                                <i class="fa-solid fa-bus card-icon"></i>
-                                <h3>Transporte, Limpieza & Outsourcing</h3>
-                                <p>Movilización de personal, intermediación laboral, filtros de selección, limpieza profunda e higiene industrial.</p>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <i class="fa-solid fa-users-gear back-icon"></i>
-                            <h3>Outsourcing & Movilidad</h3>
-                            <p>Proveemos el talento y la logística necesaria para el funcionamiento de tu negocio.</p>
-                            <a href="https://wa.me/51941637862?text=Hola,%20deseo%20cotizar%20Transporte,%20Limpieza%20o%20Outsourcing." class="btn-card-whatsapp" target="_blank">
-                                <i class="fa-brands fa-whatsapp"></i> Cotizar Servicio
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Nueva Sección: Buzón de Comentarios -->
-    <section id="comentarios" class="comments-section">
-        <div class="container">
-            <div class="comments-wrapper">
-                <div class="comments-info">
-                    <h2>Tu Opinión nos hace Mejores</h2>
-                    <p>En <strong>Galviz Soluciones Generales</strong> nos preocupamos por brindar siempre el mejor servicio. Nos adaptamos a tus necesidades y queremos escucharte. Déjanos tus sugerencias, dudas o comentarios sobre tu experiencia con nosotros.</p>
-                    <ul class="comments-benefits">
-                        <li><i class="fa-solid fa-check-circle"></i> Leemos cada comentario.</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Mejoramos nuestros procesos gracias a ti.</li>
-                        <li><i class="fa-solid fa-check-circle"></i> Trato directo y confidencial.</li>
-                    </ul>
-                </div>
-                <div class="comments-form-container">
-                    <form action="mailto:contacto@solucionesgeneralesgalviz.com" method="post" enctype="text/plain" class="contact-form">
-                        <div class="form-group">
-                            <label for="nombre">Nombre Completo</label>
-                            <input type="text" id="nombre" name="Nombre" placeholder="Ej. Juan Pérez" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="correo">Correo Electrónico</label>
-                            <input type="email" id="correo" name="Correo" placeholder="tu@correo.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="servicio">Servicio de Interés / Comentado</label>
-                            <select id="servicio" name="Servicio" required>
-                                <option value="" disabled selected>Selecciona una opción...</option>
-                                <option value="Eventos y Catering">Organización de Eventos y Catering</option>
-                                <option value="Limpieza y Mantenimiento">Limpieza y Mantenimiento</option>
-                                <option value="SST y Ambiental">Seguridad en el Trabajo y Ambiental</option>
-                                <option value="Logistica">Logística y Suministros</option>
-                                <option value="Otros">Otro (Especifique en el mensaje)</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje o Recomendación</label>
-                            <textarea id="mensaje" name="Mensaje" rows="4" placeholder="Escribe aquí tu opinión, consulta o recomendación..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary btn-submit">
-                            <i class="fa-solid fa-paper-plane"></i> Enviar Comentario
-                        </button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -320,30 +286,30 @@
     <!-- Pie de página -->
     <footer id="contacto">
         <div class="container footer-container">
-            <div class="footer-top">
+            <div class="footer-top" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;">
                 <div class="footer-info">
                     <h3>GALVIZ Soluciones Generales S.A.C.S.</h3>
-                    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:contacto@solucionesgeneralesgalviz.com">contacto@solucionesgeneralesgalviz.com</a></p>
-                    <p><i class="fa-solid fa-phone"></i> +51 941 637 862</p>
+                    <p>Conectamos visiones, transformamos entornos y elevamos tus eventos.</p>
+                    <p style="margin-top: 10px;"><i class="fa-solid fa-location-dot" style="color: var(--accent-gold);"></i> Sede Central: Tumbes, Perú (Cobertura Nacional)</p>
+                    <p><i class="fa-solid fa-phone" style="color: var(--accent-gold);"></i> +51 941 637 862</p>
                 </div>
-                <div class="footer-cta">
-                    <h4>¿Tienes un proyecto o evento en mente?</h4>
-                    <a href="https://wa.me/51941637862" class="btn-primary" target="_blank">Escríbenos Ahora</a>
+                <div class="footer-info">
+                    <h4 style="color: var(--white); margin-bottom: 10px;">Transparencia Corporativa</h4>
+                    <p><i class="fa-solid fa-file-invoice"></i> <strong>RUC:</strong> 20614802929</p>
+                    <p><i class="fa-solid fa-certificate"></i> RNP Vigente (Facturas y Boletas)</p>
                 </div>
             </div>
             
             <hr class="footer-divider">
-
-            <!-- Frase innovadora y profesional -->
             <p class="footer-phrase">
                 "Conectamos visiones, transformamos entornos y elevamos tus eventos. Galviz: tu aliado integral para hacer posible lo extraordinario."
             </p>
-            <p class="copyright">&copy; 2026 Galviz Soluciones Generales S.A.C.S. Todos los derechos reservados.</p>
+            <p class="copyright">&copy; 2026 Galviz Soluciones Generales S.A.C.S. Todos los derechos reservados. | RUC: 20614802929</p>
         </div>
     </footer>
 
-    <!-- Botón flotante de WhatsApp (+51941637862) -->
-    <a href="https://wa.me/51941637862?text=Hola!%20Me%20gustaria%20recibir%20informacion%20de%20sus%20servicios" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar a Galviz por WhatsApp">
+    <!-- Botón WhatsApp Flotante -->
+    <a href="https://wa.me/51941637862?text=Hola!%20Me%20gustaria%20recibir%20informacion%20general%20de%20sus%20servicios" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar a Galviz por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
         <span class="tooltip">¡Habla con nosotros!</span>
     </a>
