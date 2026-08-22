@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ARENA EXTREMA | Paintball Championship Tumbes</title>
+
+    <meta name="description"
+        content="Arena Extrema Paintball Championship Tumbes. Torneo 5 vs 5, adrenalina, estrategia y entretenimiento para todos. Reserva tu lugar en la lista de espera.">
+
+    <meta name="keywords"
+        content="Paintball Tumbes, Torneo Paintball Tumbes, Paintball Perú, Arena Extrema, Paintball Championship, entretenimiento Tumbes">
+
+    <meta name="author" content="Galviz Soluciones Generales S.A.C.S.">
+    <meta name="robots" content="index, follow">
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="staly.css">
+
+    <!-- FUENTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =========================================================
+            PAINTBALL PAGE - ESTILOS PROFESIONALES DE TORNEO
+        ========================================================= */
+
+        :root {
+            --pb-yellow: #d9ff00;
+            --pb-yellow-dark: #9bb800;
+            --pb-black: #050505;
+            --pb-dark: #0b0b0b;
+            --pb-dark-2: #111111;
+            --pb-gray: #191919;
+            --pb-white: #f5f5f5;
+            --pb-gray-text: #a5a5a5;
+            --pb-red: #ff3030;
+            --pb-blue: #00d9ff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--pb-black);
+            color: var(--pb-white);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-image: 
+                linear-gradient(rgba(217, 255, 0, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(217, 255, 0, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .pb-container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        /* LÍNEAS DE MIRA / HUD DECORATIVO */
+        .hud-crosshair {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            pointer-events: none;
+            opacity: 0.4;
+            z-index: 10;
+        }
+        .hud-crosshair::before, .hud-crosshair::after {
+            content: "";
+            position: absolute;
+            background: var(--pb-yellow);
+        }
+        .hud-crosshair::before { top: 9px; left: 0; width: 20px; height: 2px; }
+        .hud-crosshair::after { top: 0; left: 9px; width: 2px; height: 20px; }
+
+
+        /* =========================================================
+            NAVBAR
+        ========================================================= */
+
+        .pb-navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 20px 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,.9),
+                transparent
+            );
+            border-bottom: 1px solid rgba(217,255,0,.1);
+        }
+
+        .pb-nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .pb-logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .pb-logo span {
+            color: var(--pb-yellow);
+        }
+
+        .pb-logo i {
+            color: var(--pb-yellow);
+            margin-right: 8px;
+        }
+
+        .pb-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .pb-menu a {
+            color: white;
+            font-size: .85rem;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .pb-menu a:hover {
+            color: var(--pb-yellow);
+        }
+
+        .pb-nav-button {
+            background: var(--pb-yellow);
+            color: #000 !important;
+            padding: 12px 20px;
+            font-weight: 900 !important;
+            clip-path: polygon(
+                8px 0,
+                100% 0,
+                calc(100% - 8px) 100%,
+                0 100%
+            );
+        }
+
+
+        /* =========================================================
+            HERO
+        ========================================================= */
+
+        .pb-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.96) 0%,
+                    rgba(0,0,0,.82) 45%,
+                    rgba(0,0,0,.3) 100%
+                ),
+                url("https://www.visitgarlandtx.com/p/plan-your-visit/nxl-paintball")
+                center/cover no-repeat;
+
+            background-color: #111;
+        }
+
+        .pb-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at 75% 30%,
+                    rgba(217,255,0,.15),
+                    transparent 25%
+                ),
+                linear-gradient(
+                    135deg,
+                    transparent 60%,
+                    rgba(217,255,0,.08)
+                );
+
+            pointer-events: none;
+        }
+
+        .pb-hero-content {
+            position: relative;
+            z-index: 5;
+            padding: 150px 0 100px;
+            max-width: 780px;
+        }
+
+        .pb-small-title {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--pb-yellow);
+            font-size: .8rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .pb-small-title::before {
+            content: "";
+            width: 45px;
+            height: 3px;
+            background: var(--pb-yellow);
+        }
+
+        .pb-hero h1 {
+            font-family: 'Anton', sans-serif;
+            font-size: clamp(4rem, 10vw, 8.5rem);
+            line-height: .88;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0 0 25px;
+        }
+
+        .pb-hero h1 span {
+            color: var(--pb-yellow);
+            text-shadow:
+                0 0 20px rgba(217,255,0,.25);
+        }
+
+        .pb-hero-description {
+            max-width: 650px;
+            color: #d0d0d0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .pb-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .pb-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            padding: 16px 25px;
+
+            font-size: .9rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            transition: .3s;
+        }
+
+        .pb-btn-primary {
+            background: var(--pb-yellow);
+            color: #000;
+
+            clip-path: polygon(
+                12px 0,
+                100% 0,
+                calc(100% - 12px) 100%,
+                0 100%
+            );
+        }
+
+        .pb-btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(217,255,0,.25);
+        }
+
+        .pb-btn-outline {
+            border: 1px solid rgba(255,255,255,.35);
+            color: white;
+        }
+
+        .pb-btn-outline:hover {
+            background: white;
+            color: black;
+        }
+
+
+        /* =========================================================
+            BARRA DE ENERGÍA / SISTEMA HUD
+        ========================================================= */
+
+        .pb-energy-bar-wrapper {
+            margin-top: 30px;
+            max-width: 500px;
+        }
+        .pb-energy-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--pb-yellow);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .pb-energy-track {
+            height: 8px;
+            background: #222;
+            border: 1px solid rgba(217,255,0,.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .pb-energy-fill {
+            position: absolute;
+            top: 0; left: 0; bottom: 0;
+            width: 100%;
+            background: linear-gradient(90deg, var(--pb-yellow-dark), var(--pb-yellow));
+            box-shadow: 0 0 10px var(--pb-yellow);
+            animation: energyPulse 2s infinite alternate;
+        }
+        @keyframes energyPulse {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+
+        /* =========================================================
+            GAME HUD LATERAL
+        ========================================================= */
+
+        .pb-hud {
+            position: absolute;
+            right: 6%;
+            bottom: 80px;
+            z-index: 5;
+
+            width: 270px;
+            padding: 20px;
+
+            background: rgba(0,0,0,.75);
+            border: 1px solid rgba(217,255,0,.35);
+
+            backdrop-filter: blur(10px);
+
+            box-shadow:
+                0 0 40px rgba(0,0,0,.5);
+        }
+
+        .pb-hud-title {
+            color: var(--pb-yellow);
+            font-size: .7rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .pb-match {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Anton', sans-serif;
+            font-size: 1.8rem;
+        }
+
+        .pb-vs {
+            color: var(--pb-yellow);
+            font-size: 1rem;
+        }
+
+        .pb-live {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            color: #aaa;
+            font-size: .7rem;
+            text-transform: uppercase;
+        }
+
+        .pb-live-dot {
+            width: 8px;
+            height: 8px;
+            background: #ff3030;
+            border-radius: 50%;
+            animation: livePulse 1s infinite;
+        }
+
+        @keyframes livePulse {
+            50% {
+                opacity: .25;
+                transform: scale(.7);
+            }
+        }
+
+
+        /* =========================================================
+            PRÓXIMAMENTE / RELOJ DE ARENA
+        ========================================================= */
+
+        .pb-countdown-section {
+            position: relative;
+            background: var(--pb-yellow);
+            color: #000;
+            padding: 30px 0;
+            overflow: hidden;
+        }
+
+        .pb-countdown-section::before {
+            content: "ARENA EXTREMA";
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-5deg);
+
+            font-family: 'Anton', sans-serif;
+            font-size: 8rem;
+
+            color: rgba(0,0,0,.05);
+            white-space: nowrap;
+        }
+
+        .pb-countdown-content {
+            position: relative;
+            z-index: 2;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .pb-countdown-label {
+            font-size: .75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .pb-countdown-title {
+            font-family: 'Anton', sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin: 5px 0 0;
+        }
+
+        .pb-soon-banner {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #000;
+            color: var(--pb-yellow);
+            padding: 15px 30px;
+            font-family: 'Anton', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .pb-soon-banner i {
+            font-size: 2rem;
+            animation: fa-spin 3s infinite linear;
+        }
+
+
+        /* =========================================================
+            SECTION GENERAL
+        ========================================================= */
+
+        .pb-section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .pb-section-dark {
+            background: var(--pb-dark);
+        }
+
+        .pb-section-black {
+            background: #000;
+        }
+
+        .pb-section-heading {
+            margin-bottom: 55px;
+        }
+
+        .pb-kicker {
+            color: var(--pb-yellow);
+            font-size: .7rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .pb-section-heading h2 {
+            font-family: 'Anton', sans-serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            line-height: .95;
+            text-transform: uppercase;
+            margin: 10px 0 15px;
+        }
+
+        .pb-section-heading p {
+            max-width: 650px;
+            color: var(--pb-gray-text);
+            line-height: 1.8;
+        }
+
+
+        /* =========================================================
+            STATS
+        ========================================================= */
+
+        .pb-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+            background: #080808;
+        }
+
+        .pb-stat {
+            padding: 35px 20px;
+            text-align: center;
+            border-right: 1px solid #222;
+        }
+
+        .pb-stat:last-child {
+            border-right: none;
+        }
+
+        .pb-stat i {
+            font-size: 1.5rem;
+            color: var(--pb-yellow);
+            margin-bottom: 12px;
+        }
+
+        .pb-stat strong {
+            display: block;
+            font-family: 'Anton', sans-serif;
+            font-size: 2.8rem;
+        }
+
+        .pb-stat span {
+            color: #888;
+            font-size: .7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================================================
+            CARDS (EXPERIENCIA)
+        ========================================================= */
+
+        .pb-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .pb-card {
+            position: relative;
+            min-height: 380px;
+            overflow: hidden;
+
+            background: #111;
+
+            border: 1px solid #222;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+            transition: .4s;
+        }
+
+        .pb-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--pb-yellow);
+            box-shadow: 0 15px 40px rgba(217,255,0,0.15);
+        }
+
+        .pb-card-image {
+            position: absolute;
+            inset: 0;
+
+            background-size: cover;
+            background-position: center;
+
+            transition: transform .6s;
+        }
+
+        .pb-card:hover .pb-card-image {
+            transform: scale(1.08);
+        }
+
+        .pb-card-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,.96),
+                    rgba(0,0,0,.2)
+                );
+        }
+
+        .pb-card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 28px;
+            z-index: 2;
+        }
+
+        .pb-card-number {
+            color: var(--pb-yellow);
+            font-family: 'Anton', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        .pb-card h3 {
+            font-family: 'Anton', sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin: 8px 0;
+        }
+
+        .pb-card p {
+            color: #bbb;
+            font-size: .85rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+
+        /* =========================================================
+            RANKING DE EQUIPOS
+        ========================================================= */
+
+        .pb-ranking-table {
+            background: #111;
+            border: 1px solid #222;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+        .pb-ranking-table th, .pb-ranking-table td {
+            padding: 18px 20px;
+            text-align: left;
+            border-bottom: 1px solid #222;
+        }
+        .pb-ranking-table th {
+            background: #080808;
+            color: var(--pb-yellow);
+            font-family: 'Anton', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .pb-ranking-table tr:hover {
+            background: rgba(217,255,0,.02);
+        }
+
+
+        /* =========================================================
+            SECCIÓN DE PREMIOS (POR DEFINIR)
+        ========================================================= */
+
+        .pb-prizes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .pb-prize-card {
+            background: #111;
+            border: 1px solid #222;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .pb-prize-card:hover {
+            border-color: var(--pb-yellow);
+            transform: translateY(-8px);
+        }
+        .pb-prize-card i {
+            font-size: 3rem;
+            color: var(--pb-yellow);
+            margin-bottom: 20px;
+        }
+        .pb-prize-place {
+            font-size: 0.75rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .pb-prize-amount {
+            font-family: 'Anton', sans-serif;
+            font-size: 2.2rem;
+            color: var(--pb-yellow);
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        .pb-prize-desc {
+            color: #aaa;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================================
+            EQUIPAMIENTO
+        ========================================================= */
+
+        .pb-equipment {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .pb-equipment-image {
+            min-height: 500px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(217,255,0,.12),
+                    transparent
+                ),
+                url("https://www.paintballusa.org/sites/default/files/styles/pu_blogpage_img/public/images/blog/dreamstime_s_14848170_1.jpg?itok=OfiWGBOi")
+                center/cover no-repeat;
+
+            border: 1px solid #272727;
+
+            box-shadow:
+                25px 25px 0 rgba(217,255,0,.06);
+        }
+
+        .pb-equipment-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .pb-equipment-item {
+            display: flex;
+            gap: 18px;
+            padding: 20px;
+            background: #101010;
+            border: 1px solid #222;
+
+            transition: .3s;
+        }
+
+        .pb-equipment-item:hover {
+            border-color: var(--pb-yellow);
+            transform: translateX(8px);
+        }
+
+        .pb-equipment-item i {
+            width: 40px;
+            color: var(--pb-yellow);
+            font-size: 1.3rem;
+        }
+
+        .pb-equipment-item h3 {
+            margin: 0 0 5px;
+            font-size: .95rem;
+            text-transform: uppercase;
+        }
+
+        .pb-equipment-item p {
+            margin: 0;
+            color: #888;
+            font-size: .8rem;
+            line-height: 1.5;
+        }
+
+
+        /* =========================================================
+            TORNEO
+        ========================================================= */
+
+        .pb-tournament {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 550px;
+            background: #0d0d0d;
+            border: 1px solid #222;
+        }
+
+        .pb-tournament-image {
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(0,0,0,.3)
+                ),
+                url("https://lirp.cdn-website.com/090f05aa/dms3rep/multi/opt/sq-commando-pb-File%2B2-14379-bf2b6fcc-1920w.webp")
+                center/cover no-repeat;
+        }
+
+        .pb-tournament-content {
+            padding: 70px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .pb-tournament-content h2 {
+            font-family: 'Anton', sans-serif;
+            font-size: 4rem;
+            line-height: .9;
+            text-transform: uppercase;
+            margin: 10px 0 25px;
+        }
+
+        .pb-tournament-content h2 span {
+            color: var(--pb-yellow);
+        }
+
+        .pb-tournament-content p {
+            color: #999;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .pb-format {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .pb-format-number {
+            font-family: 'Anton', sans-serif;
+            font-size: 4rem;
+            color: var(--pb-yellow);
+            line-height: 1;
+        }
+
+        .pb-format-text strong {
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .pb-format-text span {
+            color: #777;
+            font-size: .75rem;
+        }
+
+
+        /* =========================================================
+            ZONA PÚBLICA
+        ========================================================= */
+
+        .pb-public {
+            position: relative;
+            overflow: hidden;
+
+            padding: 80px 50px;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    #101010,
+                    #191919
+                );
+
+            border: 1px solid #2a2a2a;
+        }
+
+        .pb-public::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            right: -150px;
+            top: -150px;
+
+            background: var(--pb-yellow);
+
+            opacity: .08;
+
+            border-radius: 50%;
+        }
+
+        .pb-public h2 {
+            position: relative;
+            z-index: 2;
+
+            max-width: 700px;
+
+            font-family: 'Anton', sans-serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            line-height: .95;
+            text-transform: uppercase;
+
+            margin: 0 0 20px;
+        }
+
+        .pb-public h2 span {
+            color: var(--pb-yellow);
+        }
+
+        .pb-public p {
+            position: relative;
+            z-index: 2;
+
+            max-width: 700px;
+
+            color: #aaa;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================================
+            FORMULARIO
+        ========================================================= */
+
+        .pb-form-section {
+            background: #080808;
+        }
+
+        .pb-form-box {
+            max-width: 800px;
+            margin: auto;
+
+            padding: 45px;
+
+            background: #111;
+            border: 1px solid #292929;
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,.4);
+        }
+
+        .pb-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .pb-form-group {
+            margin-bottom: 20px;
+        }
+
+        .pb-form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .pb-form-group label {
+            display: block;
+            color: #ddd;
+            font-size: .75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .pb-form-control {
+            width: 100%;
+            padding: 15px;
+
+            background: #080808;
+            border: 1px solid #333;
+
+            color: white;
+
+            font-family: inherit;
+            font-size: .9rem;
+
+            outline: none;
+            transition: .3s;
+        }
+
+        .pb-form-control:focus {
+            border-color: var(--pb-yellow);
+            box-shadow: 0 0 0 2px rgba(217,255,0,.08);
+        }
+
+        .pb-rules {
+            grid-column: 1 / -1;
+
+            padding: 20px;
+
+            background: rgba(217,255,0,.04);
+            border-left: 3px solid var(--pb-yellow);
+
+            color: #999;
+            font-size: .8rem;
+            line-height: 1.7;
+        }
+
+        .pb-rules strong {
+            color: var(--pb-yellow);
+        }
+
+        .pb-submit {
+            grid-column: 1 / -1;
+
+            width: 100%;
+
+            padding: 18px;
+
+            border: none;
+
+            background: var(--pb-yellow);
+            color: #000;
+
+            font-family: inherit;
+            font-size: .9rem;
+            font-weight: 900;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .pb-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(217,255,0,.2);
+        }
+
+
+        /* =========================================================
+            PAINT SPLASH EFFECT (GLOBAL)
+        ========================================================= */
+
+        .paint-splash {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+
+            background: var(--pb-yellow);
+            border-radius: 50%;
+
+            opacity: .7;
+
+            animation: paintFloat 6s ease-in-out infinite;
+        }
+
+        .splash-1 {
+            top: 25%;
+            left: 7%;
+            width: 13px;
+            height: 13px;
+        }
+
+        .splash-2 {
+            top: 70%;
+            left: 45%;
+            width: 7px;
+            height: 7px;
+            animation-delay: 1s;
+        }
+
+        .splash-3 {
+            top: 35%;
+            right: 20%;
+            width: 11px;
+            height: 11px;
+            animation-delay: 2s;
+        }
+
+        .splash-4 {
+            bottom: 15%;
+            right: 7%;
+            width: 6px;
+            height: 6px;
+            animation-delay: 3s;
+        }
+
+        @keyframes paintFloat {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-25px) scale(1.4);
+            }
+        }
+
+
+        /* =========================================================
+            RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .pb-menu a:not(.pb-nav-button) {
+                display: none;
+            }
+
+            .pb-hud {
+                display: none;
+            }
+
+            .pb-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pb-stat:nth-child(2) {
+                border-right: none;
+            }
+
+            .pb-stat:nth-child(-n+2) {
+                border-bottom: 1px solid #222;
+            }
+
+            .pb-cards, .pb-prizes-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pb-equipment {
+                grid-template-columns: 1fr;
+            }
+
+            .pb-equipment-image {
+                min-height: 400px;
+            }
+
+            .pb-tournament {
+                grid-template-columns: 1fr;
+            }
+
+            .pb-tournament-image {
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .pb-navbar {
+                padding: 15px 0;
+            }
+
+            .pb-logo {
+                font-size: 1.15rem;
+            }
+
+            .pb-nav-button {
+                padding: 9px 13px;
+                font-size: .65rem !important;
+            }
+
+            .pb-hero {
+                min-height: 900px;
+
+                background:
+                    linear-gradient(
+                        0deg,
+                        rgba(0,0,0,.98),
+                        rgba(0,0,0,.55)
+                    ),
+                    url("https://www.visitgarlandtx.com/p/plan-your-visit/nxl-paintball")
+                    center/cover no-repeat;
+            }
+
+            .pb-hero-content {
+                padding-top: 170px;
+            }
+
+            .pb-hero h1 {
+                font-size: clamp(3.8rem, 18vw, 6rem);
+            }
+
+            .pb-hero-description {
+                font-size: .95rem;
+            }
+
+            .pb-buttons {
+                flex-direction: column;
+            }
+
+            .pb-btn {
+                width: 100%;
+            }
+
+            .pb-countdown-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .pb-soon-banner {
+                font-size: 1.4rem;
+                padding: 12px 20px;
+            }
+
+            .pb-cards, .pb-prizes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pb-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pb-stat {
+                padding: 25px 10px;
+            }
+
+            .pb-stat strong {
+                font-size: 2rem;
+            }
+
+            .pb-tournament-content {
+                padding: 40px 25px;
+            }
+
+            .pb-tournament-content h2 {
+                font-size: 3rem;
+            }
+
+            .pb-public {
+                padding: 50px 25px;
+            }
+
+            .pb-form-box {
+                padding: 25px 20px;
+            }
+
+            .pb-form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pb-form-group.full,
+            .pb-rules,
+            .pb-submit {
+                grid-column: auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Elementos de Líneas de Mira Decorativas -->
+    <div class="hud-crosshair" style="top: 120px; left: 40px;"></div>
+    <div class="hud-crosshair" style="top: 300px; right: 50px;"></div>
+
+    <!-- =========================================================
+         NAVBAR
+    ========================================================= -->
+
+    <header class="pb-navbar">
+
+        <div class="pb-container pb-nav-content">
+
+            <a href="index.html" class="pb-logo">
+                <i class="fa-solid fa-crosshairs"></i>
+                GALVIZ <span>EXTREMA</span>
+            </a>
+
+            <nav class="pb-menu">
+
+                <a href="index.html">Inicio</a>
+
+                <a href="nosotros.html">Nosotros</a>
+
+                <a href="#torneo">Torneo</a>
+
+                <a href="#experiencia">Experiencia</a>
+
+                <a href="#ranking">Ranking</a>
+
+                <a href="#premios">Premios</a>
+
+                <a href="#registro" class="pb-nav-button">
+                    REGÍSTRATE
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <section class="pb-hero">
+
+        <span class="paint-splash splash-1"></span>
+        <span class="paint-splash splash-2"></span>
+        <span class="paint-splash splash-3"></span>
+        <span class="paint-splash splash-4"></span>
+
+        <div class="pb-container">
+
+            <div class="pb-hero-content">
+
+                <div class="pb-small-title">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    Próximamente en Tumbes
+                </div>
+
+                <h1>
+                    ARENA<br>
+                    <span>EXTREMA</span>
+                </h1>
+
+                <p class="pb-hero-description">
+                    La nueva experiencia de Paintball Championship llega a Tumbes.
+                    Forma tu escuadrón, prepara tu estrategia y demuestra quién
+                    domina el campo.
+                </p>
+
+                <!-- Barra de Energía del Sistema (Modificación 1) -->
+                <div class="pb-energy-bar-wrapper">
+                    <div class="pb-energy-label">
+                        <span>Inscripciones Abiertas / Próximamente Competencia</span>
+                        <span>Activo</span>
+                    </div>
+                    <div class="pb-energy-track">
+                        <div class="pb-energy-fill"></div>
+                    </div>
+                </div>
+
+                <div class="pb-buttons" style="margin-top: 30px;">
+
+                    <a href="#registro" class="pb-btn pb-btn-primary">
+                        <i class="fa-solid fa-crosshairs"></i>
+                        Quiero participar
+                    </a>
+
+                    <a href="#experiencia" class="pb-btn pb-btn-outline">
+                        <i class="fa-solid fa-play"></i>
+                        Descubrir Arena
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HUD -->
+
+        <div class="pb-hud">
+
+            <div class="pb-hud-title">
+                <i class="fa-solid fa-satellite-dish"></i>
+                MATCH STATUS
+            </div>
+
+            <div class="pb-match">
+                <span>TEAM A</span>
+
+                <span class="pb-vs">VS</span>
+
+                <span>TEAM B</span>
+            </div>
+
+            <div class="pb-live">
+                <span class="pb-live-dot"></span>
+                Arena Extrema • Tumbes
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         PRÓXIMAMENTE / RELOJ DE ARENA
+    ========================================================= -->
+
+    <section class="pb-countdown-section">
+
+        <div class="pb-container pb-countdown-content">
+
+            <div>
+
+                <div class="pb-countdown-label">
+                    <i class="fa-solid fa-hourglass-half"></i>
+                    GRAN APERTURA
+                </div>
+
+                <div class="pb-countdown-title">
+                    La batalla está por comenzar
+                </div>
+
+            </div>
+
+            <div class="pb-soon-banner">
+                <i class="fa-solid fa-hourglass-start"></i>
+                <span>Muy pronto en Tumbes</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         ESTADÍSTICAS
+    ========================================================= -->
+
+    <section class="pb-section pb-section-black" style="padding: 50px 0;">
+
+        <div class="pb-container">
+
+            <div class="pb-stats">
+
+                <div class="pb-stat">
+                    <i class="fa-solid fa-users"></i>
+                    <strong>5 VS 5</strong>
+                    <span>Formato competitivo</span>
+                </div>
+
+                <div class="pb-stat">
+                    <i class="fa-solid fa-bolt"></i>
+                    <strong>100%</strong>
+                    <span>Adrenalina</span>
+                </div>
+
+                <div class="pb-stat">
+                    <i class="fa-solid fa-crosshairs"></i>
+                    <strong>TACTIC</strong>
+                    <span>Precisión y estrategia</span>
+                </div>
+
+                <div class="pb-stat">
+                    <i class="fa-solid fa-trophy"></i>
+                    <strong>1</strong>
+                    <span>Campeón</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         EXPERIENCIA
+    ========================================================= -->
+
+    <section id="experiencia" class="pb-section pb-section-dark">
+
+        <div class="pb-container">
+
+            <div class="pb-section-heading">
+
+                <span class="pb-kicker">
+                    / La experiencia
+                </span>
+
+                <h2>
+                    No vienes a mirar.<br>
+                    Vienes a competir.
+                </h2>
+
+                <p>
+                    Arena Extrema combina deporte, estrategia, velocidad y
+                    entretenimiento en una experiencia diseñada para equipos,
+                    amigos, familias y empresas.
+                </p>
+
+            </div>
+
+
+            <div class="pb-cards">
+
+                <article class="pb-card">
+
+                    <div
+                        class="pb-card-image"
+                        style="background-image:url('https://www.visitgarlandtx.com/p/plan-your-visit/nxl-paintball');">
+                    </div>
+
+                    <div class="pb-card-content">
+
+                        <span class="pb-card-number">01</span>
+
+                        <h3>Campo de batalla</h3>
+
+                        <p>
+                            Escenarios diseñados para movimiento,
+                            cobertura, estrategia y adrenalina.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="pb-card">
+
+                    <div
+                        class="pb-card-image"
+                        style="background-image:url('https://lirp.cdn-website.com/090f05aa/dms3rep/multi/opt/sq-commando-pb-File%2B2-14379-bf2b6fcc-1920w.webp');">
+                    </div>
+
+                    <div class="pb-card-content">
+
+                        <span class="pb-card-number">02</span>
+
+                        <h3>Competición</h3>
+
+                        <p>
+                            Coordina a tu equipo, toma posiciones
+                            y supera al escuadrón rival.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="pb-card">
+
+                    <div
+                        class="pb-card-image"
+                        style="background-image:url('https://www.paintballusa.org/sites/default/files/styles/pu_blogpage_img/public/images/blog/dreamstime_s_14848170_1.jpg?itok=OfiWGBOi');">
+                    </div>
+
+                    <div class="pb-card-content">
+
+                        <span class="pb-card-number">03</span>
+
+                        <h3>Equipamiento</h3>
+
+                        <p>
+                            Marcadores, máscaras, hopper, tanque y
+                            todo lo necesario para entrar al campo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         RANKING DE EQUIPOS (Modificación 2)
+    ========================================================= -->
+
+    <section id="ranking" class="pb-section pb-section-black">
+
+        <div class="pb-container">
+
+            <div class="pb-section-heading">
+
+                <span class="pb-kicker">
+                    / Tabla de posiciones
+                </span>
+
+                <h2>
+                    Ranking de<br>
+                    Escuadrones
+                </h2>
+
+                <p>
+                    Esperando la inscripción oficial de los nuevos competidores y escuadrones para armar la tabla de posiciones del torneo. ¡Inscribe a tu equipo y sé el primero en la lista!
+                </p>
+
+            </div>
+
+            <table class="pb-ranking-table">
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Escuadrón</th>
+                        <th>Capitán</th>
+                        <th>Estado</th>
+                        <th>Registro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5" style="text-align: center; color: #888; padding: 35px;">
+                            <i class="fa-solid fa-hourglass-start" style="font-size: 1.5rem; color: var(--pb-yellow); display: block; margin-bottom: 10px;"></i>
+                            Esperando nuevos competidores... ¡Registra tu escuadrón hoy mismo!
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SECCIÓN DE PREMIOS (Modificación 3)
+    ========================================================= -->
+
+    <section id="premios" class="pb-section pb-section-dark">
+
+        <div class="pb-container">
+
+            <div class="pb-section-heading" style="text-align: center;">
+
+                <span class="pb-kicker">
+                    / Bolsa de Premios
+                </span>
+
+                <h2>
+                    Premios del<br>
+                    Campeonato
+                </h2>
+
+                <p style="margin: auto;">
+                    Los premios oficiales, trofeos y categorías especiales se encuentran actualmente en desarrollo y serán anunciados muy pronto.
+                </p>
+
+            </div>
+
+            <div class="pb-prizes-grid">
+
+                <div class="pb-prize-card">
+                    <i class="fa-solid fa-award"></i>
+                    <span class="pb-prize-place">Podio Oficial</span>
+                    <div class="pb-prize-amount">Por Definir</div>
+                    <p class="pb-prize-desc">Reconocimientos especiales para los equipos que alcancen los primeros lugares de la competencia.</p>
+                </div>
+
+                <div class="pb-prize-card">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span class="pb-prize-place">Gran Campeón</span>
+                    <div class="pb-prize-amount">Por Definir</div>
+                    <p class="pb-prize-desc">Trofeo principal del campeonato y premios sorpresa para el escuadrón ganador absoluto.</p>
+                </div>
+
+                <div class="pb-prize-card">
+                    <i class="fa-solid fa-medal"></i>
+                    <span class="pb-prize-place">Menciones de Honor</span>
+                    <div class="pb-prize-amount">Por Definir</div>
+                    <p class="pb-prize-desc">Premios al juego limpio, estrategia táctica y desempeño destacado en la arena.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         EQUIPAMIENTO
+    ========================================================= -->
+
+    <section class="pb-section pb-section-black">
+
+        <div class="pb-container">
+
+            <div class="pb-equipment">
+
+                <div class="pb-equipment-image"></div>
+
+                <div>
+
+                    <div class="pb-section-heading">
+
+                        <span class="pb-kicker">
+                            / Gear Up
+                        </span>
+
+                        <h2>
+                            Equipamiento<br>
+                            de batalla
+                        </h2>
+
+                        <p>
+                            Todo comienza con la preparación. Conoce algunos
+                            de los elementos que forman parte de la experiencia
+                            Paintball.
+                        </p>
+
+                    </div>
+
+
+                    <div class="pb-equipment-list">
+
+                        <div class="pb-equipment-item">
+
+                            <i class="fa-solid fa-crosshairs"></i>
+
+                            <div>
+                                <h3>Marcador Paintball</h3>
+
+                                <p>
+                                    Equipamiento deportivo utilizado
+                                    para disparar las bolas de pintura.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="pb-equipment-item">
+
+                            <i class="fa-solid fa-mask-face"></i>
+
+                            <div>
+                                <h3>Máscara de protección</h3>
+
+                                <p>
+                                    Protección facial indispensable
+                                    durante el juego.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="pb-equipment-item">
+
+                            <i class="fa-solid fa-circle-dot"></i>
+
+                            <div>
+                                <h3>Bolas de pintura</h3>
+
+                                <p>
+                                    Munición deportiva utilizada
+                                    exclusivamente para el juego.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="pb-equipment-item">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            <div>
+                                <h3>Protección y seguridad</h3>
+
+                                <p>
+                                    El equipamiento adecuado forma parte
+                                    fundamental de una experiencia segura.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         TORNEO
+    ========================================================= -->
+
+    <section id="torneo" class="pb-section pb-section-dark">
+
+        <div class="pb-container">
+
+            <div class="pb-tournament">
+
+                <div class="pb-tournament-image"></div>
+
+                <div class="pb-tournament-content">
+
+                    <span class="pb-kicker">
+                        / Paintball Championship
+                    </span>
+
+                    <h2>
+                        FORMA TU<br>
+                        <span>ESCUADRÓN</span>
+                    </h2>
+
+                    <p>
+                        Reúne a tus jugadores. Diseña tu estrategia.
+                        Entrena tus movimientos y prepárate para entrar
+                        al campo de batalla.
+                    </p>
+
+                    <div class="pb-format">
+
+                        <div class="pb-format-number">
+                            5
+                        </div>
+
+                        <div class="pb-format-text">
+
+                            <strong>
+                                Jugadores
+                            </strong>
+
+                            <span>
+                                En cancha
+                            </span>
+
+                        </div>
+
+                        <div class="pb-format-number">
+                            VS
+                        </div>
+
+                        <div class="pb-format-number">
+                            5
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <a href="#registro" class="pb-btn pb-btn-primary">
+                            <i class="fa-solid fa-trophy"></i>
+                            Registrar mi equipo
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         ZONA PÚBLICA
+    ========================================================= -->
+
+    <section class="pb-section pb-section-black">
+
+        <div class="pb-container">
+
+            <div class="pb-public">
+
+                <span class="pb-kicker">
+                    / No necesitas competir
+                </span>
+
+                <h2>
+                    Ven con tu equipo.<br>
+                    <span>Vive la experiencia.</span>
+                </h2>
+
+                <p>
+                    Arena Extrema también tendrá una zona recreativa abierta
+                    al público. Ven con tus amigos, familia, compañeros de
+                    trabajo o forma tu propio grupo y disfruta del paintball
+                    sin necesidad de participar en el campeonato.
+                </p>
+
+                <a href="#registro" class="pb-btn pb-btn-primary">
+                    <i class="fa-solid fa-users"></i>
+                    Quiero recibir información
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FORMULARIO
+    ========================================================= -->
+
+    <section id="registro" class="pb-section pb-form-section">
+
+        <div class="pb-container">
+
+            <div class="pb-section-heading" style="text-align:center;">
+
+                <span class="pb-kicker">
+                    / Registro anticipado
+                </span>
+
+                <h2>
+                    Únete a la<br>
+                    Lista de Espera
+                </h2>
+
+                <p style="margin-left:auto;margin-right:auto;">
+                    Sé de los primeros en conocer las fechas,
+                    precios, modalidades y apertura oficial
+                    de las inscripciones.
+                </p>
+
+            </div>
+
+
+            <div class="pb-form-box">
+
+                <form
+                    action="https://formsubmit.co/contacto@solucionesgeneralesgalviz.com"
+                    method="POST">
+
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="Nuevo Pre-registro - Arena Extrema Paintball">
+
+                    <input
+                        type="hidden"
+                        name="_next"
+                        value="https://galviz-hub.github.io/Galviz-Soluciones-Generales/paintball-tumbes.html">
+
+
+                    <div class="pb-form-grid">
+
+
+                        <div class="pb-form-group">
+
+                            <label for="nombre">
+                                Capitán / Responsable *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="Capitan"
+                                class="pb-form-control"
+                                placeholder="Ej. Rodrigo Silva"
+                                required>
+
+                        </div>
+
+
+                        <div class="pb-form-group">
+
+                            <label for="equipo">
+                                Nombre del equipo *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="equipo"
+                                name="Nombre de Equipo"
+                                class="pb-form-control"
+                                placeholder="Ej. Los Halcones"
+                                required>
+
+                        </div>
+
+
+                        <div class="pb-form-group">
+
+                            <label for="contacto">
+                                WhatsApp / Correo *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contacto"
+                                name="Contacto"
+                                class="pb-form-control"
+                                placeholder="+51 999 999 999"
+                                required>
+
+                        </div>
+
+
+                        <div class="pb-form-group">
+
+                            <label for="interes">
+                                ¿Qué te interesa? *
+                            </label>
+
+                            <select
+                                id="interes"
+                                name="Interes Principal"
+                                class="pb-form-control"
+                                required>
+
+                                <option value="" disabled selected>
+                                    Selecciona una opción
+                                </option>
+
+                                <option value="Torneo 5vs5">
+                                    Torneo competitivo 5 vs 5
+                                </option>
+
+                                <option value="Zona Recreativa">
+                                    Zona recreativa
+                                </option>
+
+                                <option value="Ambos">
+                                    Ambas opciones
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="pb-rules">
+
+                            <strong>
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                Importante:
+                            </strong>
+
+                            La participación estará sujeta a las normas
+                            de seguridad y reglamento oficial del evento.
+                            Los menores de edad deberán contar con la
+                            autorización correspondiente de sus padres
+                            o tutores.
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="pb-submit">
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                            Enviar mi registro
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         NO FOOTER
+         El pie de página corporativo fue eliminado
+         ========================================================= -->
+
+
+</body>
+</html>
