@@ -4,16 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ARENA EXTREMA | Paintball Championship Tumbes</title>
-
-    <meta name="description"
-        content="Arena Extrema Paintball Championship Tumbes. Torneo 5 vs 5, adrenalina, estrategia y entretenimiento para todos. Reserva tu lugar en la lista de espera.">
-
-    <meta name="keywords"
-        content="Paintball Tumbes, Torneo Paintball Tumbes, Paintball Perú, Arena Extrema, Paintball Championship, entretenimiento Tumbes">
-
+    <!-- ========================================== -->
+    <!-- OPTIMIZACIÓN SEO (POSICIONAMIENTO GOOGLE)  -->
+    <!-- ========================================== -->
+    <title>Arena Extrema | Paintball Championship Tumbes - Galviz Soluciones</title>
+    <meta name="description" content="Participa en el Arena Extrema Paintball Championship en Tumbes. Torneo competitivo 5 vs 5, estrategia, adrenalina y zona recreativa. ¡Inscribe a tu escuadrón hoy!">
+    <meta name="keywords" content="Paintball Tumbes, Torneo Paintball Tumbes, Paintball Perú, Arena Extrema, Paintball Championship, entretenimiento Tumbes, Galviz Soluciones Generales">
     <meta name="author" content="Galviz Soluciones Generales S.A.C.S.">
     <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="PE-TUM">
+    <meta name="geo.placename" content="Tumbes">
+
+    <!-- SEO para Redes Sociales (Facebook, WhatsApp, Open Graph) -->
+    <meta property="og:title" content="Arena Extrema | Paintball Championship Tumbes">
+    <meta property="og:description" content="Torneo 5 vs 5, adrenalina y estrategia en Tumbes. Inscribe a tu escuadrón en la lista de espera oficial.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:image" content="https://www.visitgarlandtx.com/p/plan-your-visit/nxl-paintball">
+
+    <!-- ========================================== -->
+    <!-- DATOS ESTRUCTURADOS (SCHEMA.ORG / EVENTO)  -->
+    <!-- ========================================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsEvent",
+      "name": "Arena Extrema Paintball Championship Tumbes",
+      "description": "Torneo competitivo de paintball formato 5 vs 5 y zona recreativa en Tumbes.",
+      "location": {
+        "@type": "Place",
+        "name": "Arena Extrema",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tumbes",
+          "addressCountry": "PE"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Galviz Soluciones Generales S.A.C.S.",
+        "taxID": "20614802929"
+      }
+    }
+    </script>
 
     <!-- CSS PRINCIPAL -->
     <link rel="stylesheet" href="staly.css">
@@ -109,10 +142,10 @@
             left: 0;
             width: 100%;
             z-index: 100;
-            padding: 20px 0;
+            padding: 15px 0;
             background: linear-gradient(
                 to bottom,
-                rgba(0,0,0,.9),
+                rgba(0,0,0,.95),
                 transparent
             );
             border-bottom: 1px solid rgba(217,255,0,.1);
@@ -122,14 +155,15 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 25px;
+            gap: 15px;
         }
 
         .pb-logo {
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: 900;
             letter-spacing: 1px;
+            white-space: nowrap;
         }
 
         .pb-logo span {
@@ -138,13 +172,13 @@
 
         .pb-logo i {
             color: var(--pb-yellow);
-            margin-right: 8px;
+            margin-right: 6px;
         }
 
         .pb-menu {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 20px;
         }
 
         .pb-menu a {
@@ -161,7 +195,7 @@
         .pb-nav-button {
             background: var(--pb-yellow);
             color: #000 !important;
-            padding: 12px 20px;
+            padding: 10px 16px;
             font-weight: 900 !important;
             clip-path: polygon(
                 8px 0,
@@ -219,7 +253,7 @@
         .pb-hero-content {
             position: relative;
             z-index: 5;
-            padding: 150px 0 100px;
+            padding: 130px 0 80px;
             max-width: 780px;
         }
 
@@ -232,23 +266,24 @@
             font-weight: 900;
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .pb-small-title::before {
             content: "";
-            width: 45px;
+            width: 35px;
             height: 3px;
             background: var(--pb-yellow);
         }
 
         .pb-hero h1 {
             font-family: 'Anton', sans-serif;
-            font-size: clamp(4rem, 10vw, 8.5rem);
-            line-height: .88;
+            font-size: clamp(3.5rem, 12vw, 8.5rem);
+            line-height: .9;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin: 0 0 25px;
+            margin: 0 0 20px;
+            word-break: break-word;
         }
 
         .pb-hero h1 span {
@@ -260,15 +295,15 @@
         .pb-hero-description {
             max-width: 650px;
             color: #d0d0d0;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 35px;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
         }
 
         .pb-buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 12px;
         }
 
         .pb-btn {
@@ -277,14 +312,15 @@
             justify-content: center;
             gap: 10px;
 
-            padding: 16px 25px;
+            padding: 14px 22px;
 
-            font-size: .9rem;
+            font-size: .85rem;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 1px;
 
             transition: .3s;
+            text-align: center;
         }
 
         .pb-btn-primary {
@@ -316,22 +352,24 @@
 
 
         /* =========================================================
-            BARRA DE ENERGÍA / SISTEMA HUD
+            BARRA DE ENERGÍA / SISTEMA HUD (65%)
         ========================================================= */
 
         .pb-energy-bar-wrapper {
-            margin-top: 30px;
-            max-width: 500px;
+            margin-top: 25px;
+            max-width: 100%;
         }
         .pb-energy-label {
             display: flex;
             justify-content: space-between;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 800;
             letter-spacing: 1px;
             color: var(--pb-yellow);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             text-transform: uppercase;
+            flex-wrap: wrap;
+            gap: 5px;
         }
         .pb-energy-track {
             height: 8px;
@@ -343,7 +381,7 @@
         .pb-energy-fill {
             position: absolute;
             top: 0; left: 0; bottom: 0;
-            width: 100%;
+            width: 65%;
             background: linear-gradient(90deg, var(--pb-yellow-dark), var(--pb-yellow));
             box-shadow: 0 0 10px var(--pb-yellow);
             animation: energyPulse 2s infinite alternate;
@@ -360,28 +398,26 @@
 
         .pb-hud {
             position: absolute;
-            right: 6%;
-            bottom: 80px;
+            right: 5%;
+            bottom: 40px;
             z-index: 5;
 
-            width: 270px;
-            padding: 20px;
+            width: 240px;
+            padding: 15px;
 
             background: rgba(0,0,0,.75);
             border: 1px solid rgba(217,255,0,.35);
 
             backdrop-filter: blur(10px);
-
-            box-shadow:
-                0 0 40px rgba(0,0,0,.5);
+            box-shadow: 0 0 30px rgba(0,0,0,.5);
         }
 
         .pb-hud-title {
             color: var(--pb-yellow);
-            font-size: .7rem;
+            font-size: .65rem;
             font-weight: 900;
             letter-spacing: 2px;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .pb-match {
@@ -389,27 +425,27 @@
             justify-content: space-between;
             align-items: center;
             font-family: 'Anton', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
         }
 
         .pb-vs {
             color: var(--pb-yellow);
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         .pb-live {
             display: flex;
             align-items: center;
-            gap: 8px;
-            margin-top: 15px;
+            gap: 6px;
+            margin-top: 10px;
             color: #aaa;
-            font-size: .7rem;
+            font-size: .65rem;
             text-transform: uppercase;
         }
 
         .pb-live-dot {
-            width: 8px;
-            height: 8px;
+            width: 7px;
+            height: 7px;
             background: #ff3030;
             border-radius: 50%;
             animation: livePulse 1s infinite;
@@ -431,7 +467,7 @@
             position: relative;
             background: var(--pb-yellow);
             color: #000;
-            padding: 30px 0;
+            padding: 25px 0;
             overflow: hidden;
         }
 
@@ -443,9 +479,9 @@
             transform: translateY(-50%) rotate(-5deg);
 
             font-family: 'Anton', sans-serif;
-            font-size: 8rem;
+            font-size: 6rem;
 
-            color: rgba(0,0,0,.05);
+            color: rgba(0,0,0,.04);
             white-space: nowrap;
         }
 
@@ -456,11 +492,12 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .pb-countdown-label {
-            font-size: .75rem;
+            font-size: .7rem;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -468,26 +505,26 @@
 
         .pb-countdown-title {
             font-family: 'Anton', sans-serif;
-            font-size: 2rem;
+            font-size: 1.6rem;
             text-transform: uppercase;
-            margin: 5px 0 0;
+            margin: 3px 0 0;
         }
 
         .pb-soon-banner {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
             background: #000;
             color: var(--pb-yellow);
-            padding: 15px 30px;
+            padding: 12px 24px;
             font-family: 'Anton', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
         .pb-soon-banner i {
-            font-size: 2rem;
+            font-size: 1.7rem;
             animation: fa-spin 3s infinite linear;
         }
 
@@ -497,7 +534,7 @@
         ========================================================= */
 
         .pb-section {
-            padding: 100px 0;
+            padding: 70px 0;
             position: relative;
         }
 
@@ -510,12 +547,12 @@
         }
 
         .pb-section-heading {
-            margin-bottom: 55px;
+            margin-bottom: 40px;
         }
 
         .pb-kicker {
             color: var(--pb-yellow);
-            font-size: .7rem;
+            font-size: .65rem;
             font-weight: 900;
             letter-spacing: 3px;
             text-transform: uppercase;
@@ -523,16 +560,18 @@
 
         .pb-section-heading h2 {
             font-family: 'Anton', sans-serif;
-            font-size: clamp(3rem, 6vw, 5rem);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
             line-height: .95;
             text-transform: uppercase;
-            margin: 10px 0 15px;
+            margin: 8px 0 12px;
+            word-break: break-word;
         }
 
         .pb-section-heading p {
             max-width: 650px;
             color: var(--pb-gray-text);
-            line-height: 1.8;
+            line-height: 1.7;
+            font-size: 0.95rem;
         }
 
 
@@ -549,7 +588,7 @@
         }
 
         .pb-stat {
-            padding: 35px 20px;
+            padding: 25px 15px;
             text-align: center;
             border-right: 1px solid #222;
         }
@@ -559,20 +598,20 @@
         }
 
         .pb-stat i {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--pb-yellow);
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .pb-stat strong {
             display: block;
             font-family: 'Anton', sans-serif;
-            font-size: 2.8rem;
+            font-size: 2.2rem;
         }
 
         .pb-stat span {
             color: #888;
-            font-size: .7rem;
+            font-size: .65rem;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -591,7 +630,7 @@
 
         .pb-card {
             position: relative;
-            min-height: 380px;
+            min-height: 350px;
             overflow: hidden;
 
             background: #111;
@@ -603,9 +642,8 @@
         }
 
         .pb-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             border-color: var(--pb-yellow);
-            box-shadow: 0 15px 40px rgba(217,255,0,0.15);
         }
 
         .pb-card-image {
@@ -619,7 +657,7 @@
         }
 
         .pb-card:hover .pb-card-image {
-            transform: scale(1.08);
+            transform: scale(1.05);
         }
 
         .pb-card-image::after {
@@ -630,7 +668,7 @@
             background:
                 linear-gradient(
                     to top,
-                    rgba(0,0,0,.96),
+                    rgba(0,0,0,.95),
                     rgba(0,0,0,.2)
                 );
         }
@@ -640,27 +678,27 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            padding: 28px;
+            padding: 22px;
             z-index: 2;
         }
 
         .pb-card-number {
             color: var(--pb-yellow);
             font-family: 'Anton', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .pb-card h3 {
             font-family: 'Anton', sans-serif;
-            font-size: 2rem;
+            font-size: 1.8rem;
             text-transform: uppercase;
-            margin: 8px 0;
+            margin: 6px 0;
         }
 
         .pb-card p {
             color: #bbb;
             font-size: .85rem;
-            line-height: 1.6;
+            line-height: 1.5;
             margin: 0;
         }
 
@@ -669,46 +707,51 @@
             RANKING DE EQUIPOS
         ========================================================= */
 
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
         .pb-ranking-table {
             background: #111;
             border: 1px solid #222;
             width: 100%;
+            min-width: 500px;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin-top: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
         .pb-ranking-table th, .pb-ranking-table td {
-            padding: 18px 20px;
+            padding: 15px;
             text-align: left;
             border-bottom: 1px solid #222;
+            font-size: 0.9rem;
         }
         .pb-ranking-table th {
             background: #080808;
             color: var(--pb-yellow);
             font-family: 'Anton', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             letter-spacing: 1px;
             text-transform: uppercase;
-        }
-        .pb-ranking-table tr:hover {
-            background: rgba(217,255,0,.02);
         }
 
 
         /* =========================================================
-            SECCIÓN DE PREMIOS (POR DEFINIR)
+            SECCIÓN DE PREMIOS
         ========================================================= */
 
         .pb-prizes-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 40px;
+            gap: 20px;
+            margin-top: 30px;
         }
         .pb-prize-card {
             background: #111;
             border: 1px solid #222;
-            padding: 40px 30px;
+            padding: 30px 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -716,33 +759,33 @@
         }
         .pb-prize-card:hover {
             border-color: var(--pb-yellow);
-            transform: translateY(-8px);
+            transform: translateY(-6px);
         }
         .pb-prize-card i {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--pb-yellow);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .pb-prize-place {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 900;
             letter-spacing: 2px;
             color: #888;
             text-transform: uppercase;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             display: block;
         }
         .pb-prize-amount {
             font-family: 'Anton', sans-serif;
-            font-size: 2.2rem;
+            font-size: 2rem;
             color: var(--pb-yellow);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             letter-spacing: 1px;
         }
         .pb-prize-desc {
             color: #aaa;
-            font-size: 0.9rem;
-            line-height: 1.6;
+            font-size: 0.85rem;
+            line-height: 1.5;
         }
 
 
@@ -753,12 +796,12 @@
         .pb-equipment {
             display: grid;
             grid-template-columns: 1.1fr .9fr;
-            gap: 50px;
+            gap: 40px;
             align-items: center;
         }
 
         .pb-equipment-image {
-            min-height: 500px;
+            min-height: 400px;
 
             background:
                 linear-gradient(
@@ -770,48 +813,46 @@
                 center/cover no-repeat;
 
             border: 1px solid #272727;
-
-            box-shadow:
-                25px 25px 0 rgba(217,255,0,.06);
+            box-shadow: 15px 15px 0 rgba(217,255,0,.06);
         }
 
         .pb-equipment-list {
             display: grid;
-            gap: 15px;
+            gap: 12px;
         }
 
         .pb-equipment-item {
             display: flex;
-            gap: 18px;
-            padding: 20px;
+            gap: 15px;
+            padding: 16px;
             background: #101010;
             border: 1px solid #222;
-
             transition: .3s;
         }
 
         .pb-equipment-item:hover {
             border-color: var(--pb-yellow);
-            transform: translateX(8px);
+            transform: translateX(6px);
         }
 
         .pb-equipment-item i {
-            width: 40px;
+            width: 30px;
             color: var(--pb-yellow);
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            flex-shrink: 0;
         }
 
         .pb-equipment-item h3 {
-            margin: 0 0 5px;
-            font-size: .95rem;
+            margin: 0 0 4px;
+            font-size: .9rem;
             text-transform: uppercase;
         }
 
         .pb-equipment-item p {
             margin: 0;
             color: #888;
-            font-size: .8rem;
-            line-height: 1.5;
+            font-size: .78rem;
+            line-height: 1.4;
         }
 
 
@@ -822,7 +863,7 @@
         .pb-tournament {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            min-height: 550px;
+            min-height: 450px;
             background: #0d0d0d;
             border: 1px solid #222;
         }
@@ -839,7 +880,7 @@
         }
 
         .pb-tournament-content {
-            padding: 70px;
+            padding: 50px;
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -847,10 +888,10 @@
 
         .pb-tournament-content h2 {
             font-family: 'Anton', sans-serif;
-            font-size: 4rem;
-            line-height: .9;
+            font-size: 3.2rem;
+            line-height: .95;
             text-transform: uppercase;
-            margin: 10px 0 25px;
+            margin: 8px 0 20px;
         }
 
         .pb-tournament-content h2 span {
@@ -859,20 +900,21 @@
 
         .pb-tournament-content p {
             color: #999;
-            line-height: 1.8;
-            margin-bottom: 30px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
         }
 
         .pb-format {
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 30px;
+            gap: 12px;
+            margin-bottom: 25px;
         }
 
         .pb-format-number {
             font-family: 'Anton', sans-serif;
-            font-size: 4rem;
+            font-size: 3.2rem;
             color: var(--pb-yellow);
             line-height: 1;
         }
@@ -880,11 +922,12 @@
         .pb-format-text strong {
             display: block;
             text-transform: uppercase;
+            font-size: 0.9rem;
         }
 
         .pb-format-text span {
             color: #777;
-            font-size: .75rem;
+            font-size: .7rem;
         }
 
 
@@ -896,7 +939,7 @@
             position: relative;
             overflow: hidden;
 
-            padding: 80px 50px;
+            padding: 60px 30px;
 
             background:
                 linear-gradient(
@@ -911,30 +954,26 @@
         .pb-public::before {
             content: "";
             position: absolute;
-            width: 350px;
-            height: 350px;
-            right: -150px;
-            top: -150px;
+            width: 250px;
+            height: 250px;
+            right: -100px;
+            top: -100px;
 
             background: var(--pb-yellow);
-
             opacity: .08;
-
             border-radius: 50%;
         }
 
         .pb-public h2 {
             position: relative;
             z-index: 2;
-
             max-width: 700px;
-
             font-family: 'Anton', sans-serif;
-            font-size: clamp(3rem, 6vw, 5rem);
+            font-size: clamp(2.5rem, 5vw, 4rem);
             line-height: .95;
             text-transform: uppercase;
-
-            margin: 0 0 20px;
+            margin: 0 0 15px;
+            word-break: break-word;
         }
 
         .pb-public h2 span {
@@ -944,11 +983,11 @@
         .pb-public p {
             position: relative;
             z-index: 2;
-
             max-width: 700px;
-
             color: #aaa;
-            line-height: 1.8;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
         }
 
 
@@ -963,24 +1002,20 @@
         .pb-form-box {
             max-width: 800px;
             margin: auto;
-
-            padding: 45px;
-
+            padding: 35px 25px;
             background: #111;
             border: 1px solid #292929;
-
-            box-shadow:
-                0 30px 80px rgba(0,0,0,.4);
+            box-shadow: 0 20px 60px rgba(0,0,0,.4);
         }
 
         .pb-form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 15px;
         }
 
         .pb-form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .pb-form-group.full {
@@ -990,25 +1025,21 @@
         .pb-form-group label {
             display: block;
             color: #ddd;
-            font-size: .75rem;
+            font-size: .7rem;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .pb-form-control {
             width: 100%;
-            padding: 15px;
-
+            padding: 12px 14px;
             background: #080808;
             border: 1px solid #333;
-
             color: white;
-
             font-family: inherit;
             font-size: .9rem;
-
             outline: none;
             transition: .3s;
         }
@@ -1020,15 +1051,13 @@
 
         .pb-rules {
             grid-column: 1 / -1;
-
-            padding: 20px;
-
+            padding: 15px;
             background: rgba(217,255,0,.04);
             border-left: 3px solid var(--pb-yellow);
-
             color: #999;
-            font-size: .8rem;
-            line-height: 1.7;
+            font-size: .78rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
         }
 
         .pb-rules strong {
@@ -1037,25 +1066,17 @@
 
         .pb-submit {
             grid-column: 1 / -1;
-
             width: 100%;
-
-            padding: 18px;
-
+            padding: 16px;
             border: none;
-
             background: var(--pb-yellow);
             color: #000;
-
             font-family: inherit;
             font-size: .9rem;
             font-weight: 900;
-
             text-transform: uppercase;
             letter-spacing: 1px;
-
             cursor: pointer;
-
             transition: .3s;
         }
 
@@ -1073,63 +1094,29 @@
             position: absolute;
             width: 8px;
             height: 8px;
-
             background: var(--pb-yellow);
             border-radius: 50%;
-
             opacity: .7;
-
             animation: paintFloat 6s ease-in-out infinite;
+            pointer-events: none;
         }
 
-        .splash-1 {
-            top: 25%;
-            left: 7%;
-            width: 13px;
-            height: 13px;
-        }
-
-        .splash-2 {
-            top: 70%;
-            left: 45%;
-            width: 7px;
-            height: 7px;
-            animation-delay: 1s;
-        }
-
-        .splash-3 {
-            top: 35%;
-            right: 20%;
-            width: 11px;
-            height: 11px;
-            animation-delay: 2s;
-        }
-
-        .splash-4 {
-            bottom: 15%;
-            right: 7%;
-            width: 6px;
-            height: 6px;
-            animation-delay: 3s;
-        }
+        .splash-1 { top: 25%; left: 7%; width: 13px; height: 13px; }
+        .splash-2 { top: 70%; left: 45%; width: 7px; height: 7px; animation-delay: 1s; }
+        .splash-3 { top: 35%; right: 20%; width: 11px; height: 11px; animation-delay: 2s; }
+        .splash-4 { bottom: 15%; right: 7%; width: 6px; height: 6px; animation-delay: 3s; }
 
         @keyframes paintFloat {
-            0%, 100% {
-                transform: translateY(0) scale(1);
-            }
-
-            50% {
-                transform: translateY(-25px) scale(1.4);
-            }
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.3); }
         }
 
 
         /* =========================================================
-            RESPONSIVE
+            RESPONSIVE OPTIMIZADO PARA MÓVILES (CELULAR)
         ========================================================= */
 
         @media (max-width: 1000px) {
-
             .pb-menu a:not(.pb-nav-button) {
                 display: none;
             }
@@ -1159,7 +1146,7 @@
             }
 
             .pb-equipment-image {
-                min-height: 400px;
+                min-height: 350px;
             }
 
             .pb-tournament {
@@ -1167,52 +1154,44 @@
             }
 
             .pb-tournament-image {
-                min-height: 400px;
+                min-height: 300px;
             }
         }
 
         @media (max-width: 700px) {
-
             .pb-navbar {
-                padding: 15px 0;
+                padding: 12px 0;
             }
 
             .pb-logo {
-                font-size: 1.15rem;
+                font-size: 1.1rem;
             }
 
             .pb-nav-button {
-                padding: 9px 13px;
-                font-size: .65rem !important;
+                padding: 8px 12px;
+                font-size: .6rem !important;
             }
 
             .pb-hero {
-                min-height: 900px;
-
-                background:
-                    linear-gradient(
-                        0deg,
-                        rgba(0,0,0,.98),
-                        rgba(0,0,0,.55)
-                    ),
-                    url("https://www.visitgarlandtx.com/p/plan-your-visit/nxl-paintball")
-                    center/cover no-repeat;
+                min-height: 85vh;
             }
 
             .pb-hero-content {
-                padding-top: 170px;
+                padding-top: 130px;
+                padding-bottom: 60px;
             }
 
             .pb-hero h1 {
-                font-size: clamp(3.8rem, 18vw, 6rem);
+                font-size: clamp(3rem, 14vw, 5rem);
             }
 
             .pb-hero-description {
-                font-size: .95rem;
+                font-size: 0.9rem;
             }
 
             .pb-buttons {
                 flex-direction: column;
+                width: 100%;
             }
 
             .pb-btn {
@@ -1225,8 +1204,10 @@
             }
 
             .pb-soon-banner {
-                font-size: 1.4rem;
-                padding: 12px 20px;
+                font-size: 1.2rem;
+                padding: 10px 16px;
+                width: 100%;
+                justify-content: center;
             }
 
             .pb-cards, .pb-prizes-grid {
@@ -1238,27 +1219,27 @@
             }
 
             .pb-stat {
-                padding: 25px 10px;
+                padding: 20px 10px;
             }
 
             .pb-stat strong {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .pb-tournament-content {
-                padding: 40px 25px;
+                padding: 30px 20px;
             }
 
             .pb-tournament-content h2 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
 
             .pb-public {
-                padding: 50px 25px;
+                padding: 40px 20px;
             }
 
             .pb-form-box {
-                padding: 25px 20px;
+                padding: 25px 15px;
             }
 
             .pb-form-grid {
@@ -1278,8 +1259,8 @@
 <body>
 
     <!-- Elementos de Líneas de Mira Decorativas -->
-    <div class="hud-crosshair" style="top: 120px; left: 40px;"></div>
-    <div class="hud-crosshair" style="top: 300px; right: 50px;"></div>
+    <div class="hud-crosshair" style="top: 100px; left: 20px;"></div>
+    <div class="hud-crosshair" style="top: 250px; right: 20px;"></div>
 
     <!-- =========================================================
          NAVBAR
@@ -1350,18 +1331,18 @@
                     domina el campo.
                 </p>
 
-                <!-- Barra de Energía del Sistema (Modificación 1) -->
+                <!-- Barra de Energía del Sistema (65%) -->
                 <div class="pb-energy-bar-wrapper">
                     <div class="pb-energy-label">
                         <span>Inscripciones Abiertas / Próximamente Competencia</span>
-                        <span>Activo</span>
+                        <span>65% Completado</span>
                     </div>
                     <div class="pb-energy-track">
                         <div class="pb-energy-fill"></div>
                     </div>
                 </div>
 
-                <div class="pb-buttons" style="margin-top: 30px;">
+                <div class="pb-buttons" style="margin-top: 25px;">
 
                     <a href="#registro" class="pb-btn pb-btn-primary">
                         <i class="fa-solid fa-crosshairs"></i>
@@ -1442,7 +1423,7 @@
          ESTADÍSTICAS
     ========================================================= -->
 
-    <section class="pb-section pb-section-black" style="padding: 50px 0;">
+    <section class="pb-section pb-section-black" style="padding: 40px 0;">
 
         <div class="pb-container">
 
@@ -1585,7 +1566,7 @@
 
 
     <!-- =========================================================
-         RANKING DE EQUIPOS (Modificación 2)
+         RANKING DE EQUIPOS
     ========================================================= -->
 
     <section id="ranking" class="pb-section pb-section-black">
@@ -1609,25 +1590,27 @@
 
             </div>
 
-            <table class="pb-ranking-table">
-                <thead>
-                    <tr>
-                        <th>Pos</th>
-                        <th>Escuadrón</th>
-                        <th>Capitán</th>
-                        <th>Estado</th>
-                        <th>Registro</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="5" style="text-align: center; color: #888; padding: 35px;">
-                            <i class="fa-solid fa-hourglass-start" style="font-size: 1.5rem; color: var(--pb-yellow); display: block; margin-bottom: 10px;"></i>
-                            Esperando nuevos competidores... ¡Registra tu escuadrón hoy mismo!
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="pb-ranking-table">
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Escuadrón</th>
+                            <th>Capitán</th>
+                            <th>Estado</th>
+                            <th>Registro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="5" style="text-align: center; color: #888; padding: 30px;">
+                                <i class="fa-solid fa-hourglass-start" style="font-size: 1.4rem; color: var(--pb-yellow); display: block; margin-bottom: 8px;"></i>
+                                Esperando nuevos competidores... ¡Registra tu escuadrón hoy mismo!
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
         </div>
 
@@ -1635,7 +1618,7 @@
 
 
     <!-- =========================================================
-         SECCIÓN DE PREMIOS (Modificación 3)
+         SECCIÓN DE PREMIOS
     ========================================================= -->
 
     <section id="premios" class="pb-section pb-section-dark">
