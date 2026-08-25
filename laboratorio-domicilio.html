@@ -1,0 +1,2292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ========================================== -->
+    <!-- OPTIMIZACIÓN SEO (POSICIONAMIENTO GOOGLE)  -->
+    <!-- ========================================== -->
+    <title>Laboratorio Clínico a Domicilio en Tumbes | Galviz Soluciones</title>
+    <meta name="description" content="Servicio de laboratorio clínico a domicilio en Tumbes. Toma de muestras en casa, paquetes de análisis y resultados enviados por WhatsApp en formato PDF.">
+    <meta name="keywords" content="laboratorio clínico a domicilio Tumbes, análisis clínicos Tumbes, exámenes a domicilio Tumbes, hemograma Tumbes, Helicobacter pylori Tumbes, Galviz Soluciones Generales">
+    <meta name="author" content="Galviz Soluciones Generales S.A.C.S.">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="PE-TUM">
+    <meta name="geo.placename" content="Tumbes">
+
+    <!-- SEO para Redes Sociales (Facebook, WhatsApp, Open Graph) -->
+    <meta property="og:title" content="Laboratorio Clínico a Domicilio | Tumbes - Galviz Soluciones">
+    <meta property="og:description" content="Toma de muestras a domicilio en Tumbes. Resultados rápidos y seguros por WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PE">
+
+    <!-- ========================================== -->
+    <!-- DATOS ESTRUCTURADOS (SCHEMA.ORG / WEB)     -->
+    <!-- ========================================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Laboratorio Clínico a Domicilio en Tumbes",
+      "description": "Servicio de laboratorio clínico con toma de muestras a domicilio en Tumbes.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Galviz Soluciones Generales S.A.C.S.",
+        "taxID": "20614802929"
+      }
+    }
+    </script>
+
+    <!-- CSS PRINCIPAL DE GALVIZ -->
+    <link rel="stylesheet" href="staly.css">
+
+    <!-- FUENTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+
+        /* =====================================================
+            VARIABLES
+        ===================================================== */
+
+        :root {
+            --lab-blue: #0f4c81;
+            --lab-blue-dark: #082f52;
+            --lab-cyan: #00a8cc;
+            --lab-light: #eef8fc;
+            --lab-green: #16a085;
+            --lab-white: #ffffff;
+            --lab-dark: #102a43;
+            --lab-gray: #64748b;
+            --lab-border: #dbe7ef;
+        }
+
+
+        /* =====================================================
+            HERO
+        ===================================================== */
+
+        .lab-hero {
+
+            position: relative;
+
+            min-height: 82vh;
+
+            display: flex;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+                    115deg,
+                    rgba(4, 30, 55, .96),
+                    rgba(10, 79, 125, .88)
+                ),
+
+                url("img/laboratorio-domicilio.jpg")
+                center / cover no-repeat;
+
+            color: white;
+
+            padding: 100px 20px 80px;
+        }
+
+
+        .lab-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 450px;
+
+            height: 450px;
+
+            border-radius: 50%;
+
+            background: rgba(0, 200, 230, .18);
+
+            filter: blur(80px);
+
+            right: -150px;
+
+            top: -100px;
+        }
+
+
+        .lab-hero-container {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 1200px;
+
+            width: 100%;
+
+            margin: auto;
+
+        }
+
+
+        .lab-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 9px 18px;
+
+            border-radius: 50px;
+
+            background: rgba(255,255,255,.12);
+
+            border: 1px solid rgba(255,255,255,.25);
+
+            font-size: .85rem;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            backdrop-filter: blur(8px);
+
+            margin-bottom: 25px;
+        }
+
+
+        .lab-badge i {
+
+            color: #6ee7f2;
+        }
+
+
+        .lab-hero h1 {
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: clamp(2.7rem, 6vw, 5.5rem);
+
+            line-height: 1;
+
+            font-weight: 800;
+
+            max-width: 850px;
+
+            margin: 0 0 25px;
+
+        }
+
+
+        .lab-hero h1 span {
+
+            color: #5eead4;
+
+        }
+
+
+        .lab-hero p {
+
+            max-width: 700px;
+
+            font-size: 1.15rem;
+
+            line-height: 1.8;
+
+            color: #dcecf5;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .lab-hero-buttons {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+        }
+
+
+        .lab-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            padding: 15px 25px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: .3s;
+
+        }
+
+
+        .lab-btn-primary {
+
+            background: #18b887;
+
+            color: white;
+
+            box-shadow: 0 10px 25px rgba(24,184,135,.25);
+
+        }
+
+
+        .lab-btn-primary:hover {
+
+            transform: translateY(-4px);
+
+            background: #119b72;
+
+        }
+
+
+        .lab-btn-secondary {
+
+            border: 1px solid rgba(255,255,255,.35);
+
+            color: white;
+
+            background: rgba(255,255,255,.08);
+
+        }
+
+
+        .lab-btn-secondary:hover {
+
+            background: white;
+
+            color: var(--lab-blue);
+
+            transform: translateY(-4px);
+
+        }
+
+
+        /* =====================================================
+            BANNER DOMICILIO
+        ===================================================== */
+
+        .home-service {
+
+            position: relative;
+
+            z-index: 5;
+
+            margin-top: -45px;
+
+            padding: 0 20px;
+
+        }
+
+
+        .home-service-box {
+
+            max-width: 1050px;
+
+            margin: auto;
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 25px 35px;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+
+            box-shadow: 0 20px 50px rgba(15,76,129,.15);
+
+            border: 1px solid var(--lab-border);
+
+        }
+
+
+        .home-service-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 10px;
+
+        }
+
+
+        .home-service-icon {
+
+            width: 55px;
+
+            height: 55px;
+
+            min-width: 55px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: var(--lab-light);
+
+            color: var(--lab-blue);
+
+            font-size: 1.4rem;
+
+        }
+
+
+        .home-service-item strong {
+
+            display: block;
+
+            color: var(--lab-dark);
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .home-service-item span {
+
+            color: var(--lab-gray);
+
+            font-size: .85rem;
+
+        }
+
+
+        /* =====================================================
+            SECCIONES
+        ===================================================== */
+
+        .lab-section {
+
+            padding: 100px 20px;
+
+        }
+
+
+        .lab-section.light {
+
+            background: #f7fbfd;
+
+        }
+
+
+        .lab-container {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+        }
+
+
+        .lab-section-heading {
+
+            text-align: center;
+
+            max-width: 750px;
+
+            margin: 0 auto 55px;
+
+        }
+
+
+        .lab-section-heading span {
+
+            display: block;
+
+            color: var(--lab-cyan);
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            font-size: .85rem;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .lab-section-heading h2 {
+
+            font-family: "Montserrat", sans-serif;
+
+            color: var(--lab-dark);
+
+            font-size: clamp(2rem, 4vw, 3.2rem);
+
+            margin: 0 0 15px;
+
+        }
+
+
+        .lab-section-heading p {
+
+            color: var(--lab-gray);
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+            PAQUETE DESTACADO
+        ===================================================== */
+
+        .package-wrapper {
+
+            max-width: 900px;
+
+            margin: auto;
+
+        }
+
+
+        .package-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #0a406d,
+                    #0b6984
+                );
+
+            color: white;
+
+            border-radius: 24px;
+
+            padding: 45px;
+
+            box-shadow: 0 25px 60px rgba(8,47,82,.22);
+
+        }
+
+
+        .package-card::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+
+            height: 250px;
+
+            background: rgba(255,255,255,.08);
+
+            border-radius: 50%;
+
+            right: -100px;
+
+            top: -100px;
+
+        }
+
+
+        .package-tag {
+
+            display: inline-block;
+
+            background: #5eead4;
+
+            color: #064e3b;
+
+            padding: 7px 14px;
+
+            border-radius: 50px;
+
+            font-weight: 800;
+
+            font-size: .75rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .package-header {
+
+            display: flex;
+
+            align-items: flex-end;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .package-header h3 {
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 2rem;
+
+            margin: 0 0 8px;
+
+        }
+
+
+        .package-header p {
+
+            margin: 0;
+
+            color: #cce8f2;
+
+        }
+
+
+        .package-price {
+
+            font-size: 3.5rem;
+
+            font-weight: 800;
+
+            white-space: nowrap;
+
+        }
+
+
+        .package-price small {
+
+            font-size: 1rem;
+
+            font-weight: 500;
+
+        }
+
+
+        .package-list {
+
+            display: grid;
+
+            grid-template-columns: repeat(2,1fr);
+
+            gap: 15px;
+
+            margin: 30px 0;
+
+        }
+
+
+        .package-list div {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 14px;
+
+            background: rgba(255,255,255,.09);
+
+            border-radius: 10px;
+
+        }
+
+
+        .package-list i {
+
+            color: #5eead4;
+
+        }
+
+
+        .package-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            background: white;
+
+            color: var(--lab-blue);
+
+            padding: 14px 25px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+            transition: .3s;
+
+        }
+
+
+        .package-btn:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 10px 25px rgba(0,0,0,.15);
+
+        }
+
+
+        /* =====================================================
+            EXAMENES
+        ===================================================== */
+
+        .exams-grid {
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit,minmax(230px,1fr));
+
+            gap: 18px;
+
+        }
+
+
+        .exam-card {
+
+            background: white;
+
+            border: 1px solid var(--lab-border);
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            transition: .3s;
+
+        }
+
+
+        .exam-card:hover {
+
+            transform: translateY(-5px);
+
+            border-color: #8bd8e7;
+
+            box-shadow: 0 15px 30px rgba(15,76,129,.09);
+
+        }
+
+
+        .exam-info {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+        }
+
+
+        .exam-icon {
+
+            width: 45px;
+
+            height: 45px;
+
+            min-width: 45px;
+
+            border-radius: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--lab-light);
+
+            color: var(--lab-blue);
+
+        }
+
+
+        .exam-name {
+
+            color: var(--lab-dark);
+
+            font-weight: 700;
+
+            font-size: .95rem;
+
+        }
+
+
+        .exam-price {
+
+            color: var(--lab-green);
+
+            font-weight: 800;
+
+            white-space: nowrap;
+
+        }
+
+
+        /* =====================================================
+            HELICOBACTER
+        ===================================================== */
+
+        .h-pylori {
+
+            background: linear-gradient(
+                135deg,
+                #fff7ed,
+                #ffffff
+            );
+
+            border: 1px solid #fed7aa;
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            margin-top: 35px;
+
+        }
+
+
+        .h-pylori-header {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .h-pylori-icon {
+
+            width: 55px;
+
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: #ffedd5;
+
+            color: #ea580c;
+
+            font-size: 1.4rem;
+
+        }
+
+
+        .h-pylori h3 {
+
+            color: #9a3412;
+
+            margin: 0;
+
+        }
+
+
+        .h-pylori p {
+
+            color: #7c2d12;
+
+            margin: 5px 0 0;
+
+        }
+
+
+        .hp-options {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+
+        }
+
+
+        .hp-option {
+
+            background: white;
+
+            border: 1px solid #fed7aa;
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+        }
+
+
+        .hp-option strong {
+
+            display: block;
+
+            color: #9a3412;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .hp-option span {
+
+            font-size: 1.7rem;
+
+            font-weight: 800;
+
+            color: #ea580c;
+
+        }
+
+
+        /* =====================================================
+            PROCESO
+        ===================================================== */
+
+        .process-grid {
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(4,1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .process-card {
+
+            position: relative;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+        }
+
+
+        .process-number {
+
+            width: 60px;
+
+            height: 60px;
+
+            margin: auto auto 20px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--lab-blue);
+
+            color: white;
+
+            font-size: 1.3rem;
+
+            font-weight: 800;
+
+            box-shadow: 0 8px 20px rgba(15,76,129,.2);
+
+        }
+
+
+        .process-card h3 {
+
+            color: var(--lab-dark);
+
+            font-size: 1.05rem;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .process-card p {
+
+            color: var(--lab-gray);
+
+            font-size: .9rem;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =====================================================
+            RESULTADOS
+        ===================================================== */
+
+        .results-box {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            background: linear-gradient(
+                135deg,
+                #082f52,
+                #0f4c81
+            );
+
+            color: white;
+
+            border-radius: 22px;
+
+            padding: 45px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 40px;
+
+            align-items: center;
+
+        }
+
+
+        .results-box h2 {
+
+            font-family: "Montserrat", sans-serif;
+
+            font-size: 2.2rem;
+
+            margin-top: 0;
+
+        }
+
+
+        .results-box p {
+
+            color: #cde1ed;
+
+            line-height: 1.7;
+
+        }
+
+
+        .result-feature {
+
+            display: flex;
+
+            gap: 15px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .result-feature i {
+
+            color: #5eead4;
+
+            font-size: 1.3rem;
+
+            margin-top: 3px;
+
+        }
+
+
+        .result-feature strong {
+
+            display: block;
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .result-feature span {
+
+            color: #cde1ed;
+
+            font-size: .9rem;
+
+        }
+
+
+        /* =====================================================
+            CONTACTO Y BOTÓN WHATSAPP INDEPENDIENTE (CORREGIDO)
+        ===================================================== */
+
+        .lab-contact {
+
+            text-align: center;
+
+            background: #eaf8f5;
+
+            padding: 90px 20px;
+
+        }
+
+
+        .lab-contact h2 {
+
+            font-family: "Montserrat", sans-serif;
+
+            color: var(--lab-dark);
+
+            font-size: clamp(2rem,4vw,3.2rem);
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .lab-contact p {
+
+            color: var(--lab-gray);
+
+            max-width: 650px;
+
+            margin: 0 auto 30px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* Estilo aislado para evitar interferencia de staly.css */
+        .lab-whatsapp-btn {
+
+            display: inline-flex !important;
+
+            align-items: center !important;
+
+            justify-content: center !important;
+
+            gap: 12px !important;
+
+            background: #16a085 !important;
+
+            color: white !important;
+
+            text-decoration: none !important;
+
+            padding: 16px 32px !important;
+
+            border-radius: 50px !important;
+
+            font-size: 1.05rem !important;
+
+            font-weight: 800 !important;
+
+            box-shadow: 0 12px 30px rgba(22,160,133,.25) !important;
+
+            transition: .3s !important;
+
+            border: none !important;
+
+        }
+
+
+        .lab-whatsapp-btn:hover {
+
+            transform: translateY(-5px) !important;
+
+            background: #12846f !important;
+
+            color: white !important;
+
+        }
+
+
+        .lab-whatsapp-btn i {
+
+            font-size: 1.4rem !important;
+
+            margin: 0 !important;
+
+            background: none !important;
+
+            color: white !important;
+
+            border-radius: 0 !important;
+
+            width: auto !important;
+
+            height: auto !important;
+
+        }
+
+
+        .contact-note {
+
+            margin-top: 20px;
+
+            font-size: .85rem;
+
+            color: #64748b;
+
+        }
+
+
+        /* =====================================================
+            RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .home-service-box {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .package-header {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+
+            .package-list {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .process-grid {
+
+                grid-template-columns:
+
+                    repeat(2,1fr);
+
+            }
+
+
+            .results-box {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .lab-hero {
+
+                min-height: 90vh;
+
+            }
+
+
+            .lab-hero h1 {
+
+                font-size: 2.7rem;
+
+            }
+
+
+            .package-card {
+
+                padding: 28px 22px;
+
+            }
+
+
+            .package-price {
+
+                font-size: 2.8rem;
+
+            }
+
+
+            .hp-options {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .process-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .results-box {
+
+                padding: 30px 22px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVEGACIÓN
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-content">
+
+            <a href="index.html" class="logo">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                GALVIZ
+
+                <span>Soluciones</span>
+
+            </a>
+
+
+            <nav class="menu">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a href="nosotros.html">
+                    Nosotros
+                </a>
+
+                <div class="dropdown">
+
+                    <a href="#">
+                        Servicios
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+
+                    <div class="dropdown-content">
+
+                        <a href="eventos-catering.html">
+                            Eventos & Catering
+                        </a>
+
+                        <a href="servicio-limpieza-mantenimiento.html">
+                            Limpieza y Mantenimiento
+                        </a>
+
+                        <a href="servicio-drywall-electricidad.html">
+                            Drywall, Pintura y Electricidad
+                        </a>
+
+                        <a href="servicio-sst-ambiental.html">
+                            Consultoría SST y Ambiental
+                        </a>
+
+                        <a href="servicio-logistica-transporte.html">
+                            Logística y Transportes
+                        </a>
+
+                        <a href="servicio-outsourcing-asesoria.html">
+                            Outsourcing y Asesoría
+                        </a>
+
+                        <a href="servicio-marketing-ti.html">
+                            Marketing Digital y TI
+                        </a>
+
+                        <a href="turismo-ecuador.html">
+                            Turismo & Experiencias
+                        </a>
+
+                        <a href="paintball-tumbes.html">
+                            Arena Extrema: Paintball
+                        </a>
+
+                        <a href="laboratorio-domicilio.html"
+                            style="color: var(--accent-gold);">
+
+                            <i class="fa-solid fa-house-medical"></i>
+
+                            Laboratorio a Domicilio
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <a href="#contacto-lab"
+                   class="btn-nav">
+
+                    Solicitar servicio
+
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="lab-hero">
+
+        <div class="lab-hero-container">
+
+            <span class="lab-badge">
+
+                <i class="fa-solid fa-house-medical"></i>
+
+                SERVICIO EXCLUSIVAMENTE A DOMICILIO
+
+            </span>
+
+
+            <h1>
+
+                Tu salud,
+
+                <span>sin salir de casa.</span>
+
+            </h1>
+
+
+            <p>
+
+                Realizamos la toma de muestras directamente
+                en tu domicilio, con coordinación previa y
+                resultados enviados en formato PDF a través
+                de WhatsApp.
+
+            </p>
+
+
+            <div class="lab-hero-buttons">
+
+                <a
+                    href="https://wa.me/51941637862?text=Hola%2C%20quiero%20solicitar%20el%20servicio%20de%20laboratorio%20a%20domicilio."
+                    target="_blank"
+                    class="lab-btn lab-btn-primary">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    Solicitar visita
+
+                </a>
+
+
+                <a
+                    href="#paquete"
+                    class="lab-btn lab-btn-secondary">
+
+                    <i class="fa-solid fa-flask"></i>
+
+                    Ver exámenes
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BENEFICIOS
+    ====================================================== -->
+
+    <section class="home-service">
+
+        <div class="home-service-box">
+
+
+            <div class="home-service-item">
+
+                <div class="home-service-icon">
+
+                    <i class="fa-solid fa-house"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Atención a domicilio
+                    </strong>
+
+                    <span>
+                        Coordinamos la visita previamente
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="home-service-item">
+
+                <div class="home-service-icon">
+
+                    <i class="fa-solid fa-vial"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Toma de muestras
+                    </strong>
+
+                    <span>
+                        Equipo para realizar la toma en casa
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="home-service-item">
+
+                <div class="home-service-icon">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        Resultados por WhatsApp
+                    </strong>
+
+                    <span>
+                        En aproximadamente 24 horas
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PAQUETE S/55
+    ====================================================== -->
+
+    <section id="paquete"
+             class="lab-section">
+
+        <div class="lab-container">
+
+            <div class="lab-section-heading">
+
+                <span>
+                    PAQUETE DESTACADO
+                </span>
+
+                <h2>
+                    Análisis esenciales desde casa
+                </h2>
+
+                <p>
+
+                    Una opción práctica para realizar varios
+                    análisis en una sola visita a domicilio.
+
+                </p>
+
+            </div>
+
+
+            <div class="package-wrapper">
+
+                <div class="package-card">
+
+                    <span class="package-tag">
+
+                        Paquete especial
+
+                    </span>
+
+
+                    <div class="package-header">
+
+                        <div>
+
+                            <h3>
+                                Paquete de laboratorio
+                            </h3>
+
+                            <p>
+                                Toma de muestra a domicilio
+                            </p>
+
+                        </div>
+
+
+                        <div class="package-price">
+
+                            S/ 55
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="package-list">
+
+                        <div>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Hemograma completo
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Triglicéridos
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Colesterol
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Examen completo de orina
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="https://wa.me/51941637862?text=Hola%2C%20quiero%20solicitar%20el%20paquete%20de%20laboratorio%20a%20domicilio%20de%20S%2F%2055."
+                        target="_blank"
+                        class="package-btn">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        Solicitar paquete
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EXÁMENES INDIVIDUALES
+    ====================================================== -->
+
+    <section class="lab-section light">
+
+        <div class="lab-container">
+
+            <div class="lab-section-heading">
+
+                <span>
+                    EXÁMENES INDIVIDUALES
+                </span>
+
+                <h2>
+                    Elige el análisis que necesitas
+                </h2>
+
+                <p>
+
+                    Si buscas un examen específico,
+                    consulta y coordina tu toma de muestra
+                    directamente a domicilio.
+
+                </p>
+
+            </div>
+
+
+            <div class="exams-grid">
+
+
+                <div class="exam-card">
+
+                    <div class="exam-info">
+
+                        <div class="exam-icon">
+
+                            <i class="fa-solid fa-droplet"></i>
+
+                        </div>
+
+                        <span class="exam-name">
+                            Glucosa
+                        </span>
+
+                    </div>
+
+                    <span class="exam-price">
+                        S/ 15
+                    </span>
+
+                </div>
+
+
+                <div class="exam-card">
+
+                    <div class="exam-info">
+
+                        <div class="exam-icon">
+
+                            <i class="fa-solid fa-heart-pulse"></i>
+
+                        </div>
+
+                        <span class="exam-name">
+                            Colesterol
+                        </span>
+
+                    </div>
+
+                    <span class="exam-price">
+                        S/ 15
+                    </span>
+
+                </div>
+
+
+                <div class="exam-card">
+
+                    <div class="exam-info">
+
+                        <div class="exam-icon">
+
+                            <i class="fa-solid fa-vial"></i>
+
+                        </div>
+
+                        <span class="exam-name">
+                            Triglicéridos
+                        </span>
+
+                    </div>
+
+                    <span class="exam-price">
+                        S/ 15
+                    </span>
+
+                </div>
+
+
+                <div class="exam-card">
+
+                    <div class="exam-info">
+
+                        <div class="exam-icon">
+
+                            <i class="fa-solid fa-flask"></i>
+
+                        </div>
+
+                        <span class="exam-name">
+                            Urea
+                        </span>
+
+                    </div>
+
+                    <span class="exam-price">
+                        S/ 15
+                    </span>
+
+                </div>
+
+
+                <div class="exam-card">
+
+                    <div class="exam-info">
+
+                        <div class="exam-icon">
+
+                            <i class="fa-solid fa-vial-circle-check"></i>
+
+                        </div>
+
+                        <span class="exam-name">
+                            Creatinina
+                        </span>
+
+                    </div>
+
+                    <span class="exam-price">
+                        S/ 15
+                    </span>
+
+                </div>
+
+
+                <div class="exam-card">
+
+                    <div class="exam-info">
+
+                        <div class="exam-icon">
+
+                            <i class="fa-solid fa-atom"></i>
+
+                        </div>
+
+                        <span class="exam-name">
+                            Ácido úrico
+                        </span>
+
+                    </div>
+
+                    <span class="exam-price">
+                        S/ 15
+                    </span>
+
+                </div>
+
+
+                <div class="exam-card">
+
+                    <div class="exam-info">
+
+                        <div class="exam-icon">
+
+                            <i class="fa-solid fa-microscope"></i>
+
+                        </div>
+
+                        <span class="exam-name">
+                            Hemograma
+                        </span>
+
+                    </div>
+
+                    <span class="exam-price">
+                        S/ 30
+                    </span>
+
+                </div>
+
+
+                <div class="exam-card">
+
+                    <div class="exam-info">
+
+                        <div class="exam-icon">
+
+                            <i class="fa-solid fa-droplet"></i>
+
+                        </div>
+
+                        <span class="exam-name">
+                            Hemoglobina
+                        </span>
+
+                    </div>
+
+                    <span class="exam-price">
+                        S/ 20
+                    </span>
+
+                </div>
+
+
+                <div class="exam-card">
+
+                    <div class="exam-info">
+
+                        <div class="exam-icon">
+
+                            <i class="fa-solid fa-virus"></i>
+
+                        </div>
+
+                        <span class="exam-name">
+                            VIH
+                        </span>
+
+                    </div>
+
+                    <span class="exam-price">
+                        S/ 25
+                    </span>
+
+                </div>
+
+
+                <div class="exam-card">
+
+                    <div class="exam-info">
+
+                        <div class="exam-icon">
+
+                            <i class="fa-solid fa-virus"></i>
+
+                        </div>
+
+                        <span class="exam-name">
+                            Sífilis
+                        </span>
+
+                    </div>
+
+                    <span class="exam-price">
+                        S/ 25
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HELICOBACTER -->
+
+            <div class="h-pylori">
+
+                <div class="h-pylori-header">
+
+                    <div class="h-pylori-icon">
+
+                        <i class="fa-solid fa-microscope"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Prueba de Helicobacter pylori
+                        </h3>
+
+                        <p>
+                            Dos modalidades disponibles
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hp-options">
+
+
+                    <div class="hp-option">
+
+                        <strong>
+                            Prueba cuantitativa
+                        </strong>
+
+                        <span>
+                            S/ 50
+                        </span>
+
+                    </div>
+
+
+                    <div class="hp-option">
+
+                        <strong>
+                            Prueba rápida
+                        </strong>
+
+                        <p>
+                            Resultado positivo / negativo
+                        </p>
+
+                        <span>
+                            S/ 30
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         COMO FUNCIONA
+    ====================================================== -->
+
+    <section class="lab-section">
+
+        <div class="lab-container">
+
+            <div class="lab-section-heading">
+
+                <span>
+                    SERVICIO A DOMICILIO
+                </span>
+
+                <h2>
+                    ¿Cómo funciona?
+                </h2>
+
+                <p>
+
+                    Todo el proceso se coordina previamente
+                    para realizar la toma de muestra
+                    directamente en tu domicilio.
+
+                </p>
+
+            </div>
+
+
+            <div class="process-grid">
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Escríbenos
+                    </h3>
+
+                    <p>
+
+                        Comunícate por WhatsApp y consulta
+                        el examen que necesitas.
+
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Coordinamos
+                    </h3>
+
+                    <p>
+
+                        Acordamos contigo el día y horario
+                        para realizar la visita.
+
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Vamos a tu domicilio
+                    </h3>
+
+                    <p>
+
+                        El personal acude con el equipo
+                        necesario para realizar la toma.
+
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Recibe tus resultados
+                    </h3>
+
+                    <p>
+
+                        Los resultados se envían en PDF
+                        mediante WhatsApp aproximadamente
+                        24 horas después.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RESULTADOS
+    ====================================================== -->
+
+    <section class="lab-section light">
+
+        <div class="lab-container">
+
+            <div class="results-box">
+
+
+                <div>
+
+                    <h2>
+                        Tus resultados,
+                        donde estés.
+                    </h2>
+
+                    <p>
+
+                        No necesitas regresar a ningún
+                        establecimiento para recibir tus
+                        resultados.
+
+                    </p>
+
+                </div>
+
+
+                <div>
+
+
+                    <div class="result-feature">
+
+                        <i class="fa-solid fa-file-pdf"></i>
+
+                        <div>
+
+                            <strong>
+                                Resultado digital
+                            </strong>
+
+                            <span>
+                                Se envía en archivo PDF
+                                directamente por WhatsApp.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-feature">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <div>
+
+                            <strong>
+                                Aproximadamente 24 horas
+                            </strong>
+
+                            <span>
+                                Tiempo estimado después de
+                                la toma de muestra.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-feature">
+
+                        <i class="fa-solid fa-file-lines"></i>
+
+                        <div>
+
+                            <strong>
+                                Resultado físico
+                            </strong>
+
+                            <span>
+                                Si lo deseas, puedes coordinar
+                                para recogerlo físicamente.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACTO
+    ====================================================== -->
+
+    <section
+        id="contacto-lab"
+        class="lab-contact">
+
+
+        <h2>
+            ¿Necesitas un examen?
+        </h2>
+
+
+        <p>
+
+            Consulta por disponibilidad, precios,
+            preparación previa o cualquier otro examen
+            que necesites. Coordinamos tu atención
+            directamente a domicilio.
+
+        </p>
+
+
+        <a
+            href="https://wa.me/51941637862?text=Hola%2C%20quiero%20consultar%20por%20un%20examen%20de%20laboratorio%20a%20domicilio."
+            target="_blank"
+            class="lab-whatsapp-btn">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Escríbenos por WhatsApp
+
+        </a>
+
+
+        <div class="contact-note">
+
+            <i class="fa-solid fa-house"></i>
+
+            Servicio exclusivamente a domicilio.
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
