@@ -1,0 +1,5 @@
+/* GALVIZ EVENTS · enlace de partido en vivo */
+.galviz-en-vivo{display:inline-flex;align-items:center;gap:.4rem;margin:.6rem 0;padding:.6rem .9rem;
+ border-radius:.65rem;background:#b91c1c;color:white!important;font-weight:800;text-decoration:none;
+ letter-spacing:.035em;box-shadow:0 0 0 1px rgba(255,255,255,.12)}
+.galviz-en-vivo:hover,.galviz-en-vivo:focus-visible{background:#991b1b;outline:2px solid #fca5a5;outline-offset:2px}

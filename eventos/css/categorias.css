@@ -1,0 +1,1274 @@
+
+/* ==========================================
+   GALVIZ EVENTS
+   DISEÑO DE LAS CATEGORÍAS
+   CAMPEONATO ANUAL: LIBRE Y MÁSTER
+========================================== */
+
+
+/* ==========================================
+   01. CONFIGURACIÓN GENERAL
+========================================== */
+
+.categoria-pagina {
+    background: #171717;
+    color: #FFFFFF;
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   02. PORTADA DE LA CATEGORÍA
+========================================== */
+
+.categoria-portada {
+    padding: 90px 5% 75px;
+
+    background:
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(216, 182, 109, 0.18),
+            transparent 45%
+        ),
+        linear-gradient(
+            120deg,
+            #111111,
+            #252118
+        );
+}
+
+.categoria-portada h1 {
+    color: #FFFFFF;
+    font-size: clamp(36px, 4.5vw, 60px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 22px;
+}
+
+.categoria-descripcion {
+    max-width: 650px;
+    color: #C9C9C9;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   03. BASES DE PARTICIPACIÓN
+========================================== */
+
+.categoria-bases {
+    padding: 35px 5%;
+    background: #202020;
+    border-top: 1px solid #423724;
+    border-bottom: 1px solid #423724;
+}
+
+.categoria-bases-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.categoria-bases h2 {
+    color: #D8B66D;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.categoria-bases p {
+    max-width: 650px;
+    color: #C9C9C9;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.categoria-bases-pendiente {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 18px;
+
+    color: #D8B66D;
+    background: #29251D;
+
+    border: 1px solid #6C5734;
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   04. NAVEGACIÓN POR PESTAÑAS
+========================================== */
+
+.categoria-navegacion {
+    background: #1D1D1D;
+    border-bottom: 1px solid #423724;
+}
+
+.categoria-pestanas {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    overflow-x: auto;
+}
+
+.categoria-pestana {
+    position: relative;
+
+    padding: 24px 5px;
+
+    color: #BDBDBD;
+    background: transparent;
+
+    border: 0;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.categoria-pestana:hover {
+    color: #FFFFFF;
+}
+
+.categoria-pestana.activa {
+    color: #D8B66D;
+}
+
+.categoria-pestana.activa::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #D8B66D;
+}
+
+.categoria-pestana:focus-visible {
+    outline: 2px solid #D8B66D;
+    outline-offset: -4px;
+}
+
+
+/* ==========================================
+   05. CONTENIDO DE LAS PESTAÑAS
+========================================== */
+
+.categoria-panel {
+    min-height: 600px;
+    padding: 80px 5% 105px;
+
+    background: #171717;
+}
+
+/* Ocultar los paneles no seleccionados */
+
+.categoria-panel[hidden] {
+    display: none;
+}
+
+
+/* 05.1 ENCABEZADOS */
+
+.categoria-encabezado {
+    max-width: 780px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.categoria-encabezado h2 {
+    color: #FFFFFF;
+
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 800;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.categoria-encabezado > p:last-child {
+    color: #C9C9C9;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   06. EQUIPOS
+========================================== */
+
+.categoria-equipos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Las tarjetas individuales se incorporarán
+   cuando preparemos los equipos ilustrativos. */
+
+
+/* ==========================================
+   07. PARTIDOS Y RESULTADOS
+========================================== */
+
+.categoria-partido-destacado {
+    margin-bottom: 35px;
+}
+
+.categoria-jornadas {
+    display: flex;
+    gap: 12px;
+
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+
+    overflow-x: auto;
+}
+
+.categoria-lista-partidos,
+.categoria-lista-resultados {
+    display: grid;
+    gap: 15px;
+}
+
+
+/* ==========================================
+   08. CLASIFICACIÓN
+========================================== */
+
+.categoria-grupos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+
+    margin-bottom: 65px;
+}
+
+.categoria-grupo {
+    min-width: 0;
+
+    padding: 25px;
+
+    background: #222222;
+    border: 1px solid #49402F;
+    border-radius: 10px;
+}
+
+.categoria-grupo h3,
+.categoria-eliminatorias h3 {
+    color: #D8B66D;
+
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    margin-bottom: 25px;
+}
+
+.categoria-tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.categoria-eliminatorias {
+    padding: 30px;
+
+    background: #222222;
+    border: 1px solid #49402F;
+    border-radius: 10px;
+}
+
+#cuadro-eliminatorias {
+    display: grid;
+    gap: 25px;
+}
+
+
+/* ==========================================
+   09. ADAPTACIÓN A TABLETAS
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .categoria-equipos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .categoria-grupos {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ==========================================
+   10. ADAPTACIÓN A CELULARES
+========================================== */
+
+@media (max-width: 768px) {
+
+    .categoria-portada {
+        padding: 70px 6% 60px;
+    }
+
+    .categoria-descripcion {
+        font-size: 16px;
+    }
+
+    .categoria-bases {
+        padding: 30px 6%;
+    }
+
+    .categoria-bases-contenido {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+    .categoria-pestanas {
+        padding: 0 6%;
+        gap: 25px;
+    }
+
+    .categoria-pestana {
+        padding: 20px 4px;
+        font-size: 13px;
+    }
+
+    .categoria-panel {
+        padding: 60px 6% 80px;
+    }
+
+    .categoria-encabezado {
+        margin-bottom: 35px;
+    }
+
+    .categoria-equipos {
+        gap: 12px;
+    }
+
+    .categoria-grupo,
+    .categoria-eliminatorias {
+        padding: 18px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .categoria-equipos {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ==========================================
+   11. TARJETAS DE LOS EQUIPOS
+========================================== */
+
+.equipo-tarjeta {
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+    padding: 30px 20px;
+
+    background: #222222;
+    border: 1px solid #49402F;
+    border-radius: 12px;
+
+    text-align: center;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.equipo-tarjeta:hover {
+    transform: translateY(-4px);
+    border-color: #D8B66D;
+}
+
+
+/* 11.1 ESCUDO PROVISIONAL */
+
+.equipo-escudo {
+    width: 90px;
+    height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+
+    color: #D8B66D;
+    background: #353025;
+
+    border: 2px solid #D8B66D;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 72%,
+        50% 100%,
+        0 72%
+    );
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.equipo-escudo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* 11.2 NOMBRE */
+
+.equipo-nombre {
+    color: #FFFFFF;
+
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+
+/* 11.3 ACCESO A LA PLANTILLA */
+
+.equipo-enlace {
+    padding: 8px 0;
+
+    color: #D8B66D;
+    background: transparent;
+
+    border: 0;
+    border-bottom: 1px solid #D8B66D;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.equipo-enlace:hover:not(:disabled) {
+    color: #FFFFFF;
+}
+
+.equipo-enlace:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* 11.4 ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+
+    .equipo-tarjeta {
+        min-height: 230px;
+        gap: 15px;
+        padding: 20px 12px;
+    }
+
+    .equipo-escudo {
+        width: 72px;
+        height: 85px;
+        font-size: 18px;
+    }
+
+    .equipo-nombre {
+        font-size: 14px;
+    }
+
+    .equipo-enlace {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .categoria-equipos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* ==========================================
+   12. FICHA INDIVIDUAL DEL EQUIPO
+========================================== */
+
+.plantilla-pagina {
+    min-height: calc(100vh - 68px);
+    padding: 65px 5% 100px;
+}
+
+.plantilla-contenedor {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
+/* 12.1 PRESENTACIÓN DEL EQUIPO */
+
+.plantilla-presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+    padding: 45px 25px;
+
+    background: #25221D;
+    border: 1px solid #49402F;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.plantilla-presentacion .equipo-escudo {
+    width: 105px;
+    height: 125px;
+    font-size: 26px;
+}
+
+.plantilla-presentacion h1 {
+    color: #FFFFFF;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+}
+
+.plantilla-presentacion p {
+    color: #C9C9C9;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* 12.2 APARTADO DE JUGADORES */
+
+.plantilla-seccion {
+    margin-top: 50px;
+}
+
+.plantilla-seccion h2 {
+    color: #FFFFFF;
+    font-size: clamp(22px, 3vw, 28px);
+    margin-bottom: 25px;
+}
+
+.plantilla-jugadores {
+    display: grid;
+    gap: 12px;
+
+    list-style: none;
+}
+
+.plantilla-jugador {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    min-height: 65px;
+    padding: 15px 22px;
+
+    background: #262626;
+    border: 1px solid #383838;
+    border-radius: 7px;
+}
+
+.plantilla-numero {
+    min-width: 30px;
+
+    color: #D8B66D;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.plantilla-jugador-nombre {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.plantilla-nota {
+    color: #AFAFAF;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+
+/* 12.3 ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+
+    .plantilla-pagina {
+        padding: 40px 6% 75px;
+    }
+
+    .plantilla-presentacion {
+        padding: 35px 18px;
+    }
+
+    .plantilla-seccion {
+        margin-top: 35px;
+    }
+
+    .plantilla-jugador {
+        gap: 15px;
+        padding: 12px 15px;
+    }
+
+}
+
+/* ==========================================
+   13. CALENDARIO DE PARTIDOS
+========================================== */
+
+
+/* 13.1 PARTIDO DESTACADO */
+
+#proximo-partido {
+    padding: 35px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #393022,
+            #211F1B
+        );
+
+    border: 1px solid #6C5734;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.partido-destacado-etiqueta {
+    color: #D8B66D;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 30px;
+}
+
+
+/* 13.2 ENFRENTAMIENTO */
+
+.partido-enfrentamiento {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+
+    align-items: center;
+    gap: 25px;
+
+    margin-bottom: 22px;
+}
+
+.partido-participante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    min-width: 0;
+}
+
+.partido-escudo {
+    width: 75px;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px;
+
+    background: #353025;
+    border: 2px solid #D8B66D;
+
+    color: #D8B66D;
+    font-size: 20px;
+    font-weight: 800;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 72%,
+        50% 100%,
+        0 72%
+    );
+}
+
+.partido-escudo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.partido-equipo-nombre {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+
+    text-align: center;
+}
+
+.partido-versus {
+    color: #D8B66D;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.partido-horario {
+    color: #BDBDBD;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+/* 13.3 SELECTOR DE JORNADAS */
+
+.jornada-boton {
+    flex: 1 0 85px;
+
+    padding: 14px 18px;
+
+    background: #292929;
+    color: #FFFFFF;
+
+    border: 1px solid #49402F;
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.jornada-boton:hover {
+    border-color: #D8B66D;
+}
+
+.jornada-boton.activo {
+    background: #D8B66D;
+    color: #141414;
+    border-color: #D8B66D;
+}
+
+.jornada-boton:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 3px;
+}
+
+
+/* 13.4 LISTA DE PARTIDOS */
+
+.partidos-jornada-titulo {
+    color: #D8B66D;
+    font-size: 18px;
+    font-weight: 700;
+
+    margin: 15px 0;
+}
+
+.partido-tarjeta {
+    padding: 25px;
+
+    background: #252525;
+    border: 1px solid #414141;
+    border-radius: 10px;
+}
+
+.partido-fase {
+    color: #D8B66D;
+    font-size: 12px;
+    font-weight: 600;
+
+    margin-bottom: 22px;
+}
+
+
+/* 13.5 CEREMONIA DE PREMIACIÓN */
+
+.partidos-ceremonia {
+    padding: 30px;
+
+    background: #29251D;
+    border: 1px solid #6C5734;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.partidos-ceremonia h4 {
+    color: #D8B66D;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.partidos-ceremonia p {
+    color: #C9C9C9;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* 13.6 ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+
+    #proximo-partido {
+        padding: 25px 15px;
+    }
+
+    .partido-enfrentamiento {
+        gap: 10px;
+    }
+
+    .partido-escudo {
+        width: 58px;
+        height: 68px;
+        font-size: 15px;
+    }
+
+    .partido-equipo-nombre {
+        font-size: 12px;
+    }
+
+    .partido-versus {
+        font-size: 19px;
+    }
+
+    .partido-tarjeta {
+        padding: 20px 12px;
+    }
+
+    .jornada-boton {
+        flex-basis: 72px;
+        padding: 12px;
+        font-size: 12px;
+    }
+
+}
+
+/* ==========================================
+   14. RESULTADOS DEL CAMPEONATO
+========================================== */
+
+
+/* 14.1 ÚLTIMO ENCUENTRO */
+
+#ultimo-resultado {
+    padding: 35px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #393022,
+            #211F1B
+        );
+
+    border: 1px solid #6C5734;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+#ultimo-resultado .partido-fase {
+    text-align: center;
+}
+
+
+/* 14.2 TARJETAS DE RESULTADOS */
+
+.resultado-tarjeta {
+    padding: 25px;
+
+    background: #252525;
+    border: 1px solid #414141;
+    border-radius: 10px;
+}
+
+
+/* 14.3 ENFRENTAMIENTOS */
+
+.resultado-enfrentamiento {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1fr);
+
+    align-items: center;
+    gap: 25px;
+
+    margin-bottom: 20px;
+}
+
+.resultado-participante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 0;
+    gap: 12px;
+}
+
+.resultado-equipo-nombre {
+    color: #FFFFFF;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+
+    text-align: center;
+}
+
+.resultado-marcador {
+    color: #D8B66D;
+
+    font-size: clamp(24px, 3.5vw, 42px);
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.resultado-estado {
+    color: #BDBDBD;
+    font-size: 12px;
+
+    text-align: center;
+}
+
+.resultados-jornada-titulo {
+    color: #D8B66D;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    margin: 15px 0;
+}
+
+
+/* 14.4 MENSAJE SIN RESULTADOS */
+
+.resultado-sin-datos {
+    padding: 35px 20px;
+
+    color: #C9C9C9;
+    font-size: 14px;
+    line-height: 1.8;
+
+    text-align: center;
+
+    background: #252525;
+    border: 1px solid #414141;
+    border-radius: 10px;
+}
+
+
+/* 14.5 CORONACIÓN */
+
+.resultado-coronacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+    padding: 35px 20px;
+
+    background: #29251D;
+    border: 1px solid #6C5734;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.resultado-coronacion h3,
+.resultado-campeon {
+    color: #D8B66D;
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.resultado-coronacion
+.resultado-participante
+.partido-escudo {
+    width: 90px;
+    height: 105px;
+}
+
+
+/* 14.6 ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+
+    #ultimo-resultado {
+        padding: 25px 15px;
+    }
+
+    .resultado-tarjeta {
+        padding: 20px 12px;
+    }
+
+    .resultado-enfrentamiento {
+        gap: 10px;
+    }
+
+    .resultado-equipo-nombre {
+        font-size: 12px;
+    }
+
+    .resultado-marcador {
+        font-size: 24px;
+    }
+
+    .resultado-coronacion {
+        padding: 25px 15px;
+    }
+
+}
+
+/* ==========================================
+   15. CLASIFICACIÓN DEL CAMPEONATO
+========================================== */
+
+
+/* 15.1 TABLAS DE POSICIONES */
+
+.clasificacion-tabla {
+    width: 100%;
+    border-collapse: collapse;
+
+    color: #FFFFFF;
+    font-size: 12px;
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.clasificacion-tabla caption {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.clasificacion-tabla th,
+.clasificacion-tabla td {
+    padding: 14px 9px;
+
+    border-bottom: 1px solid #383838;
+}
+
+.clasificacion-tabla thead {
+    background: #302A20;
+    color: #D8B66D;
+}
+
+.clasificacion-tabla tbody th {
+    font-weight: 600;
+}
+
+.clasificacion-tabla thead th:nth-child(2),
+.clasificacion-tabla tbody th {
+    text-align: left;
+}
+
+.clasificacion-tabla
+tbody td:last-child {
+    font-weight: 800;
+}
+
+
+/* 15.2 POSICIONES CLASIFICATORIAS */
+
+.clasificacion-zona {
+    background: rgba(216, 182, 109, 0.09);
+}
+
+.clasificacion-zona td:first-child {
+    color: #D8B66D;
+    font-weight: 800;
+
+    border-left: 3px solid #D8B66D;
+}
+
+
+/* 15.3 TARJETAS DE ELIMINATORIAS */
+
+.clasificacion-eliminatoria {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+    padding: 28px;
+
+    background: #29251D;
+    border: 1px solid #51442D;
+    border-radius: 10px;
+}
+
+.clasificacion-fase {
+    color: #D8B66D;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.clasificacion-enfrentamiento {
+    color: #FFFFFF;
+
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.clasificacion-marcador {
+    color: #C9C9C9;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.clasificacion-global {
+    display: block;
+
+    padding-top: 15px;
+    border-top: 1px solid #51442D;
+
+    color: #D8B66D;
+    font-size: 20px;
+}
+
+
+/* 15.4 GRAN FINAL */
+
+.clasificacion-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 18px;
+    padding: 40px 25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #393022,
+            #211F1B
+        );
+
+    border: 1px solid #8B7041;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.clasificacion-final
+.clasificacion-enfrentamiento {
+    font-size: 20px;
+}
+
+.clasificacion-final
+.clasificacion-global {
+    width: 100%;
+
+    font-size: 32px;
+}
+
+.clasificacion-campeon {
+    color: #D8B66D;
+
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* 15.5 ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+
+    .clasificacion-tabla {
+        font-size: 11px;
+    }
+
+    .clasificacion-tabla th,
+    .clasificacion-tabla td {
+        padding: 12px 8px;
+    }
+
+    .clasificacion-eliminatoria {
+        padding: 22px;
+    }
+
+    .clasificacion-final {
+        padding: 30px 15px;
+    }
+
+    .clasificacion-enfrentamiento {
+        font-size: 15px;
+    }
+
+}
+
+/* Conexión 3 · Fases eliminatorias publicadas dinámicamente */
+.clasificacion-ronda { margin: 22px 0 32px; }
+.clasificacion-ronda-titulo { color: #D8B66D; font-size: 17px; font-weight: 800;
+    letter-spacing: .07em; margin: 0 0 16px; }
+.clasificacion-ronda-cruces { display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 16px; }
+.clasificacion-ronda-cruces .clasificacion-final { grid-column: 1 / -1; }

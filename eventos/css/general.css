@@ -1,0 +1,769 @@
+
+/* ==========================================
+   GALVIZ EVENTS
+   HOJA DE ESTILOS GENERALES
+========================================== */
+
+
+/* 01. COLORES CORPORATIVOS */
+
+:root {
+
+    --azul-corporativo: #101D2D;
+
+    --verde-corporativo: #76B947;
+
+    --blanco: #FFFFFF;
+
+    --gris-claro: #D5DEE8;
+
+}
+
+
+/* 02. CONFIGURACIÓN GENERAL */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: var(--azul-corporativo);
+
+    color: var(--blanco);
+
+}
+
+
+
+/* ==========================================
+   03. PORTADA PRINCIPAL
+========================================== */
+
+.portada {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 5% 90px;
+    overflow: hidden;
+
+    /* IMAGEN DE PORTADA */
+    background-image:
+        url("../imagenes/portada-galviz-events.webp");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--azul-corporativo);
+}
+
+
+/* 03.1 CAPA OSCURA */
+
+.portada-superposicion {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(8, 19, 32, 0.92) 0%,
+        rgba(8, 19, 32, 0.75) 55%,
+        rgba(8, 19, 32, 0.45) 100%
+    );
+}
+
+
+/* 03.2 CONTENIDO */
+
+.portada-contenido {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.portada-etiqueta {
+    color: var(--verde-corporativo);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+}
+
+
+/* 03.2.1 TÍTULO PRINCIPAL */
+
+.portada h1 {
+    max-width: 950px;
+    color: var(--blanco);
+    font-size: clamp(34px, 4vw, 58px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 28px;
+}
+
+.portada-descripcion {
+    max-width: 620px;
+    color: var(--gris-claro);
+    font-size: clamp(16px, 1.6vw, 19px);
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+
+/* 03.3 BOTÓN PRINCIPAL */
+
+.portada-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 16px 26px;
+    background: var(--verde-corporativo);
+    color: var(--azul-corporativo);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.portada-boton:hover {
+    background: #91D15C;
+    transform: translateY(-2px);
+}
+
+
+/* 03.4 ADAPTACIÓN DE LA PORTADA */
+
+@media (max-width: 768px) {
+
+    .portada {
+        padding: 130px 7% 70px;
+        min-height: 90vh;
+    }
+
+    .portada-superposicion {
+        background: rgba(8, 19, 32, 0.78);
+    }
+
+    .portada h1 {
+        letter-spacing: -0.5px;
+    }
+
+    .portada-descripcion {
+        line-height: 1.6;
+    }
+
+}
+
+/* ==========================================
+   04. ENCABEZADO
+========================================== */
+
+.encabezado {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(16, 29, 45, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition: background 0.3s ease;
+}
+
+.encabezado.desplazado {
+    background: rgba(16, 29, 45, 0.98);
+}
+
+.encabezado-contenedor {
+    max-width: 1400px;
+    min-height: 82px;
+    margin: auto;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+
+/* 04.1 LOGOTIPO */
+
+.logotipo {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.logotipo-galviz {
+    color: var(--blanco);
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logotipo-events {
+    color: var(--verde-corporativo);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+
+/* 04.2 ENLACES */
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu-enlace {
+    color: var(--gris-claro);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.menu-enlace:hover,
+.menu-enlace.activo {
+    color: var(--verde-corporativo);
+}
+
+
+/* 04.3 BOTÓN COMERCIAL */
+
+.encabezado-acciones {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.boton-organizar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    background: var(--verde-corporativo);
+    color: var(--azul-corporativo);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+}
+
+.boton-organizar:hover {
+    background: #91D15C;
+}
+
+
+/* 04.4 BOTÓN DEL MENÚ MÓVIL */
+
+.boton-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.boton-menu span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--blanco);
+    border-radius: 2px;
+}
+
+
+/* ==========================================
+   05. DISEÑO ADAPTABLE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .encabezado-contenedor {
+        min-height: 72px;
+    }
+
+    .boton-menu {
+        display: flex;
+    }
+
+    .menu-principal {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 22px 5%;
+        background: var(--azul-corporativo);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .menu-principal.abierto {
+        display: flex;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .logotipo-galviz {
+        font-size: 23px;
+    }
+
+    .boton-organizar {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+
+    .encabezado-acciones {
+        gap: 5px;
+    }
+
+}
+
+/* ==========================================
+   06. SECCIÓN NUESTROS EVENTOS
+========================================== */
+
+.seccion-eventos {
+    background: #F4F6F8;
+    padding: 110px 5%;
+    color: #101D2D;
+}
+
+.eventos-contenedor {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* 06.1 PRESENTACIÓN */
+
+.eventos-encabezado {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.eventos-etiqueta {
+    color: #568B32;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.eventos-encabezado h2 {
+    font-size: clamp(32px, 4vw, 50px);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.eventos-descripcion {
+    color: #536273;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* 06.2 DISTRIBUCIÓN DE TARJETAS */
+
+.eventos-cuadricula {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+
+/* 06.3 DISEÑO DE TARJETAS */
+
+.evento-tarjeta {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #172333;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.3s ease;
+}
+
+.evento-tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.evento-tarjeta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.92) 0%,
+        rgba(0, 0, 0, 0.35) 65%,
+        rgba(0, 0, 0, 0.12) 100%
+    );
+}
+
+
+/* 06.4 IMÁGENES */
+
+.evento-futbol {
+    background-image: url("../imagenes/evento-futbol.webp");
+}
+
+.evento-paintball {
+    background-image: url("../imagenes/evento-paintball.webp");
+}
+
+
+/* 06.5 CONTENIDO */
+
+.evento-contenido {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 35px;
+    color: #FFFFFF;
+}
+
+.evento-categoria {
+    display: inline-block;
+    color: #B5D783;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.evento-contenido h3 {
+    font-size: clamp(32px, 3vw, 44px);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.evento-subtitulo {
+    color: #D5DEE8;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.evento-enlace {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 2px solid #76B947;
+    padding-bottom: 7px;
+}
+
+.evento-enlace:hover {
+    color: #B5D783;
+}
+
+.evento-estado {
+    display: block;
+    width: fit-content;
+    margin-bottom: 20px;
+    padding: 7px 11px;
+    border: 1px solid #B5D783;
+    border-radius: 4px;
+    color: #B5D783;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* 06.6 ADAPTACIÓN A CELULARES */
+
+@media (max-width: 768px) {
+
+    .seccion-eventos {
+        padding: 75px 6%;
+    }
+
+    .eventos-cuadricula {
+        grid-template-columns: 1fr;
+    }
+
+    .evento-tarjeta {
+        min-height: 380px;
+    }
+
+    .evento-contenido {
+        padding: 28px;
+    }
+
+    .eventos-encabezado {
+        margin-bottom: 35px;
+    }
+
+}
+
+/* ==========================================
+   07. PIE DE PÁGINA
+========================================== */
+
+.footer {
+    background: #101D2D;
+    color: #FFFFFF;
+    padding: 75px 5% 25px;
+}
+
+.footer-contenedor {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr 1.2fr;
+    gap: 50px;
+
+    padding-bottom: 55px;
+}
+
+
+/* 07.1 IDENTIDAD DE MARCA */
+
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logotipo {
+    display: flex;
+    flex-direction: column;
+
+    text-decoration: none;
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.footer-galviz {
+    font-size: 29px;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+.footer-events {
+    font-size: 10px;
+    font-weight: 700;
+    color: #76B947;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.footer-lema {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.footer-descripcion {
+    font-size: 13px;
+    color: #B5C6D4;
+    line-height: 1.8;
+}
+
+
+/* 07.2 COLUMNAS */
+
+.footer-columna {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.footer-columna h2 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.footer-columna > a {
+    color: #B5C6D4;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.6;
+
+    transition: color 0.2s ease;
+}
+
+.footer-columna > a:hover {
+    color: #76B947;
+}
+
+.footer-columna p {
+    color: #B5C6D4;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* 07.3 JERARQUÍA DE EVENTOS */
+
+.footer-disciplinas {
+    gap: 20px;
+}
+
+.footer-disciplina {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-disciplina-titulo {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-disciplina-titulo:hover {
+    color: #76B947;
+}
+
+.footer-subenlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-left: 6px;
+    padding-left: 14px;
+
+    border-left: 1px solid #486174;
+}
+
+.footer-subenlaces a {
+    color: #B5C6D4;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.footer-subenlaces a:hover {
+    color: #76B947;
+}
+
+
+/* 07.4 ENLACE CORPORATIVO */
+
+.footer-columna .footer-enlace-empresa {
+    color: #76B947;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+
+/* 07.5 FRANJA INFERIOR */
+
+.footer-inferior {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    padding-top: 25px;
+    border-top: 1px solid #365066;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-inferior p {
+    font-size: 12px;
+    color: #B5C6D4;
+}
+
+.footer-legales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* ==========================================
+   08. ADAPTACIÓN DEL PIE DE PÁGINA
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .footer-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 45px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding: 55px 7% 25px;
+    }
+
+    .footer-contenedor {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    .footer-inferior {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+/* GALVIZ EVENTS · Acceso flotante a inscripción en todo el portal */
+.gd-inscribete-flotante{position:fixed;right:22px;bottom:22px;z-index:999;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:40px;border:1px solid #e7c47a;background:#d8b66d;color:#16130d!important;font:800 13px/1.1 system-ui,sans-serif;letter-spacing:.08em;text-decoration:none!important;box-shadow:0 8px 26px #0009;transition:transform .2s,opacity .2s}
+.gd-inscribete-flotante:hover{transform:translateY(-3px);background:#f2d28c}
+.gd-inscribete-flotante[hidden]{display:none!important}
+.gd-aviso{padding:18px;border:1px solid #796037;border-radius:9px;color:#ddc79b;background:#241f19;margin:15px 0}
+.gd-edicion{font-size:14px;color:#e5c47b;margin-top:16px;font-weight:700;letter-spacing:.04em}
+@media(max-width:700px){.gd-inscribete-flotante{right:12px;bottom:12px;padding:11px 14px;font-size:12px;max-width:calc(100vw - 24px)}}

@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- ======================================
+         01. CONFIGURACIÓN GENERAL Y SEO
+    ======================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Categoría Libre - Liguilla de Fútbol |
+        Galviz Events
+    </title>
+
+    <meta name="description"
+          content="Sigue la categoría Libre de la Liguilla de Galviz Events en Tumbes: equipos de fútbol 7, calendario, resultados y clasificación general.">
+
+    <link rel="canonical"
+          href="https://solucionesgeneralesgalviz.com/eventos/futbol/liguilla-libre.html">
+
+    <!-- Prototipo en desarrollo -->
+    <meta name="robots" content="noindex, follow">
+
+
+    <!-- ======================================
+         02. HOJAS DE ESTILO
+    ======================================= -->
+
+    <link rel="stylesheet" href="../css/general.css">
+
+    <link rel="stylesheet" href="../css/futbol.css">
+
+    <link rel="stylesheet" href="../css/categorias.css">
+
+<link rel="stylesheet" href="../css/galviz-actualizacion.css">
+</head>
+
+
+<body>
+
+    <!-- ======================================
+         03. NAVEGACIÓN
+    ======================================= -->
+
+    <header class="futbol-navegacion">
+
+        <div class="futbol-navegacion-contenedor">
+
+            <a href="liguilla.html"
+               class="futbol-regresar">
+
+                <span aria-hidden="true">←</span>
+
+                VOLVER A LA LIGUILLA
+
+            </a>
+
+            <a href="../index.html"
+               class="futbol-navegacion-marca">
+
+                GALVIZ EVENTS
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ======================================
+         04. CONTENIDO PRINCIPAL
+    ======================================= -->
+
+    <main class="futbol-pagina categoria-pagina"
+          data-categoria="liguilla-libre">
+
+
+        <!-- ==================================
+             04.1 PORTADA
+        =================================== -->
+
+        <section class="categoria-portada">
+
+            <p class="futbol-etiqueta">
+
+                LIGUILLA · FÚTBOL 7
+
+            </p>
+
+            <h1>
+
+                CATEGORÍA LIBRE
+
+            </h1>
+
+            <p class="categoria-descripcion">
+
+                Sigue el desarrollo de la Liguilla,
+                conoce a los equipos participantes
+                y consulta sus encuentros, resultados
+                y clasificación general a lo largo
+                de las jornadas programadas.
+
+            </p>
+
+        </section>
+<!-- ==================================
+             04.3 NAVEGACIÓN POR PESTAÑAS
+        =================================== -->
+
+        <nav class="categoria-navegacion"
+             aria-label="Secciones de la categoría Libre">
+
+            <div class="categoria-pestanas"
+                 role="tablist"
+                 aria-label="Información de la Liguilla Libre">
+
+
+                <button
+                    id="pestana-equipos"
+                    class="categoria-pestana activa"
+                    type="button"
+                    role="tab"
+                    data-pestana="equipos"
+                    aria-controls="panel-equipos"
+                    aria-selected="true">
+
+                    EQUIPOS
+
+                </button>
+
+
+                <button
+                    id="pestana-partidos"
+                    class="categoria-pestana"
+                    type="button"
+                    role="tab"
+                    data-pestana="partidos"
+                    aria-controls="panel-partidos"
+                    aria-selected="false"
+                    tabindex="-1">
+
+                    PARTIDOS
+
+                </button>
+
+
+                <button
+                    id="pestana-resultados"
+                    class="categoria-pestana"
+                    type="button"
+                    role="tab"
+                    data-pestana="resultados"
+                    aria-controls="panel-resultados"
+                    aria-selected="false"
+                    tabindex="-1">
+
+                    RESULTADOS
+
+                </button>
+
+
+                <button
+                    id="pestana-clasificacion"
+                    class="categoria-pestana"
+                    type="button"
+                    role="tab"
+                    data-pestana="clasificacion"
+                    aria-controls="panel-clasificacion"
+                    aria-selected="false"
+                    tabindex="-1">
+
+                    CLASIFICACIÓN
+
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ==================================
+             04.4 PESTAÑA: EQUIPOS
+        =================================== -->
+
+        <section
+            id="panel-equipos"
+            class="categoria-panel"
+            role="tabpanel"
+            data-panel="equipos"
+            aria-labelledby="pestana-equipos">
+
+            <div class="categoria-encabezado">
+
+                <h2>
+
+                    EQUIPOS DE LA LIGUILLA
+
+                </h2>
+
+                <p>
+
+                    Conoce a los equipos
+                    participantes de la
+                    categoría Libre y consulta
+                    sus respectivas plantillas.
+
+                </p>
+
+            </div>
+
+            <div id="lista-equipos"
+                 class="categoria-equipos">
+
+                <!-- Aquí aparecerán los equipos. -->
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             04.5 PESTAÑA: PARTIDOS
+        =================================== -->
+
+        <section
+            id="panel-partidos"
+            class="categoria-panel"
+            role="tabpanel"
+            data-panel="partidos"
+            aria-labelledby="pestana-partidos"
+            hidden>
+
+            <div class="categoria-encabezado">
+
+                <h2>
+
+                    CALENDARIO DE PARTIDOS
+
+                </h2>
+
+                <p>
+
+                    Consulta los encuentros
+                    programados a lo largo
+                    de las jornadas programadas
+                    de la Liguilla.
+
+                </p>
+
+            </div>
+
+            <div id="proximo-partido"
+                 class="categoria-partido-destacado">
+
+                <!-- Próximo encuentro. -->
+
+            </div>
+
+            <div id="selector-partidos"
+                 class="categoria-jornadas">
+
+                <!-- Selector de las jornadas programadas. -->
+
+            </div>
+
+            <div id="lista-partidos"
+                 class="categoria-lista-partidos">
+
+                <!-- Calendario. -->
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             04.6 PESTAÑA: RESULTADOS
+        =================================== -->
+
+        <section
+            id="panel-resultados"
+            class="categoria-panel"
+            role="tabpanel"
+            data-panel="resultados"
+            aria-labelledby="pestana-resultados"
+            hidden>
+
+            <div class="categoria-encabezado">
+
+                <h2>
+
+                    RESULTADOS
+
+                </h2>
+
+                <p>
+
+                    Consulta los marcadores
+                    de los encuentros disputados
+                    en cada jornada de la Liguilla.
+
+                </p>
+
+            </div>
+
+            <div id="ultimo-resultado"
+                 class="categoria-partido-destacado">
+
+                <!-- Último encuentro. -->
+
+            </div>
+
+            <div id="selector-resultados"
+                 class="categoria-jornadas">
+
+                <!-- Selector de jornadas. -->
+
+            </div>
+
+            <div id="lista-resultados"
+                 class="categoria-lista-resultados">
+
+                <!-- Resultados. -->
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             04.7 PESTAÑA: CLASIFICACIÓN
+        =================================== -->
+
+        <section
+            id="panel-clasificacion"
+            class="categoria-panel"
+            role="tabpanel"
+            data-panel="clasificacion"
+            aria-labelledby="pestana-clasificacion"
+            hidden>
+
+            <div class="categoria-encabezado">
+
+                <h2>
+
+                    CLASIFICACIÓN GENERAL
+
+                </h2>
+
+                <p>
+
+                    Consulta las posiciones
+                    de los equipos según
+                    los puntos acumulados
+                    durante la temporada.
+
+                </p>
+
+            </div>
+
+            <div class="categoria-grupo">
+
+                <h3>
+
+                    TABLA DE POSICIONES
+
+                </h3>
+
+                <div id="tabla-liguilla"
+                     class="categoria-tabla-contenedor">
+
+                    <!-- Clasificación general. -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ======================================
+         05. JAVASCRIPT
+    ======================================= -->
+
+    <!-- Funcionamiento de las cuatro pestañas -->
+    <script src="../js/categorias.js"></script>
+
+<!-- ======================================
+     EQUIPOS DE LA LIGUILLA LIBRE
+======================================= -->
+
+<!-- Datos de los 12 equipos -->
+
+<!-- Presentación de las tarjetas -->
+
+<!-- ======================================
+     CALENDARIO DE LA LIGUILLA LIBRE
+======================================= -->
+
+<!-- Datos de las jornadas programadas -->
+
+<!-- Presentación del calendario -->
+
+<!-- ======================================
+     RESULTADOS DE LA LIGUILLA LIBRE
+======================================= -->
+
+<!-- Marcadores de la competición -->
+
+<!-- Presentación de los resultados -->
+
+<!-- ======================================
+     CLASIFICACIÓN DE LA LIGUILLA LIBRE
+======================================= -->
+
+<!-- Cálculo de la tabla general -->
+
+<script src="../js/datos-publicos.js"></script>
+<script src="../js/boton-inscripcion.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,677 @@
+
+/* ==========================================
+   GALVIZ EVENTS
+   LIGUILLA DE FÚTBOL
+
+   IDENTIDAD VISUAL
+   Negro:  #141414
+   Dorado: #D8B66D
+   Blanco: #FFFFFF
+========================================== */
+
+
+/* ==========================================
+   01. CONFIGURACIÓN GENERAL
+========================================== */
+
+.liguilla-pagina {
+    min-height: 100vh;
+    background: #171717;
+    color: #FFFFFF;
+}
+
+.liguilla-contenedor {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.liguilla-etiqueta {
+    color: #D8B66D;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   02. PORTADA PRINCIPAL
+========================================== */
+
+.liguilla-portada {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 570px;
+    padding: 100px 5%;
+
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(10, 10, 10, 0.92) 0%,
+            rgba(10, 10, 10, 0.76) 38%,
+            rgba(10, 10, 10, 0.42) 68%,
+            rgba(10, 10, 10, 0.18) 100%
+        ),
+        url("../imagenes/portada-liguilla.webp");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #141414;
+}
+
+/* Detalle decorativo de la portada */
+
+.liguilla-portada::after {
+    content: "";
+
+    position: absolute;
+
+    top: -130px;
+    right: -140px;
+
+    width: 500px;
+    height: 500px;
+
+    border: 1px solid rgba(216, 182, 109, 0.16);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.liguilla-portada-contenido {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+}
+
+.liguilla-portada h1 {
+    max-width: 850px;
+
+    margin: 18px 0 25px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(42px, 6vw, 82px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+.liguilla-portada-descripcion {
+    max-width: 620px;
+
+    margin-bottom: 35px;
+
+    color: #D1D1D1;
+
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+
+/* 02.1 BOTÓN DE LA PORTADA */
+
+.liguilla-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+    padding: 17px 25px;
+
+    background: #D8B66D;
+    color: #141414;
+
+    border: 1px solid #D8B66D;
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.liguilla-boton:hover {
+    background: #E8C986;
+    transform: translateY(-3px);
+}
+
+.liguilla-boton:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 4px;
+}
+
+
+/* ==========================================
+   03. INFORMACIÓN GENERAL
+========================================== */
+
+.liguilla-informacion {
+    padding: 105px 0;
+
+    background: #171717;
+}
+
+.liguilla-encabezado {
+    max-width: 780px;
+    margin-bottom: 50px;
+}
+
+.liguilla-encabezado h2 {
+    margin: 15px 0 22px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 850;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.liguilla-encabezado > p:last-child {
+    color: #C9C9C9;
+
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* 03.1 FORMATO DE COMPETICIÓN */
+
+.liguilla-formato {
+    max-width: 1000px;
+
+    padding: 40px 45px;
+
+    background: #222222;
+
+    border: 1px solid #4C402C;
+    border-left: 4px solid #D8B66D;
+    border-radius: 9px;
+}
+
+.liguilla-formato h3 {
+    margin-bottom: 24px;
+
+    color: #D8B66D;
+
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.liguilla-formato p {
+    color: #D0D0D0;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.liguilla-formato p + p {
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   04. CIFRAS DE LA LIGUILLA
+========================================== */
+
+.liguilla-cifras {
+    padding: 65px 5%;
+
+    background:
+        linear-gradient(
+            120deg,
+            #211E18,
+            #302819,
+            #211E18
+        );
+
+    border-top: 1px solid #58492F;
+    border-bottom: 1px solid #58492F;
+}
+
+.liguilla-cifras-contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 30px;
+
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.liguilla-cifra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+    text-align: center;
+}
+
+.liguilla-cifra strong {
+    color: #D8B66D;
+
+    font-size: clamp(42px, 5vw, 64px);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.liguilla-cifra span {
+    color: #E3E3E3;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   05. CATEGORÍAS DE LA LIGUILLA
+========================================== */
+
+.liguilla-categorias {
+    padding: 110px 0;
+
+    background: #171717;
+}
+
+.liguilla-categorias .liguilla-encabezado {
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.liguilla-categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* 05.1 TARJETAS */
+
+.liguilla-categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-height: 390px;
+    padding: 42px;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(216, 182, 109, 0.12),
+            transparent 50%
+        ),
+        #222222;
+
+    border: 1px solid #51442D;
+    border-radius: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.liguilla-categoria:hover {
+    border-color: #D8B66D;
+    transform: translateY(-5px);
+}
+
+
+/* 05.2 ICONO DE LA MODALIDAD */
+
+.liguilla-categoria-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+    height: 65px;
+
+    margin-bottom: 28px;
+
+    color: #D8B66D;
+    background: #332D22;
+
+    border: 1px solid #7B633C;
+    border-radius: 10px;
+
+    font-size: 32px;
+    font-weight: 900;
+}
+
+
+/* 05.3 INFORMACIÓN DE LA CATEGORÍA */
+
+.liguilla-categoria-modalidad {
+    margin-bottom: 10px;
+
+    color: #D8B66D;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.liguilla-categoria h3 {
+    margin-bottom: 20px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(23px, 2.5vw, 31px);
+    font-weight: 850;
+    line-height: 1.2;
+}
+
+.liguilla-categoria-descripcion {
+    margin-bottom: 25px;
+
+    color: #C9C9C9;
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* 05.4 DATOS DE CADA CATEGORÍA */
+
+.liguilla-categoria-datos {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.liguilla-categoria-datos span {
+    padding: 9px 12px;
+
+    color: #E6D1A6;
+    background: #322B20;
+
+    border: 1px solid #55452D;
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* 05.5 ESTADO DE LAS CATEGORÍAS */
+
+.liguilla-proximamente {
+    display: inline-flex;
+    align-items: center;
+
+    margin-top: auto;
+    padding-top: 15px;
+
+    color: #D8B66D;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+/* Enlace a las categorías disponibles */
+
+a.liguilla-proximamente {
+    width: fit-content;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.liguilla-proximamente:hover {
+    color: #FFFFFF;
+}
+
+a.liguilla-proximamente:focus-visible {
+    outline: 2px solid #D8B66D;
+    outline-offset: 5px;
+}
+
+
+/* ==========================================
+   06. SECCIÓN DE CIERRE
+========================================== */
+
+.liguilla-cierre {
+    padding: 100px 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 0,
+            rgba(216, 182, 109, 0.13),
+            transparent 60%
+        ),
+        #1F1F1F;
+
+    border-top: 1px solid #423724;
+
+    text-align: center;
+}
+
+.liguilla-cierre .liguilla-etiqueta {
+    margin-bottom: 18px;
+}
+
+.liguilla-cierre h2 {
+    margin-bottom: 20px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 850;
+    line-height: 1.2;
+}
+
+.liguilla-cierre
+.liguilla-contenedor > p:not(.liguilla-etiqueta) {
+    max-width: 600px;
+
+    margin: 0 auto 30px;
+
+    color: #C9C9C9;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* 06.1 ENLACE PARA REGRESAR */
+
+.liguilla-enlace-regresar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 14px 20px;
+
+    color: #D8B66D;
+
+    border: 1px solid #8B7041;
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.liguilla-enlace-regresar:hover {
+    background: #D8B66D;
+    color: #141414;
+}
+
+.liguilla-enlace-regresar:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 4px;
+}
+
+
+/* ==========================================
+   07. ADAPTACIÓN A TABLETAS
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .liguilla-portada {
+        min-height: 500px;
+    }
+
+    .liguilla-cifras-contenedor {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 45px 25px;
+    }
+
+    .liguilla-categoria {
+        padding: 30px;
+    }
+
+}
+
+
+/* ==========================================
+   08. ADAPTACIÓN A CELULARES
+========================================== */
+
+@media (max-width: 768px) {
+
+    .liguilla-contenedor {
+        padding: 0 6%;
+    }
+
+    .liguilla-portada {
+        min-height: 480px;
+        padding: 80px 6%;
+    }
+
+    .liguilla-portada::after {
+        width: 300px;
+        height: 300px;
+
+        top: -100px;
+        right: -150px;
+    }
+
+    .liguilla-portada h1 {
+        letter-spacing: -1px;
+    }
+
+    .liguilla-portada-descripcion {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .liguilla-informacion,
+    .liguilla-categorias {
+        padding: 75px 0;
+    }
+
+    .liguilla-encabezado {
+        margin-bottom: 35px;
+    }
+
+    .liguilla-formato {
+        padding: 30px 25px;
+    }
+
+    .liguilla-cifras {
+        padding: 55px 6%;
+    }
+
+    .liguilla-categorias-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .liguilla-categoria {
+        min-height: 350px;
+        padding: 32px 25px;
+    }
+
+    .liguilla-cierre {
+        padding: 80px 0;
+    }
+
+}
+
+
+/* ==========================================
+   09. PANTALLAS PEQUEÑAS
+========================================== */
+
+@media (max-width: 400px) {
+
+    .liguilla-cifras-contenedor {
+        gap: 35px 12px;
+    }
+
+    .liguilla-cifra strong {
+        font-size: 40px;
+    }
+
+    .liguilla-cifra span {
+        font-size: 10px;
+    }
+
+    .liguilla-boton {
+        width: 100%;
+        padding: 16px 12px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* ==========================================
+   10. PREFERENCIAS DE MOVIMIENTO
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .liguilla-boton,
+    .liguilla-categoria,
+    .liguilla-enlace-regresar {
+        transition: none;
+    }
+
+    .liguilla-boton:hover,
+    .liguilla-categoria:hover {
+        transform: none;
+    }
+
+}

@@ -1,0 +1,810 @@
+
+/* ==========================================
+   GALVIZ EVENTS
+   PÁGINA NOSOTROS
+
+   IDENTIDAD CORPORATIVA
+
+   Azul marino: #101D2D
+   Verde:       #76B947
+   Blanco:      #FFFFFF
+========================================== */
+
+
+/* ==========================================
+   01. CONFIGURACIÓN GENERAL
+========================================== */
+
+.nosotros-pagina {
+    min-height: 100vh;
+
+    background: #101D2D;
+    color: #FFFFFF;
+}
+
+.nosotros-contenedor {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.nosotros-etiqueta {
+    color: #76B947;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   02. PORTADA PRINCIPAL
+========================================== */
+
+.nosotros-portada {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 590px;
+    padding: 110px 0;
+
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(118, 185, 71, 0.16),
+            transparent 45%
+        ),
+        linear-gradient(
+            120deg,
+            #101D2D,
+            #1B3247,
+            #101D2D
+        );
+
+    border-bottom: 1px solid #2D4358;
+
+    overflow: hidden;
+}
+
+
+/* 02.1 ELEMENTO DECORATIVO */
+
+.nosotros-portada::after {
+    content: "";
+
+    position: absolute;
+
+    width: 490px;
+    height: 490px;
+
+    top: -160px;
+    right: -130px;
+
+    border: 1px solid rgba(
+        118,
+        185,
+        71,
+        0.19
+    );
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* 02.2 TÍTULO PRINCIPAL */
+
+.nosotros-portada h1 {
+    position: relative;
+    z-index: 1;
+
+    max-width: 950px;
+
+    margin: 22px 0 28px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(40px, 5.4vw, 72px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+}
+
+
+/* 02.3 DESCRIPCIÓN */
+
+.nosotros-descripcion {
+    position: relative;
+    z-index: 1;
+
+    max-width: 650px;
+
+    margin-bottom: 35px;
+
+    color: #D0D8E0;
+
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+
+/* 02.4 BOTÓN DE LA PORTADA */
+
+.nosotros-boton {
+    position: relative;
+    z-index: 1;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    padding: 17px 26px;
+
+    background: #76B947;
+    color: #101D2D;
+
+    border: 1px solid #76B947;
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.nosotros-boton:hover {
+    background: #91CC65;
+    transform: translateY(-3px);
+}
+
+.nosotros-boton:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 4px;
+}
+
+
+/* ==========================================
+   03. QUIÉNES SOMOS
+========================================== */
+
+.nosotros-seccion {
+    padding: 110px 0;
+
+    background: #101D2D;
+}
+
+.nosotros-presentacion {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(0, 0.9fr);
+
+    align-items: center;
+    gap: 75px;
+}
+
+
+/* 03.1 INFORMACIÓN EMPRESARIAL */
+
+.nosotros-presentacion-texto h2 {
+    max-width: 650px;
+
+    margin: 20px 0 30px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(30px, 3.8vw, 47px);
+    font-weight: 850;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.nosotros-presentacion-texto > p:not(
+    .nosotros-etiqueta
+) {
+    margin-bottom: 19px;
+
+    color: #C4CFD9;
+
+    font-size: 15px;
+    line-height: 1.95;
+}
+
+.nosotros-presentacion-texto > p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   04. IDENTIDAD VISUAL DE GALVIZ
+========================================== */
+
+.nosotros-identidad {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 430px;
+    padding: 45px 30px;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(118, 185, 71, 0.15),
+            transparent 58%
+        ),
+        linear-gradient(
+            140deg,
+            #1C3247,
+            #142538
+        );
+
+    border: 1px solid #3A5366;
+    border-radius: 14px;
+
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* 04.1 MARCA */
+
+.nosotros-identidad-galviz {
+    color: #FFFFFF;
+
+    font-size: clamp(40px, 5vw, 65px);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.nosotros-identidad-events {
+    margin-top: 8px;
+
+    color: #76B947;
+
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+
+/* 04.2 SEPARADOR */
+
+.nosotros-identidad-linea {
+    width: 55px;
+    height: 3px;
+
+    margin: 38px 0 26px;
+
+    background: #76B947;
+    border-radius: 3px;
+}
+
+
+/* 04.3 RESPALDO CORPORATIVO */
+
+.nosotros-identidad p {
+    margin-bottom: 12px;
+
+    color: #AFC0CE;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nosotros-identidad strong {
+    max-width: 320px;
+
+    color: #FFFFFF;
+
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   05. QUÉ HACEMOS
+========================================== */
+
+.nosotros-servicios {
+    padding: 105px 0;
+
+    background: #142438;
+
+    border-top: 1px solid #2B4055;
+    border-bottom: 1px solid #2B4055;
+}
+
+
+/* 05.1 ENCABEZADO */
+
+.nosotros-encabezado {
+    max-width: 750px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.nosotros-encabezado h2 {
+    margin: 15px 0 22px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 850;
+    line-height: 1.2;
+}
+
+.nosotros-encabezado > p:last-child {
+    color: #C4CFD9;
+
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* ==========================================
+   06. TARJETAS DE ACTIVIDADES
+========================================== */
+
+.nosotros-servicios-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+.nosotros-servicio {
+    position: relative;
+
+    min-height: 320px;
+    padding: 38px 30px;
+
+    background:
+        radial-gradient(
+            circle at 95% 5%,
+            rgba(118, 185, 71, 0.08),
+            transparent 55%
+        ),
+        #1D3045;
+
+    border: 1px solid #38516A;
+    border-radius: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.nosotros-servicio:hover {
+    border-color: #76B947;
+    transform: translateY(-5px);
+}
+
+
+/* 06.1 NUMERACIÓN */
+
+.nosotros-servicio-numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 32px;
+
+    background: #28432E;
+    color: #76B947;
+
+    border: 1px solid #416B3D;
+    border-radius: 10px;
+
+    font-size: 20px;
+    font-weight: 900;
+}
+
+
+/* 06.2 TÍTULO Y DESCRIPCIÓN */
+
+.nosotros-servicio h3 {
+    margin-bottom: 20px;
+
+    color: #FFFFFF;
+
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.nosotros-servicio p {
+    color: #C4CFD9;
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* ==========================================
+   07. RESPALDO EMPRESARIAL
+========================================== */
+
+.nosotros-respaldo {
+    padding: 110px 0;
+
+    background:
+        radial-gradient(
+            circle at 90% 50%,
+            rgba(118, 185, 71, 0.12),
+            transparent 50%
+        ),
+        #101D2D;
+}
+
+.nosotros-respaldo-contenido {
+    max-width: 800px;
+}
+
+.nosotros-respaldo h2 {
+    margin: 20px 0 28px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(31px, 4vw, 49px);
+    font-weight: 850;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.nosotros-respaldo-contenido
+> p:not(.nosotros-etiqueta) {
+    max-width: 720px;
+
+    margin-bottom: 32px;
+
+    color: #C4CFD9;
+
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* 07.1 ENLACE A LA EMPRESA */
+
+.nosotros-enlace-empresa {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+    padding: 16px 22px;
+
+    color: #76B947;
+
+    border: 1px solid #76B947;
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.nosotros-enlace-empresa:hover {
+    background: #76B947;
+    color: #101D2D;
+}
+
+.nosotros-enlace-empresa:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 4px;
+}
+
+
+/* ==========================================
+   08. ORGANIZA TU EVENTO
+========================================== */
+
+.nosotros-contacto {
+    position: relative;
+
+    padding: 115px 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 0,
+            rgba(118, 185, 71, 0.17),
+            transparent 60%
+        ),
+        #1A3045;
+
+    border-top: 1px solid #39516A;
+
+    text-align: center;
+}
+
+.nosotros-contacto-contenido {
+    max-width: 790px;
+    margin: 0 auto;
+}
+
+.nosotros-contacto h2 {
+    margin: 20px 0 26px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(34px, 4.5vw, 55px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.nosotros-contacto-contenido
+> p:not(
+    .nosotros-etiqueta,
+    .nosotros-contacto-nota
+) {
+    max-width: 650px;
+
+    margin: 0 auto 36px;
+
+    color: #D0D8E0;
+
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* 08.1 BOTÓN DE WHATSAPP */
+
+.nosotros-boton-contacto {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+    padding: 18px 30px;
+
+    background: #76B947;
+    color: #101D2D;
+
+    border: 1px solid #76B947;
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.nosotros-boton-contacto:hover {
+    background: #91CC65;
+    transform: translateY(-3px);
+}
+
+.nosotros-boton-contacto:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 4px;
+}
+
+
+/* 08.2 NOTA DE ATENCIÓN */
+
+.nosotros-contacto-nota {
+    margin-top: 20px;
+
+    color: #AFC0CE;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   09. DESPLAZAMIENTO A LAS SECCIONES
+========================================== */
+
+#quienes-somos,
+#que-hacemos,
+#organiza-tu-evento {
+    scroll-margin-top: 100px;
+}
+
+
+/* ==========================================
+   10. ADAPTACIÓN A TABLETAS
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .nosotros-presentacion {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .nosotros-identidad {
+        min-height: 350px;
+    }
+
+    .nosotros-servicios-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ==========================================
+   11. ADAPTACIÓN A CELULARES
+========================================== */
+
+@media (max-width: 768px) {
+
+    .nosotros-contenedor {
+        padding: 0 6%;
+    }
+
+    .nosotros-portada {
+        min-height: 470px;
+        padding: 85px 0;
+    }
+
+    .nosotros-portada::after {
+        width: 280px;
+        height: 280px;
+
+        top: -100px;
+        right: -150px;
+    }
+
+    .nosotros-portada h1 {
+        letter-spacing: -1px;
+    }
+
+    .nosotros-descripcion {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .nosotros-seccion {
+        padding: 75px 0;
+    }
+
+    .nosotros-presentacion {
+        gap: 35px;
+    }
+
+    .nosotros-presentacion-texto h2 {
+        margin-bottom: 25px;
+    }
+
+    .nosotros-identidad {
+        min-height: 320px;
+        padding: 35px 20px;
+    }
+
+    .nosotros-identidad-events {
+        font-size: 13px;
+        letter-spacing: 3px;
+    }
+
+    .nosotros-servicios {
+        padding: 75px 0;
+    }
+
+    .nosotros-encabezado {
+        margin-bottom: 35px;
+    }
+
+    .nosotros-encabezado > p:last-child {
+        font-size: 15px;
+    }
+
+    .nosotros-servicios-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .nosotros-servicio {
+        min-height: auto;
+        padding: 32px 25px;
+    }
+
+    .nosotros-respaldo {
+        padding: 75px 0;
+    }
+
+    .nosotros-respaldo-contenido
+    > p:not(.nosotros-etiqueta) {
+        font-size: 15px;
+    }
+
+    .nosotros-contacto {
+        padding: 80px 0;
+    }
+
+    .nosotros-contacto-contenido
+    > p:not(
+        .nosotros-etiqueta,
+        .nosotros-contacto-nota
+    ) {
+        font-size: 15px;
+    }
+
+}
+
+
+/* ==========================================
+   12. PANTALLAS PEQUEÑAS
+========================================== */
+
+@media (max-width: 400px) {
+
+    .nosotros-boton,
+    .nosotros-boton-contacto {
+        width: 100%;
+        padding: 16px 12px;
+    }
+
+    .nosotros-identidad-galviz {
+        font-size: 38px;
+    }
+
+    .nosotros-identidad-events {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+}
+
+
+/* ==========================================
+   13. ACCESIBILIDAD
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .nosotros-boton,
+    .nosotros-servicio,
+    .nosotros-enlace-empresa,
+    .nosotros-boton-contacto {
+        transition: none;
+    }
+
+    .nosotros-boton:hover,
+    .nosotros-servicio:hover,
+    .nosotros-boton-contacto:hover {
+        transform: none;
+    }
+
+}

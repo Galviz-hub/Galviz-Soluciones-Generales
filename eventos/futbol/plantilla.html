@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- ======================================
+         01. CONFIGURACIÓN GENERAL Y SEO
+    ======================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Plantilla del equipo | Galviz Events</title>
+
+    <meta name="description"
+          content="Consulta la plantilla de los equipos participantes en el Campeonato Anual de Fútbol de Galviz Events.">
+
+    <!-- Excluir de Google mientras haya datos ficticios -->
+    <meta name="robots" content="noindex, follow">
+
+
+    <!-- ======================================
+         02. HOJAS DE ESTILO
+    ======================================= -->
+
+    <link rel="stylesheet" href="../css/general.css">
+
+    <link rel="stylesheet" href="../css/futbol.css">
+
+    <link rel="stylesheet" href="../css/categorias.css">
+
+</head>
+
+<body>
+
+    <!-- ======================================
+         03. NAVEGACIÓN
+    ======================================= -->
+
+    <header class="futbol-navegacion">
+
+        <div class="futbol-navegacion-contenedor">
+
+            <a id="volver-categoria"
+               href="libre.html"
+               class="futbol-regresar">
+
+                <span aria-hidden="true">←</span>
+
+                VOLVER A EQUIPOS
+
+            </a>
+
+            <a href="../index.html"
+               class="futbol-navegacion-marca">
+
+                GALVIZ EVENTS
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ======================================
+         04. FICHA DEL EQUIPO
+    ======================================= -->
+
+    <main class="futbol-pagina plantilla-pagina">
+
+        <div class="plantilla-contenedor">
+
+            <!-- 04.1 PRESENTACIÓN DEL EQUIPO -->
+
+            <section class="plantilla-presentacion">
+
+                <div id="plantilla-escudo"
+                     class="equipo-escudo">
+
+                    <!-- Escudo del equipo -->
+
+                </div>
+
+                <h1 id="plantilla-nombre">
+                    FICHA DEL EQUIPO
+                </h1>
+
+                <p id="plantilla-categoria">
+                    Campeonato Anual
+                </p>
+
+            </section>
+
+
+            <!-- 04.2 JUGADORES -->
+
+            <section class="plantilla-seccion">
+
+                <h2>
+                    PLANTILLA DEL EQUIPO
+                </h2>
+
+                <ol id="lista-jugadores"
+                    class="plantilla-jugadores">
+
+                    <!-- Los jugadores se cargarán
+                         desde JavaScript. -->
+
+                </ol>
+
+                <p id="plantilla-nota"
+                   class="plantilla-nota">
+
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ======================================
+         05. ARCHIVOS JAVASCRIPT
+    ======================================= -->
+
+    <!-- Datos de los equipos -->
+    
+    <!-- Funcionamiento de la ficha -->
+
+<script src="../js/datos-publicos.js"></script>
+<script src="../js/boton-inscripcion.js"></script>
+</body>
+
+</html>

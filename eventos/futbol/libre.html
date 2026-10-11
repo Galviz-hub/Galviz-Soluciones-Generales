@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- ======================================
+         01. CONFIGURACIÓN GENERAL Y SEO
+    ======================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Categoría Libre - Campeonato Anual de Fútbol |
+        Galviz Events
+    </title>
+
+    <meta name="description"
+          content="Sigue la categoría Libre de Fútbol 7 del Campeonato Anual de Galviz Events en Tumbes. Consulta equipos, partidos, resultados y clasificación.">
+
+    <link rel="canonical"
+          href="https://solucionesgeneralesgalviz.com/eventos/futbol/libre.html">
+
+    <!-- Evitar indexar la página mientras sea una demostración -->
+    <meta name="robots" content="noindex, follow">
+
+
+    <!-- ======================================
+         02. HOJAS DE ESTILO
+    ======================================= -->
+
+    <!-- Estilos básicos -->
+    <link rel="stylesheet"
+          href="../css/general.css">
+
+    <!-- Identidad negra y dorada -->
+    <link rel="stylesheet"
+          href="../css/futbol.css">
+
+    <!-- Diseño específico de las categorías -->
+    <link rel="stylesheet"
+          href="../css/categorias.css">
+
+<link rel="stylesheet" href="../css/galviz-actualizacion.css">
+</head>
+
+
+<body>
+
+    <!-- ======================================
+         03. NAVEGACIÓN DE LA CATEGORÍA
+    ======================================= -->
+
+    <header class="futbol-navegacion">
+
+        <div class="futbol-navegacion-contenedor">
+
+            <!-- REGRESAR AL CAMPEONATO -->
+
+            <a href="campeonato.html"
+               class="futbol-regresar">
+
+                <span aria-hidden="true">←</span>
+
+                VOLVER AL CAMPEONATO
+
+            </a>
+
+
+            <!-- IDENTIDAD DE LA COMPETICIÓN -->
+
+            <a href="../index.html"
+               class="futbol-navegacion-marca">
+
+                GALVIZ EVENTS
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ======================================
+         04. CONTENIDO PRINCIPAL
+    ======================================= -->
+
+    <main class="futbol-pagina categoria-pagina"
+          data-categoria="libre">
+
+
+        <!-- ==================================
+             04.1 PRESENTACIÓN
+        =================================== -->
+
+        <section class="categoria-portada">
+
+            <div class="futbol-contenedor">
+
+                <p class="futbol-etiqueta">
+                    CAMPEONATO ANUAL · FÚTBOL 7
+                </p>
+
+                <h1>
+                    CATEGORÍA LIBRE
+                </h1>
+
+                <p class="categoria-descripcion">
+                    Conoce a los equipos participantes,
+                    consulta el calendario y sigue los
+                    resultados de la competición.
+                </p>
+
+            </div>
+
+        </section>
+<!-- ==================================
+             04.3 NAVEGACIÓN POR PESTAÑAS
+        =================================== -->
+
+        <nav class="categoria-navegacion"
+             aria-label="Apartados de la categoría Libre">
+
+            <div class="categoria-pestanas"
+                 role="tablist"
+                 aria-label="Información de la categoría Libre">
+
+
+                <!-- EQUIPOS -->
+
+                <button
+                    type="button"
+                    id="tab-equipos"
+                    class="categoria-pestana activa"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="panel-equipos"
+                    tabindex="0"
+                    data-pestana="equipos">
+
+                    Equipos
+
+                </button>
+
+
+                <!-- PARTIDOS -->
+
+                <button
+                    type="button"
+                    id="tab-partidos"
+                    class="categoria-pestana"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="panel-partidos"
+                    tabindex="-1"
+                    data-pestana="partidos">
+
+                    Partidos
+
+                </button>
+
+
+                <!-- RESULTADOS -->
+
+                <button
+                    type="button"
+                    id="tab-resultados"
+                    class="categoria-pestana"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="panel-resultados"
+                    tabindex="-1"
+                    data-pestana="resultados">
+
+                    Resultados
+
+                </button>
+
+
+                <!-- CLASIFICACIÓN -->
+
+                <button
+                    type="button"
+                    id="tab-clasificacion"
+                    class="categoria-pestana"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="panel-clasificacion"
+                    tabindex="-1"
+                    data-pestana="clasificacion">
+
+                    Clasificación
+
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ==================================
+             04.4 EQUIPOS
+        =================================== -->
+
+        <section
+            id="panel-equipos"
+            class="categoria-panel"
+            role="tabpanel"
+            aria-labelledby="tab-equipos"
+            tabindex="0"
+            data-panel="equipos">
+
+            <div class="futbol-contenedor">
+
+                <div class="categoria-encabezado">
+
+                    <p class="futbol-etiqueta">
+                        LOS PARTICIPANTES
+                    </p>
+
+                    <h2>
+                        EQUIPOS DE LA CATEGORÍA LIBRE
+                    </h2>
+
+                    <p>
+                        Conoce a los ocho equipos
+                        de la competición y explora
+                        sus respectivas plantillas.
+                    </p>
+
+                </div>
+
+
+                <!-- TARJETAS DE LOS EQUIPOS -->
+
+                <div id="lista-equipos"
+                     class="categoria-equipos">
+
+                    <!-- Los equipos se incorporarán
+                         desde el archivo de datos. -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             04.5 PARTIDOS
+        =================================== -->
+
+        <section
+            id="panel-partidos"
+            class="categoria-panel"
+            role="tabpanel"
+            aria-labelledby="tab-partidos"
+            tabindex="0"
+            data-panel="partidos"
+            hidden>
+
+            <div class="futbol-contenedor">
+
+                <div class="categoria-encabezado">
+
+                    <p class="futbol-etiqueta">
+                        LA COMPETICIÓN
+                    </p>
+
+                    <h2>
+                        CALENDARIO DE PARTIDOS
+                    </h2>
+
+                    <p>
+                        Consulta los encuentros
+                        programados para cada
+                        jornada del campeonato.
+                    </p>
+
+                </div>
+
+
+                <!-- PARTIDO DESTACADO -->
+
+                <div id="proximo-partido"
+                     class="categoria-partido-destacado">
+
+                    <!-- Próximo partido. -->
+
+                </div>
+
+
+                <!-- SELECTOR DE JORNADAS -->
+
+                <div id="selector-partidos"
+                     class="categoria-jornadas">
+
+                    <!-- Días 1, 2, 3, 4, 5 y 6. -->
+
+                </div>
+
+
+                <!-- PARTIDOS DE LA JORNADA -->
+
+                <div id="lista-partidos"
+                     class="categoria-lista-partidos">
+
+                    <!-- Calendario de encuentros. -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             04.6 RESULTADOS
+        =================================== -->
+
+        <section
+            id="panel-resultados"
+            class="categoria-panel"
+            role="tabpanel"
+            aria-labelledby="tab-resultados"
+            tabindex="0"
+            data-panel="resultados"
+            hidden>
+
+            <div class="futbol-contenedor">
+
+                <div class="categoria-encabezado">
+
+                    <p class="futbol-etiqueta">
+                        MARCADORES
+                    </p>
+
+                    <h2>
+                        RESULTADOS
+                    </h2>
+
+                    <p>
+                        Consulta los marcadores
+                        de los encuentros disputados
+                        en cada jornada.
+                    </p>
+
+                </div>
+
+
+                <!-- ÚLTIMO ENCUENTRO -->
+
+                <div id="ultimo-resultado"
+                     class="categoria-partido-destacado">
+
+                    <!-- Último resultado. -->
+
+                </div>
+
+
+                <!-- SELECTOR DE JORNADAS -->
+
+                <div id="selector-resultados"
+                     class="categoria-jornadas">
+
+                    <!-- Días 1, 2, 3, 4, 5 y 6. -->
+
+                </div>
+
+
+                <!-- RESULTADOS DE LA JORNADA -->
+
+                <div id="lista-resultados"
+                     class="categoria-lista-resultados">
+
+                    <!-- Marcadores de la jornada. -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             04.7 CLASIFICACIÓN
+        =================================== -->
+
+        <section
+            id="panel-clasificacion"
+            class="categoria-panel"
+            role="tabpanel"
+            aria-labelledby="tab-clasificacion"
+            tabindex="0"
+            data-panel="clasificacion"
+            hidden>
+
+            <div class="futbol-contenedor">
+
+                <div class="categoria-encabezado">
+
+                    <p class="futbol-etiqueta">
+                        LA COMPETICIÓN
+                    </p>
+
+                    <h2>
+                        CLASIFICACIÓN
+                    </h2>
+
+                    <p>
+                        Sigue las posiciones de
+                        los equipos durante la
+                        fase de grupos y el
+                        desarrollo de las eliminatorias.
+                    </p>
+
+                </div>
+
+
+                <!-- TABLAS GENERADAS AUTOMÁTICAMENTE POR GRUPO -->
+                <div id="tablas-grupos" class="categoria-grupos"
+                     aria-live="polite">
+                    <!-- Se crea una tabla por cada grupo publicado. -->
+                </div>
+
+
+                <!-- FASE ELIMINATORIA -->
+
+                <div class="categoria-eliminatorias">
+
+                    <h3>
+                        FASE ELIMINATORIA
+                    </h3>
+
+                    <div id="cuadro-eliminatorias">
+
+                        <!-- Las rondas publicadas se generan automáticamente desde el panel. -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    
+<!-- ======================================
+     05. JAVASCRIPT
+     Navegación de las categorías
+======================================= -->
+
+<script src="../js/categorias.js"></script>
+
+<!-- Datos de los equipos de Libre -->
+
+<!-- Presentación de los equipos -->
+
+<!-- ======================================
+     CALENDARIO DE PARTIDOS
+======================================= -->
+
+<!-- Datos de los partidos de Libre -->
+
+<!-- Presentación del calendario -->
+
+<!-- ======================================
+     RESULTADOS DE LA CATEGORÍA LIBRE
+======================================= -->
+
+<!-- Marcadores ilustrativos -->
+
+<!-- Presentación de los resultados -->
+
+<!-- ======================================
+     CLASIFICACIÓN DE LA CATEGORÍA LIBRE
+======================================= -->
+
+<script src="../js/datos-publicos.js"></script>
+<script src="../js/boton-inscripcion.js"></script>
+</body>
+
+</html>
