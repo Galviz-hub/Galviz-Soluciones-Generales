@@ -4,7 +4,7 @@
 */
 (function () {
   'use strict';
-  const ENDPOINT='https://script.google.com/macros/s/AKfycbzIkFXlBdEHiQQ5YLFq1os7uD4SPXeNWvnhw57oPW5X3tJryrDuZ8IIZapGbySNtUSn/exec';
+  const ENDPOINT='https://script.google.com/macros/s/AKfycbza3Wo5YYSInp0pwuGy24Kzv2LzWU3J1D1c-4Vag_wI7oz_GHL1sneKE8RduJ4_dPlT/exec';
   const raiz=document.querySelector('.categoria-pagina');
   const clave=raiz && raiz.dataset.categoria;
   const esPlantilla=location.pathname.endsWith('/plantilla.html');
