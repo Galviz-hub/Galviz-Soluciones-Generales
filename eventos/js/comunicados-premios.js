@@ -1,6 +1,6 @@
 /* GALVIZ EVENTS - Solo comunicados y premios. No modifica el circuito deportivo. */
 (function(){'use strict';
- const ENDPOINT='https://script.google.com/macros/s/AKfycbxzbNI69T5PnjI6KX502lbv-lo4tEqMXurWzYkWJJLTWLXNkwbYAJR8CoVXjIanfJxF/exec';
+ const ENDPOINT='https://script.google.com/macros/s/AKfycbza3Wo5YYSInp0pwuGy24Kzv2LzWU3J1D1c-4Vag_wI7oz_GHL1sneKE8RduJ4_dPlT/exec';
  const $=s=>document.querySelector(s),ruta=location.pathname;
  const inicio=/\/eventos\/futbol\/(?:index\.html)?$/.test(ruta);
  const comp=/\/eventos\/futbol\/campeonato\.html$/.test(ruta)?'campeonato':/\/eventos\/futbol\/liguilla\.html$/.test(ruta)?'liguilla':'';
