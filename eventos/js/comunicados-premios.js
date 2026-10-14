@@ -19,15 +19,45 @@
  ventana.append(cerrar,elemento('small','COMUNICADO OFICIAL'),elemento('h2',anuncio.titulo));if(anuncio.imagen){const img=elemento('img');img.src=anuncio.imagen;img.alt=anuncio.titulo;img.loading='lazy';ventana.append(img);}ventana.append(elemento('p',anuncio.contenido));
  if(anuncio.enlace){const a=elemento('a',anuncio.textoEnlace||'Más información');a.href=anuncio.enlace;a.target='_blank';a.rel='noopener noreferrer';a.className='cp-link';ventana.append(a);}fondo.append(ventana);document.body.append(fondo);cerrar.focus();}
  const dinero=n=>n===null||n===undefined?'Por definir':'S/ '+Number(n).toLocaleString('es-PE',{maximumFractionDigits:2});
- function premios(datos){const eds=(datos.ediciones||[]).filter(e=>e.competicion===comp),peso=e=>({en_curso:3,proximo:2,finalizado:1}[e.estado]||0);eds.sort((a,b)=>peso(b)-peso(a)||String(b.temporada).localeCompare(String(a.temporada)));const ed=eds[0];if(!ed)return;
- const items=(datos.premios||[]).filter(p=>p.idEdicion===ed.id&&p.competicion===comp);if(!items.length)return;
- const bloque=$('#panel-premios');if(!bloque)return;
- // Sustituye solamente la sección interna de premios cuando hay premios publicados.
- const original=bloque.querySelector('section');if(!original)return;
- const nuevo=elemento('section');nuevo.className=original.className;const interno=elemento('div');interno.style.cssText='max-width:1200px;margin:auto;padding:65px 24px';
- const cab=elemento('div');cab.style.textAlign='center';const mini=elemento('p','RECONOCIMIENTOS');mini.style.cssText='color:#d7b568;letter-spacing:3px';cab.append(mini,elemento('h2',comp==='campeonato'?'LA GLORIA TIENE SU RECOMPENSA':'PREMIOS DE LA LIGUILLA'),elemento('p','Premios oficiales · '+ed.nombre));interno.append(cab);
- const total=items.reduce((s,p)=>s+(Number(p.campeon)||0)+(Number(p.subcampeon)||0),0);const caja=elemento('div');caja.style.cssText='text-align:center;border:1px solid #8b7346;background:#2a261f;border-radius:12px;padding:26px;margin:32px 0';caja.append(elemento('small','PREMIOS TOTALES PUBLICADOS'),elemento('h2',dinero(total)));interno.append(caja);
- const grid=elemento('div');grid.style.cssText='display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px';items.forEach(p=>{const card=elemento('article');card.style.cssText='background:#232323;border:1px solid #514638;border-radius:12px;padding:24px;color:white';const t=elemento('h3','CATEGORÍA '+(p.categoria==='master'?'MÁSTER':'LIBRE'));t.style.color='#d7b568';card.append(t);[['Campeón',p.campeon],['Subcampeón',p.subcampeon]].forEach(([nombre,monto])=>{const linea=elemento('div');linea.style.cssText='display:flex;justify-content:space-between;gap:10px;padding:15px 0;border-top:1px solid #444';linea.append(elemento('span',nombre),elemento('strong',dinero(monto)));card.append(linea);});if(p.otros){const o=elemento('p',p.otros);o.className='cp-otros';card.append(o);}grid.append(card);});interno.append(grid);nuevo.append(interno);original.replaceWith(nuevo);
+ function premios(datos){
+  const eds=(datos.ediciones||[]).filter(e=>e.competicion===comp);
+  const peso=e=>({en_curso:3,proximo:2,finalizado:1}[e.estado]||0);
+  eds.sort((a,b)=>peso(b)-peso(a)||String(b.temporada).localeCompare(String(a.temporada)));
+  const ed=eds[0];if(!ed)return;
+  const items=(datos.premios||[]).filter(p=>String(p.idEdicion)===String(ed.id)&&p.competicion===comp);
+  if(!items.length)return;
+  const bloque=$('#panel-premios');if(!bloque)return;
+  const total=items.reduce((s,p)=>s+(Number(p.campeon)||0)+(Number(p.subcampeon)||0),0);
+  if(comp==='campeonato'){
+   // Se conservan exactamente las tarjetas y clases CSS existentes.
+   const totalEl=bloque.querySelector('.campeonato-premios-total strong');
+   if(totalEl)totalEl.textContent=dinero(total);
+   const aviso=bloque.querySelector('.campeonato-aviso');
+   if(aviso)aviso.textContent='Premios oficiales · '+ed.nombre;
+   bloque.querySelectorAll('.campeonato-premio').forEach(card=>{
+    const encabezado=card.querySelector('h3');const cat=encabezado&&/MÁSTER|MASTER/i.test(encabezado.textContent)?'master':'libre';
+    const p=items.find(x=>x.categoria===cat);
+    if(!p){card.hidden=true;return;}card.hidden=false;
+    const montos=card.querySelectorAll('div strong');
+    if(montos[0])montos[0].textContent=dinero(p.campeon);
+    if(montos[1])montos[1].textContent=dinero(p.subcampeon);
+    let otros=card.querySelector('.cp-otros');
+    if(p.otros){if(!otros){otros=elemento('p');otros.className='cp-otros';card.append(otros);}otros.textContent=p.otros;}
+    else if(otros)otros.remove();
+   });
+  }else{
+   // Liguilla: mantener el panel, contenedor y encabezado originales.
+   const cont=bloque.querySelector('.liguilla-contenedor');if(!cont)return;
+   const descripcion=cont.querySelector('.liguilla-encabezado p:last-child');
+   if(descripcion)descripcion.textContent='Premios oficiales · '+ed.nombre;
+   let caja=cont.querySelector('.cp-premios-liguilla');if(!caja){caja=elemento('div');caja.className='cp-premios-liguilla';cont.append(caja);}caja.replaceChildren();
+   caja.style.cssText='max-width:920px;margin:30px auto;';
+   const suma=elemento('p','PREMIOS TOTALES: '+dinero(total));suma.style.cssText='text-align:center;font-size:1.5rem;font-weight:700;margin-bottom:25px';caja.append(suma);
+   const grid=elemento('div');grid.style.cssText='display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px';
+   items.forEach(p=>{const card=elemento('article');card.style.cssText='border:1px solid currentColor;border-radius:12px;padding:22px';card.append(elemento('h3','CATEGORÍA '+(p.categoria==='master'?'MÁSTER':'LIBRE')));card.append(elemento('p','Campeón: '+dinero(p.campeon)));card.append(elemento('p','Subcampeón: '+dinero(p.subcampeon)));if(p.otros)card.append(elemento('p',p.otros));grid.append(card);});
+   caja.append(grid);
+  }
  }
+
  cargar().then(datos=>{if(!datos||!datos.ok)return;if(inicio)anuncios(datos);if(comp)premios(datos);}).catch(e=>console.warn('Comunicados/premios no disponibles; se conserva la página original.',e));
 })();
